@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Chat</title>
+    <title>AlphaBeta Chat</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -22,14 +22,22 @@
             overflow: hidden;
         }
         header {
-            background-color: #4A90E2;
+            background-color: #3F51B5;
             color: white;
             padding: 20px;
             text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         h1 {
             margin: 0;
             font-size: 24px;
+        }
+        #logo {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
         }
         #chat-window {
             height: 300px;
@@ -48,7 +56,7 @@
         }
         #send-button {
             padding: 10px 20px;
-            background-color: #4A90E2;
+            background-color: #4CAF50;
             color: white;
             border: none;
             border-radius: 4px;
@@ -67,16 +75,26 @@
         .ai-message {
             background-color: #F1F8E9;
         }
+        .inventor-singh {
+            font-weight: bold;
+            color: #4CAF50;
+        }
     </style>
 </head>
 <body>
     <div id="chat-container">
         <header>
+            <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="40" height="40">
+                <circle cx="150" cy="150" r="50" fill="#4CAF50" stroke="#2E7D32" stroke-width="2"/>
+                <circle cx="250" cy="150" r="50" fill="#2196F3" stroke="#1565C0" stroke-width="2"/>
+                <text x="150" y="160" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="#FFFFFF">α</text>
+                <text x="250" y="160" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="#FFFFFF">β</text>
+            </svg>
             <h1>AlphaBeta Chat</h1>
         </header>
         <div id="chat-window"></div>
         <div id="chat-input">
-            <input type="text" id="user-input" placeholder="Type your message...">
+            <input type="text" id="user-input" placeholder="Ask InventorSingh...">
             <button id="send-button">Send</button>
         </div>
     </div>
@@ -88,8 +106,13 @@
 
         function addMessage(message, isUser = false) {
             const messageElement = document.createElement('div');
-            messageElement.textContent = message;
-            messageElement.className = `message ${isUser ? 'user-message' : 'ai-message'}`;
+            if (isUser) {
+                messageElement.textContent = `You: ${message}`;
+                messageElement.className = 'message user-message';
+            } else {
+                messageElement.innerHTML = `<span class="inventor-singh">InventorSingh:</span> ${message}`;
+                messageElement.className = 'message ai-message';
+            }
             chatWindow.appendChild(messageElement);
             chatWindow.scrollTop = chatWindow.scrollHeight;
         }
@@ -97,22 +120,27 @@
         async function sendMessage() {
             const message = userInput.value.trim();
             if (message) {
-                addMessage(`You: ${message}`, true);
+                addMessage(message, true);
                 userInput.value = '';
 
                 try {
-                    const response = await fetch('/chat', {
+                    const response = await fetch('http://localhost:8000/chat', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
                         },
-                        body: JSON.stringify({ message: message })
+                        body: JSON.stringify({ sender: "User", content: message })
                     });
+
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+
                     const data = await response.json();
-                    addMessage(`AlphaBeta AI: ${data.response}`);
+                    addMessage(data.content);
                 } catch (error) {
                     console.error('Error:', error);
-                    addMessage('Error: Failed to get response from AlphaBeta AI.');
+                    addMessage('Error: Failed to get response from InventorSingh.');
                 }
             }
         }

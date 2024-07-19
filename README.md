@@ -2,7 +2,7 @@ We have 8000 and 9000 ports for running our UI and Backend server.
 
 cd beta 
 
-`uvicorn main:app –reload` : runs on 8000
+`uvicorn main:app –-reload` : runs on 8000
 
 cd alpha
 

@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Alpha: Frontend",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/start_frontend.sh",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
+        },
+        {
+            "name": "Beta: FastAPI Backend",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/start_backend.sh",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "AlphaBetaChat: Full Stack",
+            "configurations": ["Alpha: Frontend", "Beta: FastAPI Backend"]
+        }
+    ]
+}
