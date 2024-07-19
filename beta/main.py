@@ -18,7 +18,8 @@ async def alive():
 
 @app.post("/chat")
 async def chat(message: str):
-    # Here you would typically call your AI model
+    # Here we will call an AI model like ChatGPT, ClaudAI, Ollama(my fav!)
+    # Ollama is easy to integrate with Python! No API Key required!
     # For now, we'll just echo the message back
     return {"response": f"You said: {message}"}
 
