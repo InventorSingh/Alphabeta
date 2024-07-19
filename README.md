@@ -12,10 +12,6 @@ cd alpha
 # [Where we are now!]
     Our Alpha and Beta are ready to Chat! 
     
-    Mext need to integrate AI and Teri Assignment Complete!
-
-    Phir apne GitHub Account main fork kr lena and uski ReadMe submissions k liye modify krke cover letter likh dena Company k liye.
-
     - Bugs in Our System 
 
         - Bug 1: Alpha Beta baat nhi kr pa rhe error aa rha hai. 
