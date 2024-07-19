@@ -3,98 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AlphaBeta Chat</title>
+    <title>AlphaBeta Tech Solutions Chat</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f0f0f0;
+            background-color: #f0f8ff; /* Light blue background */
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(255,165,0,0.05) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(30,144,255,0.05) 0%, transparent 20%);
+            background-attachment: fixed;
         }
         #chat-container {
-            width: 400px;
+            width: 80%;
+            max-width: 600px;
             background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             overflow: hidden;
         }
         header {
-            background-color: #3F51B5;
+            background-color: #1e90ff; /* Dodger blue */
             color: white;
             padding: 20px;
             text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            position: relative;
         }
         h1 {
             margin: 0;
             font-size: 24px;
+            font-weight: 600;
         }
-        #logo {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
+        #subheader {
+            font-size: 14px;
+            margin-top: 5px;
+            color: #e6e6e6;
         }
         #chat-window {
-            height: 300px;
+            height: 350px;
             overflow-y: auto;
             padding: 20px;
+            background-color: #fafafa;
         }
         #chat-input {
             display: flex;
             padding: 20px;
+            background-color: #f0f0f0;
         }
         #user-input {
             flex-grow: 1;
-            padding: 10px;
+            padding: 12px;
             border: 1px solid #ddd;
-            border-radius: 4px;
+            border-radius: 25px;
+            font-size: 16px;
         }
         #send-button {
-            padding: 10px 20px;
-            background-color: #4CAF50;
+            padding: 12px 25px;
+            background-color: #ffa500; /* Orange */
             color: white;
             border: none;
-            border-radius: 4px;
+            border-radius: 25px;
             margin-left: 10px;
             cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        #send-button:hover {
+            background-color: #ff8c00; /* Dark orange */
         }
         .message {
-            margin-bottom: 10px;
-            padding: 8px;
-            border-radius: 4px;
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            border-radius: 18px;
+            max-width: 80%;
+            line-height: 1.4;
         }
         .user-message {
-            background-color: #E3F2FD;
-            text-align: right;
+            background-color: #e3f2fd; /* Light blue */
+            color: #0d47a1;
+            margin-left: auto;
+            border-bottom-right-radius: 0;
         }
         .ai-message {
-            background-color: #F1F8E9;
+            background-color: #fff3e0; /* Light orange */
+            color: #e65100;
+            margin-right: auto;
+            border-bottom-left-radius: 0;
         }
-        .inventor-singh {
+        .sender {
             font-weight: bold;
-            color: #4CAF50;
+            margin-bottom: 5px;
+        }
+        #logo {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div id="chat-container">
         <header>
-            <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="40" height="40">
-                <circle cx="150" cy="150" r="50" fill="#4CAF50" stroke="#2E7D32" stroke-width="2"/>
-                <circle cx="250" cy="150" r="50" fill="#2196F3" stroke="#1565C0" stroke-width="2"/>
-                <text x="150" y="160" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="#FFFFFF">α</text>
-                <text x="250" y="160" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="#FFFFFF">β</text>
-            </svg>
-            <h1>AlphaBeta Chat</h1>
+            <div id="logo">αβ</div>
+            <h1>AlphaBeta Tech Solutions</h1>
+            <div id="subheader">Custom Solutions for Canada & India</div>
         </header>
         <div id="chat-window"></div>
         <div id="chat-input">
-            <input type="text" id="user-input" placeholder="Ask InventorSingh...">
+            <input type="text" id="user-input" placeholder="Ask InventorSingh about our tech solutions...">
             <button id="send-button">Send</button>
         </div>
     </div>
@@ -104,15 +128,13 @@
         const userInput = document.getElementById('user-input');
         const sendButton = document.getElementById('send-button');
 
-        function addMessage(message, isUser = false) {
+        function addMessage(sender, message, isUser) {
             const messageElement = document.createElement('div');
-            if (isUser) {
-                messageElement.textContent = `You: ${message}`;
-                messageElement.className = 'message user-message';
-            } else {
-                messageElement.innerHTML = `<span class="inventor-singh">InventorSingh:</span> ${message}`;
-                messageElement.className = 'message ai-message';
-            }
+            messageElement.className = `message ${isUser ? 'user-message' : 'ai-message'}`;
+            messageElement.innerHTML = `
+                <div class="sender">${sender}</div>
+                ${message}
+            `;
             chatWindow.appendChild(messageElement);
             chatWindow.scrollTop = chatWindow.scrollHeight;
         }
@@ -120,27 +142,22 @@
         async function sendMessage() {
             const message = userInput.value.trim();
             if (message) {
-                addMessage(message, true);
+                addMessage('You', message, true);
                 userInput.value = '';
 
                 try {
-                    const response = await fetch('http://127.0.0.1:8000/chat', {
+                    const response = await fetch('http://localhost:8000/chat', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
                         },
                         body: JSON.stringify({ sender: "User", content: message })
                     });
-
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! Status: ${response.status}`);
-                    }
-
                     const data = await response.json();
-                    addMessage(data.content);
+                    addMessage('InventorSingh', data.content, false);
                 } catch (error) {
                     console.error('Error:', error);
-                    addMessage('Error: Failed to get response from InventorSingh.');
+                    addMessage('InventorSingh', 'Error: Failed to get response.', false);
                 }
             }
         }
