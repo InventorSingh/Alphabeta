@@ -9,7 +9,7 @@ cd alpha
 `./run.sh` : runs on 8000
 
 
-# [Readings for the Sister]
+# [Where we are now!]
     Our Alpha and Beta are ready to Chat! 
     
     Mext need to integrate AI and Teri Assignment Complete!
