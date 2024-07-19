@@ -6,7 +6,7 @@ cd beta
 
 cd alpha
 
-`./run.sh` : runs on 8000
+`./run.sh` : runs on 9000
 
 
 # [Where we are now!]
