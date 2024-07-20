@@ -4,3 +4,5 @@ uvicorn==0.15.0
 jinja2==3.0.1
 python-multipart==0.0.5
 requests
+
+langchain-cli
