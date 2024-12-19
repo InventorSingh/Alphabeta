@@ -1,0 +1,82 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "id": "x9WH6RpYov7CO_kHhsCe3",
+      "type": "rectangle",
+      "x": 251,
+      "y": 115.4000015258789,
+      "width": 294.4000244140625,
+      "height": 118.40003204345703,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": {
+        "type": 3
+      },
+      "seed": 606138224,
+      "version": 35,
+      "versionNonce": 1583425936,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "type": "text",
+          "id": "QBOkH9cd0RYdW7WWr4yJc"
+        }
+      ],
+      "updated": 1734568497477,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "QBOkH9cd0RYdW7WWr4yJc",
+      "type": "text",
+      "x": 261.00013732910156,
+      "y": 137.10001754760742,
+      "width": 274.3997497558594,
+      "height": 75,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": null,
+      "seed": 1397892464,
+      "version": 62,
+      "versionNonce": 1408683408,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1734568509119,
+      "link": null,
+      "locked": false,
+      "text": "Note down everyone's skills \nand create our Teams \nWebsite!",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "baseline": 68,
+      "containerId": "x9WH6RpYov7CO_kHhsCe3",
+      "originalText": "Note down everyone's skills and create our Teams Website!",
+      "lineHeight": 1.25
+    }
+  ],
+  "appState": {
+    "gridSize": null,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}

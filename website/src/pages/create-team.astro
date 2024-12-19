@@ -1,0 +1,96 @@
+---
+import sunriseTheme from '../assets/sunriseTheme.svg';
+---
+
+<div id="create-team-container">
+  <img id="background" src={sunriseTheme.src} alt="Sunrise Theme Background" fetchpriority="high" />
+  <main>
+    <section id="create-team">
+      <h1>Create Your Team</h1>
+      <form id="team-form" method="POST" action="/api/create-team">
+        <label for="team-name">Team Name:</label>
+        <input type="text" id="team-name" name="teamName" required />
+
+        <label for="services">Services Offered:</label>
+        <textarea id="services" name="services" placeholder="List the services your team provides..." required></textarea>
+
+        <label for="contact">Contact Email:</label>
+        <input type="email" id="contact" name="contactEmail" required />
+
+        <button type="submit">Create Team</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Sunrise Teams - Building Stories Together</p>
+  </footer>
+</div>
+
+<style>
+  #background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(50px);
+  }
+
+  #create-team-container {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: linear-gradient(to bottom, #FFF3E0, #FFE0B2);
+    color: #E65100;
+  }
+
+  main {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: rgba(255, 87, 34, 0.1);
+    border: 2px solid #FF5722;
+    border-radius: 10px;
+    padding: 1.5rem;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  input, textarea, button {
+    padding: 0.75rem;
+    border-radius: 5px;
+    border: 1px solid #FF5722;
+  }
+
+  button {
+    background-color: #FF5722;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  button:hover {
+    background-color: #E65100;
+  }
+
+  footer {
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: #F57C00;
+  }
+</style>

@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 528 816" style="background-color: #ffffff">
+    <!-- Gradients and Filters -->
+    <defs>
+        <linearGradient id="sunriseGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#FFF3E0;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#FFE0B2;stop-opacity:1" />
+        </linearGradient>
+        <filter id="shadow">
+            <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+        </filter>
+        <!-- Role Card Gradients -->
+        <linearGradient id="roleGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#FF5722;stop-opacity:0.1" />
+            <stop offset="100%" style="stop-color:#FF8A65;stop-opacity:0.1" />
+        </linearGradient>
+        <linearGradient id="roleGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#FF7043;stop-opacity:0.1" />
+            <stop offset="100%" style="stop-color:#FFAB91;stop-opacity:0.1" />
+        </linearGradient>
+    </defs>
+    
+    <!-- Background -->
+    <rect width="528" height="816" fill="url(#sunriseGradient)"/>
+    
+    <!-- Title Section -->
+    <text x="264" y="80" font-family="Arial, sans-serif" font-size="32" fill="#E65100" text-anchor="middle" filter="url(#shadow)">
+        How Can Everyone Help?
+    </text>
+    
+    <!-- Subtitle -->
+    <text x="264" y="120" font-family="Arial, sans-serif" font-size="24" fill="#F57C00" text-anchor="middle">
+        Roles for Each Family Member
+    </text>
+
+    <!-- Role Cards Container -->
+    <g transform="translate(40, 160)">
+        <!-- Social Media Expert -->
+        <g transform="translate(0, 0)">
+            <rect x="0" y="0" width="448" height="100" rx="15" 
+                  fill="url(#roleGradient1)" stroke="#FF5722" stroke-width="2"/>
+            <text x="20" y="35" font-family="Arial, sans-serif" font-size="20" fill="#E65100" font-weight="bold">
+                Pooja
+            </text>
+            <text x="120" y="35" font-family="Arial, sans-serif" font-size="18" fill="#F57C00">
+                Social Media Expert
+            </text>
+            <text x="20" y="70" font-family="Arial, sans-serif" font-size="16" fill="#E65100">
+                Manage social media strategy and teach volunteers
+            </text>
+        </g>
+
+        <!-- Engineers -->
+        <g transform="translate(0, 120)">
+            <rect x="0" y="0" width="448" height="100" rx="15" 
+                  fill="url(#roleGradient2)" stroke="#FF7043" stroke-width="2"/>
+            <text x="20" y="35" font-family="Arial, sans-serif" font-size="20" fill="#E65100" font-weight="bold">
+                Ankush and Ankit
+            </text>
+            <text x="180" y="35" font-family="Arial, sans-serif" font-size="18" fill="#F57C00">
+                Engineers
+            </text>
+            <text x="20" y="70" font-family="Arial, sans-serif" font-size="16" fill="#E65100">
+                Develop and design the website
+            </text>
+        </g>
+
+        <!-- Community Builders -->
+        <g transform="translate(0, 240)">
+            <rect x="0" y="0" width="448" height="100" rx="15" 
+                  fill="url(#roleGradient1)" stroke="#FF8A65" stroke-width="2"/>
+            <text x="20" y="35" font-family="Arial, sans-serif" font-size="20" fill="#E65100" font-weight="bold">
+                Sattu and Monika
+            </text>
+            <text x="180" y="35" font-family="Arial, sans-serif" font-size="18" fill="#F57C00">
+                Community Builders
+            </text>
+            <text x="20" y="70" font-family="Arial, sans-serif" font-size="16" fill="#E65100">
+                Plan grassroots projects and community engagement
+            </text>
+        </g>
+
+        <!-- Content Creators -->
+        <g transform="translate(0, 360)">
+            <rect x="0" y="0" width="448" height="100" rx="15" 
+                  fill="url(#roleGradient2)" stroke="#FF9800" stroke-width="2"/>
+            <text x="20" y="35" font-family="Arial, sans-serif" font-size="20" fill="#E65100" font-weight="bold">
+                Misty and Arya
+            </text>
+            <text x="180" y="35" font-family="Arial, sans-serif" font-size="18" fill="#F57C00">
+                Content Creators
+            </text>
+            <text x="20" y="70" font-family="Arial, sans-serif" font-size="16" fill="#E65100">
+                Help with storytelling and creative writing
+            </text>
+        </g>
+
+        <!-- Solution Architect -->
+        <g transform="translate(0, 480)">
+            <rect x="0" y="0" width="448" height="100" rx="15" 
+                  fill="url(#roleGradient1)" stroke="#FFA726" stroke-width="2"/>
+            <text x="20" y="35" font-family="Arial, sans-serif" font-size="20" fill="#E65100" font-weight="bold">
+                You
+            </text>
+            <text x="120" y="35" font-family="Arial, sans-serif" font-size="18" fill="#F57C00">
+                Solution Architect
+            </text>
+            <text x="20" y="70" font-family="Arial, sans-serif" font-size="16" fill="#E65100">
+                Guide technical implementation and strategy
+            </text>
+        </g>
+    </g>
+
+    <!-- Decorative Elements -->
+    <circle cx="450" cy="150" r="40" fill="#FF9800" opacity="0.1"/>
+    <circle cx="80" cy="700" r="30" fill="#FF5722" opacity="0.1"/>
+
+    <!-- Bottom Connecting Element -->
+    <path d="M0,816 C132,786 396,786 528,816" 
+          fill="#FFB74D" 
+          opacity="0.3"/>
+</svg>

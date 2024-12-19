@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 528 816" style="background-color: #ffffff">
+    <!-- Gradients and Filters -->
+    <defs>
+        <linearGradient id="sunriseGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#FFF3E0;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#FFE0B2;stop-opacity:1" />
+        </linearGradient>
+        <filter id="shadow">
+            <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+        </filter>
+    </defs>
+    
+    <!-- Background -->
+    <rect width="528" height="816" fill="url(#sunriseGradient)"/>
+    
+    <!-- Title Section -->
+    <text x="264" y="80" font-family="Arial, sans-serif" font-size="32" fill="#E65100" text-anchor="middle" filter="url(#shadow)">
+        Getting Started
+    </text>
+    
+    <!-- Subtitle -->
+    <text x="264" y="120" font-family="Arial, sans-serif" font-size="24" fill="#F57C00" text-anchor="middle">
+        Step-by-Step Approach
+    </text>
+
+    <!-- Steps Container -->
+    <g transform="translate(60, 160)">
+        <!-- Step 1: Workshop -->
+        <g>
+            <rect x="0" y="0" width="408" height="140" rx="15" 
+                  fill="#FF5722" fill-opacity="0.1" stroke="#FF5722" stroke-width="2"/>
+            <text x="20" y="35" font-family="Arial, sans-serif" font-size="20" fill="#E65100" font-weight="bold">
+                Step 1: Participate in the Workshop
+            </text>
+            <line x1="20" y1="50" x2="388" y2="50" stroke="#FF5722" stroke-width="1" opacity="0.3"/>
+            <text x="40" y="80" font-family="Arial, sans-serif" font-size="16" fill="#E65100">
+                • Identify our skills (software, social media)
+            </text>
+            <text x="40" y="110" font-family="Arial, sans-serif" font-size="16" fill="#E65100">
+                • Brainstorm project ideas and goals
+            </text>
+        </g>
+
+        <!-- Step 2: MVP -->
+        <g transform="translate(0, 160)">
+            <rect x="0" y="0" width="408" height="140" rx="15" 
+                  fill="#FF7043" fill-opacity="0.1" stroke="#FF7043" stroke-width="2"/>
+            <text x="20" y="35" font-family="Arial, sans-serif" font-size="20" fill="#E65100" font-weight="bold">
+                Step 2: Build the MVP
+            </text>
+            <line x1="20" y1="50" x2="388" y2="50" stroke="#FF7043" stroke-width="1" opacity="0.3"/>
+            <text x="40" y="80" font-family="Arial, sans-serif" font-size="16" fill="#E65100">
+                • Set up simple website to showcase work
+            </text>
+            <text x="40" y="110" font-family="Arial, sans-serif" font-size="16" fill="#E65100">
+                • Add features for hiring and engagement
+            </text>
+        </g>
+
+        <!-- Step 3: Volunteering -->
+        <g transform="translate(0, 320)">
+            <rect x="0" y="0" width="408" height="140" rx="15" 
+                  fill="#FF9800" fill-opacity="0.1" stroke="#FF9800" stroke-width="2"/>
+            <text x="20" y="35" font-family="Arial, sans-serif" font-size="20" fill="#E65100" font-weight="bold">
+                Step 3: Start Volunteering
+            </text>
+            <line x1="20" y1="50" x2="388" y2="50" stroke="#FF9800" stroke-width="1" opacity="0.3"/>
+            <text x="40" y="80" font-family="Arial, sans-serif" font-size="16" fill="#E65100">
+                • Assign small community projects
+            </text>
+            <text x="40" y="110" font-family="Arial, sans-serif" font-size="16" fill="#E65100">
+                • Track progress and celebrate wins
+            </text>
+        </g>
+
+        <!-- Step 4: Stories -->
+        <g transform="translate(0, 480)">
+            <rect x="0" y="0" width="408" height="140" rx="15" 
+                  fill="#FFA726" fill-opacity="0.1" stroke="#FFA726" stroke-width="2"/>
+            <text x="20" y="35" font-family="Arial, sans-serif" font-size="20" fill="#E65100" font-weight="bold">
+                Step 4: Share Stories
+            </text>
+            <line x1="20" y1="50" x2="388" y2="50" stroke="#FFA726" stroke-width="1" opacity="0.3"/>
+            <text x="40" y="80" font-family="Arial, sans-serif" font-size="16" fill="#E65100">
+                • Publish family and impact stories
+            </text>
+            <text x="40" y="110" font-family="Arial, sans-serif" font-size="16" fill="#E65100">
+                • Create engaging social media content
+            </text>
+        </g>
+    </g>
+
+    <!-- Connecting Lines between Steps -->
+    <g stroke="#FF5722" stroke-width="2" stroke-dasharray="4,4" opacity="0.5">
+        <line x1="264" y1="300" x2="264" y2="320"/>
+        <line x1="264" y1="460" x2="264" y2="480"/>
+        <line x1="264" y1="620" x2="264" y2="640"/>
+    </g>
+
+    <!-- Bottom Connecting Element -->
+    <path d="M0,816 C132,786 396,786 528,816" 
+          fill="#FFB74D" 
+          opacity="0.3"/>
+</svg>
