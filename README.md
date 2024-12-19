@@ -1,5 +1,7 @@
 # Alphabeta Website
 
+Hello Everyone, this is our playgound website where we learn programming and social media.
+
 ```sh
 npm create astro@latest -- --template basics
 ```
