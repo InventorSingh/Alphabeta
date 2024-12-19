@@ -1,46 +1,59 @@
 ---
-import astroLogo from '../assets/astro.svg';
 import sunriseTheme from '../assets/sunriseTheme.svg';
-import alphabetaLogo from '../assets/logo.svg';
+import alphabetaLogo from '../assets/alphabeta-logo.svg';
 ---
 
 <div id="container">
 	<img id="background" src={sunriseTheme.src} alt="Sunrise Theme Background" fetchpriority="high" />
 	<main>
 		<section id="hero">
-			<img id="logo" src={alphabetaLogo.src} alt="Alphabeta Logo" width="100" />
-			<h1>Welcome to Alphabeta</h1>
+			<img id="logo" src={alphabetaLogo.src} alt="Alphabeta Logo" />
+			<h1>Technology with a ❤️</h1>
 			<p>
-				Empowering volunteers to showcase their skills, learn from experts, and make a meaningful impact by joining dynamic teams.
+				Alphabeta combines cutting-edge technology services with a passion for community empowerment. We deliver high-quality software solutions to businesses while helping volunteers learn, grow, and make an impact.
 			</p>
 			<section id="actions">
-				<!-- <a class="button" href="/create-team">Create a Team</a> -->
-				<a href="/featured-teams" class="button secondary">Explore Featured Teams</a>
-				<a href="/community-projects" class="button">Community Projects</a>
-				<a href="/volunteer" class="button secondary">Volunteer with Us</a>
+				<a class="button" href="/volunteer">Join as a Volunteer</a>
+				<a href="/services" class="button">Hire Us</a>
+				<a href="/community-projects" class="button secondary">Explore Projects</a>
 			</section>
 		</section>
-		<section id="volunteer-highlights">
-			<h2>Why Volunteer with Alphabeta?</h2>
-			<ul>
-				<li>Showcase your unique skills and talents.</li>
-				<li>Learn programming, social media, and business skills through real projects.</li>
-				<li>Participate in interviews and mentoring sessions with experienced teams.</li>
-				<li>Collaborate on meaningful community projects.</li>
-			</ul>
+
+		<section id="offerings">
+			<h2>What We Offer</h2>
+			<div class="offer-grid">
+				<div class="offer-card">
+					<h3>For Businesses</h3>
+					<p>
+						Custom software development, marketing services, and skilled team partnerships to bring your projects to life.
+					</p>
+					<a href="/services" class="button">Learn More</a>
+				</div>
+				<div class="offer-card">
+					<h3>For the Community</h3>
+					<p>
+						Volunteer opportunities to build skills in software, marketing, and leadership through real-world projects.
+					</p>
+					<a href="/volunteer" class="button secondary">Get Involved</a>
+				</div>
+			</div>
+		</section>
+
+		<section id="projects">
+			<h2>Community Projects</h2>
+			<p>
+				Explore the impactful projects we're building together with our volunteers and partners.
+			</p>
+			<a href="/community-projects" class="button">Explore Projects</a>
 		</section>
 	</main>
 
 	<footer>
-		<p>&copy; 2024 Alphabeta - Building Future</p>
+		<p>&copy; 2024 Alphabeta - Empowering Technology and Communities</p>
 	</footer>
 </div>
 
 <style>
-	#logo {
-		width: 200px;
-		height: auto; /* optional, to maintain aspect ratio */
-	}
 	#background {
 		position: fixed;
 		top: 0;
@@ -65,6 +78,11 @@ import alphabetaLogo from '../assets/logo.svg';
 	main {
 		text-align: center;
 		padding: 2rem;
+	}
+
+	#logo {
+		width: 100px;
+		margin-bottom: 1rem;
 	}
 
 	#hero {
@@ -101,46 +119,4 @@ import alphabetaLogo from '../assets/logo.svg';
 	}
 
 	#actions a:hover {
-		background: linear-gradient(to right, #E65100, #FF5722);
-	}
-
-	#volunteer-highlights {
-		background: rgba(255, 87, 34, 0.05);
-		border: 2px solid #FF7043;
-		border-radius: 10px;
-		padding: 1.5rem;
-		margin-top: 2rem;
-	}
-
-	#volunteer-highlights h2 {
-		font-size: 1.75rem;
-		margin-bottom: 1rem;
-	}
-
-	#volunteer-highlights ul {
-		list-style: none;
-		padding: 0;
-		font-size: 1rem;
-	}
-
-	#volunteer-highlights ul li {
-		margin-bottom: 0.5rem;
-		padding-left: 1.5rem;
-		text-align: left;
-		position: relative;
-	}
-
-	#volunteer-highlights ul li:before {
-		content: '\2022';
-		color: #FF5722;
-		font-weight: bold;
-		position: absolute;
-		left: 0;
-	}
-
-	footer {
-		margin-top: 2rem;
-		font-size: 1rem;
-		color: #F57C00;
-	}
-</style>
+		bac

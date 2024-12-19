@@ -1,0 +1,131 @@
+---
+import sunriseTheme from '../../assets/sunriseTheme.svg';
+---
+
+<div id="social-media-container">
+  <img id="background" src={sunriseTheme.src} alt="Sunrise Theme Background" fetchpriority="high" />
+  <main>
+    <section id="project-details">
+      <h1>Social Media for Nonprofits</h1>
+      <p>
+        Our Social Media for Nonprofits initiative empowers organizations to amplify their voices and connect with their communities. Volunteers will collaborate with nonprofits to craft impactful campaigns that spread their message effectively and creatively.
+      </p>
+
+      <h2>Project Goals</h2>
+      <ul>
+        <li><strong>Increase Visibility:</strong> Help nonprofits reach a wider audience through strategic social media presence.</li>
+        <li><strong>Engage Communities:</strong> Create engaging content that inspires action and builds strong connections.</li>
+        <li><strong>Teach Best Practices:</strong> Equip nonprofits with long-term social media strategies and tools.</li>
+      </ul>
+
+      <h2>What Volunteers Will Gain</h2>
+      <ul>
+        <li>Hands-on experience designing and managing social media campaigns.</li>
+        <li>Skills in content creation, analytics, and audience engagement.</li>
+        <li>The opportunity to make a meaningful difference by supporting vital causes.</li>
+      </ul>
+
+      <h2>Why This Project Matters</h2>
+      <p>
+        Social media is a powerful tool for change, but many nonprofits lack the resources or expertise to leverage it effectively. This project bridges that gap, enabling organizations to amplify their impact and reach the communities they serve.
+      </p>
+
+      <h2>Volunteer Roles</h2>
+      <p>
+        Volunteers can contribute in various ways:
+      </p>
+      <ul>
+        <li><strong>Content Creators:</strong> Develop posts, videos, and graphics tailored to each nonprofit's mission.</li>
+        <li><strong>Strategists:</strong> Plan social media campaigns that align with organizational goals.</li>
+        <li><strong>Analysts:</strong> Measure campaign performance and recommend improvements.</li>
+      </ul>
+
+      <a href="/community-projects" class="button">Back to Community Projects</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Alphabeta - Empowering Communities for a Sustainable Future</p>
+  </footer>
+</div>
+
+<style>
+  #background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(50px);
+  }
+
+  #social-media-container {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #FFF3E0, #FFE0B2);
+    color: #E65100;
+  }
+
+  main {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  #project-details {
+    padding: 16px;
+    border-radius: 10px;
+    background: rgba(255, 87, 34, 0.1);
+    border: 2px solid #FF5722;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    text-align: left;
+  }
+
+  #project-details h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  #project-details p, #project-details ul {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  #project-details h2 {
+    font-size: 1.75rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  #project-details ul {
+    list-style: disc;
+    padding-left: 2rem;
+  }
+
+  .button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 10px 20px;
+    color: white;
+    background: linear-gradient(to right, #FF9800, #FF5722);
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+
+  .button:hover {
+    background: linear-gradient(to right, #E65100, #FF5722);
+  }
+
+  footer {
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: #F57C00;
+  }
+</style>

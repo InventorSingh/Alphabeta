@@ -1,0 +1,184 @@
+---
+import sunriseTheme from '../assets/sunriseTheme.svg';
+import alphabetaLogo from '../assets/alphabeta-logo.svg';
+import Footer from '../components/Footer.astro';
+---
+
+<div id="business-container">
+  <img id="background" src={sunriseTheme.src} alt="Sunrise Theme Background" fetchpriority="high" />
+  <main>
+    <section id="hero">
+      <img id="logo" src={alphabetaLogo.src} alt="Alphabeta Logo" />
+      <h1>Empowering Businesses with Custom Solutions</h1>
+      <p>
+        At Alphabeta, we provide high-quality custom software development and marketing services tailored to meet your business needs. Our skilled teams bring creativity, expertise, and efficiency to every project, ensuring impactful results that drive success.
+      </p>
+      <a class="button" href="#services">Explore Our Services</a>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="service-grid">
+        <div class="service-card">
+          <h3>Custom Software Development</h3>
+          <p>
+            Build powerful, scalable software solutions tailored to your unique business needs, leveraging the latest technologies.
+          </p>
+        </div>
+        <div class="service-card">
+          <h3>Marketing Services</h3>
+          <p>
+            Amplify your brand with strategic campaigns, creative content, and data-driven marketing insights.
+          </p>
+        </div>
+        <div class="service-card">
+          <h3>Team Partnerships</h3>
+          <p>
+            Hire our experienced teams to support your projects and scale your technology or marketing operations effectively.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="why-us">
+      <h2>Why Partner with Alphabeta?</h2>
+      <ul>
+        <li><strong>Expertise:</strong> Our teams are skilled in modern technologies and innovative strategies.</li>
+        <li><strong>Customization:</strong> Solutions designed specifically to address your challenges and goals.</li>
+        <li><strong>Impact:</strong> Every project supports our mission of combining technology with community service.</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Let's Build Something Great Together</h2>
+      <p>
+        Ready to take your business to the next level? Contact us today to discuss your project and discover how Alphabeta can help you achieve your goals.
+      </p>
+      <a class="button" href="/contact">Get in Touch</a>
+    </section>
+  </main>
+
+  <Footer />
+</div>
+
+<style>
+  #background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(50px);
+  }
+
+  #business-container {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #FFF3E0, #FFE0B2);
+    color: #E65100;
+  }
+
+  main {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  #logo {
+    width: 100px;
+    margin-bottom: 1rem;
+  }
+
+  #hero {
+    padding: 16px;
+    border-radius: 10px;
+    background: rgba(255, 87, 34, 0.1);
+    border: 2px solid #FF5722;
+    margin-bottom: 2rem;
+  }
+
+  #hero p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  #services {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    text-align: left;
+  }
+
+  .service-grid {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .service-card {
+    background: rgba(255, 87, 34, 0.1);
+    border: 2px solid #FF7043;
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 300px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .service-card p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  #why-us ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  #why-us ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  #why-us ul li:before {
+    content: '\2022';
+    color: #FF5722;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+  }
+
+  .button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 10px 20px;
+    color: white;
+    background: linear-gradient(to right, #FF9800, #FF5722);
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+
+  .button:hover {
+    background: linear-gradient(to right, #E65100, #FF5722);
+  }
+
+  footer {
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: #F57C00;
+  }
+</style>

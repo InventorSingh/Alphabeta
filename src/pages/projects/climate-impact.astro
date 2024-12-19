@@ -1,0 +1,133 @@
+---
+import sunriseTheme from '../../assets/sunriseTheme.svg';
+import Footer from '../../components/Footer.astro';
+---
+
+<div id="climate-impact-container">
+  <img id="background" src={sunriseTheme.src} alt="Sunrise Theme Background" fetchpriority="high" />
+  <main>
+    <section id="project-details">
+      <h1>Climate Impact Explorer</h1>
+      <p>
+        The Climate Impact Explorer is a collaborative project designed to help communities understand how climate change affects natural resources around them. Built using cutting-edge tools like Astro and Cloudflare, this project empowers volunteers to gain real-world experience in web development, data science, and climate research while creating a valuable resource for the community.
+      </p>
+      <h2>What Volunteers Will Learn</h2>
+      <ul>
+        <li><strong>Astro Framework:</strong> Learn how to build fast, modern websites with Astro.</li>
+        <li><strong>Cloudflare:</strong> Gain experience in scalable backend development using Cloudflare Workers and KV storage.</li>
+        <li><strong>Data Science:</strong> Work with open datasets to extract meaningful insights and display them effectively.</li>
+        <li><strong>Mapping Technologies:</strong> Integrate tools like Mapbox or Leaflet.js for interactive maps.</li>
+        <li><strong>Team Collaboration:</strong> Participate in a real-world software development project, collaborating with team members to deliver a meaningful product.</li>
+      </ul>
+
+      <h2>Key Features of the Climate Impact Explorer</h2>
+      <ul>
+        <li><strong>Location-Based Insights:</strong> Enter an address or share your location to see nearby natural resources.</li>
+        <li><strong>Climate Data Visualizations:</strong> Explore the impact of climate change on resources like forests, rivers, and parks.</li>
+        <li><strong>Interactive Map:</strong> View a dynamic map with markers and overlays that highlight resource locations and climate impacts.</li>
+        <li><strong>Community Contributions:</strong> Allow users to report local observations, upload images, and contribute to the database.</li>
+        <li><strong>Educational Content:</strong> Provide actionable tips for individuals and communities to combat climate change.</li>
+      </ul>
+
+      <h2>Why Join This Project?</h2>
+      <p>
+        By volunteering for the Climate Impact Explorer project, you’ll not only gain valuable technical skills but also contribute to a cause that makes a difference. This is your opportunity to:
+      </p>
+      <ul>
+        <li>Work with experienced mentors in software development and data science.</li>
+        <li>Build a portfolio-worthy project that showcases your skills.</li>
+        <li>Make a tangible impact on climate awareness and community engagement.</li>
+      </ul>
+
+      <h2>Next Steps</h2>
+      <p>
+        Interested in joining? Start by reaching out through our volunteer page, or explore the technologies used in this project. Together, we can build a tool that informs, educates, and inspires action.
+      </p>
+
+      <a href="/community-projects" class="button">Back to Community Projects</a>
+    </section>
+  </main>
+
+  <Footer />
+</div>
+
+<style>
+  #background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(50px);
+  }
+
+  #climate-impact-container {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #FFF3E0, #FFE0B2);
+    color: #E65100;
+  }
+
+  main {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  #project-details {
+    padding: 16px;
+    border-radius: 10px;
+    background: rgba(255, 87, 34, 0.1);
+    border: 2px solid #FF5722;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    text-align: left;
+  }
+
+  #project-details h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  #project-details p, #project-details ul {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  #project-details h2 {
+    font-size: 1.75rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  #project-details ul {
+    list-style: disc;
+    padding-left: 2rem;
+  }
+
+  .button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 10px 20px;
+    color: white;
+    background: linear-gradient(to right, #FF9800, #FF5722);
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+
+  .button:hover {
+    background: linear-gradient(to right, #E65100, #FF5722);
+  }
+
+  footer {
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: #F57C00;
+  }
+</style>
