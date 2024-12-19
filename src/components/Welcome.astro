@@ -1,12 +1,14 @@
 ---
 import astroLogo from '../assets/astro.svg';
 import sunriseTheme from '../assets/sunriseTheme.svg';
+import alphabetaLogo from '../assets/logo.svg';
 ---
 
 <div id="container">
 	<img id="background" src={sunriseTheme.src} alt="Sunrise Theme Background" fetchpriority="high" />
 	<main>
 		<section id="hero">
+			<img id="logo" src={alphabetaLogo.src} alt="Alphabeta Logo" width="100" />
 			<h1>Welcome to Alphabeta</h1>
 			<p>
 				Empowering volunteers to showcase their skills, learn from experts, and make a meaningful impact by joining dynamic teams.
@@ -34,6 +36,10 @@ import sunriseTheme from '../assets/sunriseTheme.svg';
 </div>
 
 <style>
+	#logo {
+		width: 200px;
+		height: auto; /* optional, to maintain aspect ratio */
+	}
 	#background {
 		position: fixed;
 		top: 0;
