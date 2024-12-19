@@ -1,6 +1,7 @@
 ---
 import sunriseTheme from '../assets/sunriseTheme.svg';
 import alphabetaLogo from '../assets/alphabeta-logo.svg';
+import Footer from './Footer.astro';
 ---
 
 <div id="container">
@@ -49,9 +50,7 @@ import alphabetaLogo from '../assets/alphabeta-logo.svg';
 		</section>
 	</main>
 
-	<footer>
-		<p>&copy; 2024 Alphabeta - Empowering Technology and Communities</p>
-	</footer>
+	<Footer />
 </div>
 
 <style>
@@ -62,18 +61,19 @@ import alphabetaLogo from '../assets/alphabeta-logo.svg';
 		width: 100%;
 		height: 100%;
 		z-index: -1;
-		filter: blur(50px);
+		filter: blur(30px) brightness(1.2);
 	}
 
 	#container {
-		font-family: Arial, sans-serif;
-		height: 100%;
+		font-family: 'Montserrat', Arial, sans-serif;
+		height: auto;
+		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
-		background: linear-gradient(to bottom, #FFF3E0, #FFE0B2);
+		background: linear-gradient(to bottom, #FFF3E0, #FFCC80);
 		color: #E65100;
+		overflow-y: auto;
 	}
 
 	main {
@@ -82,42 +82,112 @@ import alphabetaLogo from '../assets/alphabeta-logo.svg';
 	}
 
 	#logo {
-		width: 100px;
+		width: 240px;
 		margin-bottom: 1rem;
 	}
 
 	#hero {
-		padding: 16px;
-		border-radius: 10px;
-		background: rgba(255, 87, 34, 0.1);
-		border: 2px solid #FF5722;
-		margin-bottom: 2rem;
+		padding: 24px;
+		border-radius: 15px;
+		background: rgba(255, 152, 0, 0.15);
+		border: 2px solid #FF9800;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+		margin-bottom: 2.5rem;
+	}
+
+	#hero h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		font-weight: 700;
 	}
 
 	#hero p {
-		font-size: 1.25rem;
-		margin-bottom: 1.5rem;
+		font-size: 1.5rem;
+		margin-bottom: 2rem;
+		line-height: 1.8;
 	}
 
 	#actions {
 		display: flex;
-		gap: 16px;
+		gap: 20px;
 		justify-content: center;
 	}
 
 	#actions a {
 		display: inline-block;
-		padding: 10px 20px;
+		padding: 12px 24px;
 		color: white;
-		background: linear-gradient(to right, #FF9800, #FF5722);
-		border-radius: 10px;
+		background: linear-gradient(to right, #FFA726, #FF5722);
+		border-radius: 12px;
 		text-decoration: none;
-		transition: background-color 0.3s;
+		transition: all 0.3s ease;
+		font-size: 1.2rem;
+		font-weight: bold;
 	}
 
 	#actions a.secondary {
-		background: linear-gradient(to right, #FFA726, #FF7043);
+		background: linear-gradient(to right, #FFCC80, #FF7043);
 	}
 
 	#actions a:hover {
-		bac
+		transform: scale(1.05);
+		background: linear-gradient(to right, #E65100, #FF5722);
+	}
+
+	#offerings {
+		margin: 3rem 0;
+		padding: 2rem;
+		background: rgba(255, 183, 77, 0.15);
+		border-radius: 12px;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	}
+
+	.offer-grid {
+		display: flex;
+		gap: 2rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.offer-card {
+		background: rgba(255, 152, 0, 0.15);
+		border: 2px solid #FF7043;
+		border-radius: 12px;
+		padding: 1.5rem;
+		width: 300px;
+		text-align: left;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+
+	.offer-card h3 {
+		font-size: 1.8rem;
+		margin-bottom: 0.8rem;
+	}
+
+	.offer-card p {
+		font-size: 1.1rem;
+		margin-bottom: 1.2rem;
+		line-height: 1.6;
+	}
+
+	#projects {
+		margin: 3rem 0;
+	}
+
+	#projects h2 {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	#projects p {
+		font-size: 1.2rem;
+		margin-bottom: 1.5rem;
+		line-height: 1.8;
+	}
+
+	footer {
+		margin-top: 3rem;
+		font-size: 1rem;
+		color: #FF7043;
+	}
+</style>
