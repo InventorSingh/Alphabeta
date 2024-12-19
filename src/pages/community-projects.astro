@@ -1,0 +1,122 @@
+---
+import sunriseTheme from '../assets/sunriseTheme.svg';
+---
+
+<div id="community-projects-container">
+  <img id="background" src={sunriseTheme.src} alt="Sunrise Theme Background" fetchpriority="high" />
+  <main>
+    <section id="community-projects">
+      <h1>Our Community Projects</h1>
+      <p>Join our efforts to make an impact with these exciting community projects.</p>
+
+      <div class="projects">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <h2>Digital Literacy Workshops</h2>
+          <p>
+            Empower individuals with essential digital skills like email management, safe browsing, and using productivity tools.
+          </p>
+          <a href="/projects/digital-literacy" class="button">Learn More</a>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <h2>Social Media for Nonprofits</h2>
+          <p>
+            Help nonprofits spread their message by creating impactful social media campaigns.
+          </p>
+          <a href="/projects/social-media" class="button">Learn More</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Alphabeta - Building Future</p>
+  </footer>
+</div>
+
+<style>
+  #background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(50px);
+  }
+
+  #community-projects-container {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #FFF3E0, #FFE0B2);
+    color: #E65100;
+  }
+
+  main {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  #community-projects h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  #community-projects p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .projects {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .project-card {
+    background: rgba(255, 87, 34, 0.1);
+    border: 2px solid #FF5722;
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 300px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .project-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-card p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 10px 16px;
+    color: white;
+    background: linear-gradient(to right, #FF9800, #FF5722);
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+
+  .button:hover {
+    background: linear-gradient(to right, #E65100, #FF5722);
+  }
+
+  footer {
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: #F57C00;
+  }
+</style>
