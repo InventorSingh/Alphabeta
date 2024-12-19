@@ -4,14 +4,14 @@
   "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
   "elements": [
     {
-      "id": "x9WH6RpYov7CO_kHhsCe3",
-      "type": "rectangle",
-      "x": 251,
-      "y": 115.4000015258789,
-      "width": 294.4000244140625,
-      "height": 118.40003204345703,
+      "id": "dhEehkUgMiXkV2vWHWuCs",
+      "type": "image",
+      "x": 109.24446275499133,
+      "y": 87.6249885559082,
+      "width": 799.6000298394097,
+      "height": 449.77501678466797,
       "angle": 0,
-      "strokeColor": "#1e1e1e",
+      "strokeColor": "transparent",
       "backgroundColor": "transparent",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -20,30 +20,29 @@
       "opacity": 100,
       "groupIds": [],
       "frameId": null,
-      "roundness": {
-        "type": 3
-      },
-      "seed": 606138224,
-      "version": 35,
-      "versionNonce": 1583425936,
+      "roundness": null,
+      "seed": 858724547,
+      "version": 188,
+      "versionNonce": 712215043,
       "isDeleted": false,
-      "boundElements": [
-        {
-          "type": "text",
-          "id": "QBOkH9cd0RYdW7WWr4yJc"
-        }
-      ],
-      "updated": 1734568497477,
+      "boundElements": null,
+      "updated": 1734583891219,
       "link": null,
-      "locked": false
+      "locked": false,
+      "status": "pending",
+      "fileId": "daca0efd84db61d14dc331a08925e3dd53af73e0",
+      "scale": [
+        1,
+        1
+      ]
     },
     {
-      "id": "QBOkH9cd0RYdW7WWr4yJc",
+      "id": "P6ZIHOQXyzp-PSy_wRyYj",
       "type": "text",
-      "x": 261.00013732910156,
-      "y": 137.10001754760742,
-      "width": 274.3997497558594,
-      "height": 75,
+      "x": 498.4000244140625,
+      "y": 342.00002670288086,
+      "width": 117.1875,
+      "height": 24,
       "angle": 0,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
@@ -55,28 +54,116 @@
       "groupIds": [],
       "frameId": null,
       "roundness": null,
-      "seed": 1397892464,
-      "version": 62,
-      "versionNonce": 1408683408,
+      "seed": 1526309507,
+      "version": 39,
+      "versionNonce": 186976205,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1734568509119,
+      "updated": 1734584034318,
       "link": null,
       "locked": false,
-      "text": "Note down everyone's skills \nand create our Teams \nWebsite!",
+      "text": "2024-12-19",
       "fontSize": 20,
-      "fontFamily": 1,
-      "textAlign": "center",
-      "verticalAlign": "middle",
-      "baseline": 68,
-      "containerId": "x9WH6RpYov7CO_kHhsCe3",
-      "originalText": "Note down everyone's skills and create our Teams Website!",
-      "lineHeight": 1.25
+      "fontFamily": 3,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 19,
+      "containerId": null,
+      "originalText": "2024-12-19",
+      "lineHeight": 1.2
+    },
+    {
+      "id": "s10-eqUfKnDX9lpKvhJbe",
+      "type": "image",
+      "x": 1168.2647562678746,
+      "y": 240.10865306929526,
+      "width": 100,
+      "height": 100,
+      "angle": 0,
+      "strokeColor": "transparent",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": null,
+      "seed": 74791053,
+      "version": 19,
+      "versionNonce": 391555075,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1734584149999,
+      "link": null,
+      "locked": false,
+      "status": "pending",
+      "fileId": "d3144ffe16ad2e742b386e59aa0bc0e44f0953d2",
+      "scale": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "FvHPsE5qJJiHRlDnKZtT9",
+      "type": "image",
+      "x": 790.9543441723678,
+      "y": 104.99916716641877,
+      "width": 100,
+      "height": 100,
+      "angle": 0,
+      "strokeColor": "transparent",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": null,
+      "seed": 217910915,
+      "version": 46,
+      "versionNonce": 866343021,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1734584371007,
+      "link": null,
+      "locked": false,
+      "status": "pending",
+      "fileId": "c61a5f42553f712c16d1f1e31e28bc04e366440c",
+      "scale": [
+        1,
+        1
+      ]
     }
   ],
   "appState": {
     "gridSize": null,
     "viewBackgroundColor": "#ffffff"
   },
-  "files": {}
+  "files": {
+    "daca0efd84db61d14dc331a08925e3dd53af73e0": {
+      "mimeType": "image/svg+xml",
+      "id": "daca0efd84db61d14dc331a08925e3dd53af73e0",
+      "dataURL": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgwIiBoZWlnaHQ9IjcyMCIgdmlld0JveD0iMCAwIDEyODAgNzIwIiBzdHlsZT0iYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KHRvIGJvdHRvbSwgI0ZGRjNFMCwgI0ZGRTBCMik7Ij4KICA8IS0tIEJhY2tncm91bmQgLS0+CiAgPHJlY3Qgd2lkdGg9IjEyODAiIGhlaWdodD0iNzIwIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIvPgogIAogIDwhLS0gQmFja2dyb3VuZCBHcmFkaWVudCAtLT4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjogI0ZGRjNFMDsgc3RvcC1vcGFjaXR5OiAxIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6ICNGRkUwQjI7IHN0b3Atb3BhY2l0eTogMSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CgogIDwhLS0gQ2VudHJhbCBHbG93IC0tPgogIDxjaXJjbGUgY3g9IjY0MCIgY3k9IjM2MCIgcj0iMzAwIiBmaWxsPSJyZ2JhKDI1NSwgMTgzLCA3NywgMC4yKSIvPgogIDxjaXJjbGUgY3g9IjY0MCIgY3k9IjM2MCIgcj0iMjAwIiBmaWxsPSJyZ2JhKDI1NSwgMTUyLCAwLCAwLjQpIi8+CgogIDwhLS0gVGV4dCBTZWN0aW9uIC0tPgogIDx0ZXh0IHg9IjUwJSIgeT0iMzAlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjRTY1MTAwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSJib2xkIj4KICAgIFRFQU0gTUVFVElORwogIDwvdGV4dD4KICA8dGV4dCB4PSI1MCUiIHk9IjQwJSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI0ZGNzA0MyIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjQ4Ij4KICAgIExldCdzIEJ1aWxkIFRvZ2V0aGVyIQogIDwvdGV4dD4KCiAgPCEtLSBMYXB0b3AgSWxsdXN0cmF0aW9uIC0tPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQ4MCwgMzIwKSI+CiAgICA8cmVjdCB4PSI4MCIgeT0iNTAiIHdpZHRoPSIzMjAiIGhlaWdodD0iMTgwIiByeD0iMTAiIGZpbGw9IiNGRjk4MDAiIHN0cm9rZT0iI0ZGNTcyMiIgc3Ryb2tlLXdpZHRoPSI1Ii8+CiAgICA8cmVjdCB4PSIxMDAiIHk9IjcwIiB3aWR0aD0iMjgwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iI0ZGRiIvPgogICAgPHRleHQgeD0iMjQwIiB5PSIxNjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNGRjU3MjIiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyNCIgZm9udC13ZWlnaHQ9ImJvbGQiPgogICAgICBBbHBoYWJldGEgUHJvamVjdAogICAgPC90ZXh0PgogIDwvZz4KCiAgPCEtLSBNb3RpdmF0aW9uYWwgU3VidGV4dCAtLT4KICA8dGV4dCB4PSI1MCUiIHk9Ijg1JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI0Y1N0MwMCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjM2Ij4KICAgIExlYXJuIEdpdCBhbmQgRXhwbG9yZSBPdXIgV2Vic2l0ZSBUb2dldGhlcgogIDwvdGV4dD4KCiAgPCEtLSBEZWNvcmF0aXZlIEljb25zIC0tPgogIDxjaXJjbGUgY3g9IjIwMCIgY3k9IjEwMCIgcj0iNDAiIGZpbGw9IiNGRjcwNDMiIG9wYWNpdHk9IjAuMiIvPgogIDxjaXJjbGUgY3g9IjExMDAiIGN5PSI2MDAiIHI9IjUwIiBmaWxsPSIjRkY1NzIyIiBvcGFjaXR5PSIwLjIiLz4KICA8cGF0aCBkPSJNMTAwMCAyMDAgTDEwNTAgMjUwIEwxMDAwIDMwMCBaIiBmaWxsPSIjRkY3MDQzIiBvcGFjaXR5PSIwLjMiLz4KICA8cGF0aCBkPSJNMjAwIDUwMCBMMjUwIDU1MCBMMjAwIDYwMCBaIiBmaWxsPSIjRkY5ODAwIiBvcGFjaXR5PSIwLjMiLz4KPC9zdmc+",
+      "created": 1734583788627,
+      "lastRetrieved": 1734583788627
+    },
+    "d3144ffe16ad2e742b386e59aa0bc0e44f0953d2": {
+      "mimeType": "image/svg+xml",
+      "id": "d3144ffe16ad2e742b386e59aa0bc0e44f0953d2",
+      "dataURL": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCI+CiAgPCEtLSBHcmFkaWVudCBEZWZpbml0aW9uIC0tPgogIDxkZWZzPgogICAgPHJhZGlhbEdyYWRpZW50IGlkPSJzdW5yaXNlR3JhZGllbnQiIGN4PSI1MCUiIGN5PSI3MCUiIHI9IjUwJSIgZng9IjUwJSIgZnk9IjcwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNGRjk4MDA7IHN0b3Atb3BhY2l0eToxIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I0ZGRjNFMDsgc3RvcC1vcGFjaXR5OjEiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgPC9kZWZzPgoKICA8IS0tIENpcmNsZSBCYWNrZ3JvdW5kIHdpdGggR3JhZGllbnQgLS0+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iNDUiIGZpbGw9InVybCgjc3VucmlzZUdyYWRpZW50KSIvPgoKICA8IS0tIFRleHQgZm9yIEFscGhhIGFuZCBCZXRhIC0tPgogIDx0ZXh0IHg9IjUwIiB5PSI2NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSI2MCIgZm9udC1mYW1pbHk9Ik1vbnRzZXJyYXQsIHNhbnMtc2VyaWYiIGZpbGw9IiNFNjUxMDAiIGZvbnQtd2VpZ2h0PSJib2xkIiBsZXR0ZXItc3BhY2luZz0iLTE1Ij4KICAgIM6xzrIKICA8L3RleHQ+Cjwvc3ZnPg==",
+      "created": 1734584142993,
+      "lastRetrieved": 1734584142993
+    },
+    "c61a5f42553f712c16d1f1e31e28bc04e366440c": {
+      "mimeType": "image/svg+xml",
+      "id": "c61a5f42553f712c16d1f1e31e28bc04e366440c",
+      "dataURL": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCI+CiAgPCEtLSBHcmFkaWVudCBEZWZpbml0aW9uIC0tPgogIDxkZWZzPgogICAgPHJhZGlhbEdyYWRpZW50IGlkPSJzdW5yaXNlR3JhZGllbnQiIGN4PSI1MCUiIGN5PSI3MCUiIHI9IjUwJSIgZng9IjUwJSIgZnk9IjcwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNGRjk4MDA7IHN0b3Atb3BhY2l0eToxIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I0ZGRjNFMDsgc3RvcC1vcGFjaXR5OjEiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgPC9kZWZzPgoKICA8IS0tIENpcmNsZSBCYWNrZ3JvdW5kIHdpdGggR3JhZGllbnQgLS0+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iNDUiIGZpbGw9InVybCgjc3VucmlzZUdyYWRpZW50KSIvPgoKICA8IS0tIFRleHQgZm9yIEFscGhhIGFuZCBCZXRhIC0tPgogIDx0ZXh0IHg9IjUwIiB5PSI2NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSI2MCIgZm9udC1mYW1pbHk9Ik1vbnRzZXJyYXQsIHNhbnMtc2VyaWYiIGZpbGw9IiNFNjUxMDAiIGZvbnQtd2VpZ2h0PSJib2xkIiBsZXR0ZXItc3BhY2luZz0iLTkiPgogICAgzrHOsgogIDwvdGV4dD4KPC9zdmc+",
+      "created": 1734584363364,
+      "lastRetrieved": 1734584363364
+    }
+  }
 }
