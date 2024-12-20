@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="skyGradientIntro" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF4500"/>
+      <stop offset="100%" stop-color="#FFE4B5"/>
+    </linearGradient>
+    
+    <!-- Glowing effect for elements -->
+    <filter id="glowIntro">
+      <feGaussianBlur stdDeviation="3" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Pattern for background -->
+    <pattern id="mandalaPattern" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <circle cx="30" cy="30" r="25" fill="none" stroke="#8B4513" stroke-width="0.5" opacity="0.1"/>
+      <circle cx="30" cy="30" r="15" fill="none" stroke="#8B4513" stroke-width="0.5" opacity="0.1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="800" fill="url(#skyGradientIntro)"/>
+  <rect width="800" height="800" fill="url(#mandalaPattern)"/>
+
+  <!-- Decorative Border -->
+  <rect x="40" y="40" width="720" height="720" fill="none" stroke="#8B4513" stroke-width="2" rx="20"/>
+  
+  <!-- Central Ornate Circle -->
+  <circle cx="400" cy="400" r="250" fill="none" stroke="#8B4513" stroke-width="3"/>
+
+  <!-- Seven Small Circles representing the steps -->
+  <g fill="none" stroke="#8B4513" stroke-width="2">
+    <!-- Nourishment -->
+    <circle cx="400" cy="200" r="40"/>
+    <!-- Strength -->
+    <circle cx="550" cy="250" r="40"/>
+    <!-- Prosperity -->
+    <circle cx="600" cy="400" r="40"/>
+    <!-- Happiness -->
+    <circle cx="550" cy="550" r="40"/>
+    <!-- Family -->
+    <circle cx="400" cy="600" r="40"/>
+    <!-- Harmony -->
+    <circle cx="250" cy="550" r="40"/>
+    <!-- Unity -->
+    <circle cx="200" cy="400" r="40"/>
+    
+    <!-- Connecting lines -->
+    <path d="M400,240 L550,250" opacity="0.5"/>
+    <path d="M550,290 L600,400" opacity="0.5"/>
+    <path d="M600,400 L550,550" opacity="0.5"/>
+    <path d="M550,550 L400,600" opacity="0.5"/>
+    <path d="M400,600 L250,550" opacity="0.5"/>
+    <path d="M250,550 L200,400" opacity="0.5"/>
+    <path d="M200,400 L400,200" opacity="0.5"/>
+  </g>
+
+  <!-- Mini Icons in each circle -->
+  <g fill="none" stroke="#8B4513" stroke-width="1.5">
+    <!-- Nourishment - Grain -->
+    <path d="M400,190 C410,180 420,180 430,190 M370,190 C380,180 390,180 400,190"/>
+    <!-- Strength - Mountains -->
+    <path d="M540,250 L550,235 L560,250"/>
+    <!-- Prosperity - Coin -->
+    <circle cx="600" cy="400" r="15"/>
+    <!-- Happiness - Flower -->
+    <path d="M550,550 C560,540 570,540 580,550 C570,560 560,560 550,550"/>
+    <!-- Family - Tree -->
+    <path d="M400,590 L400,610 M390,600 L410,600"/>
+    <!-- Harmony - Waves -->
+    <path d="M240,550 Q250,540 260,550"/>
+    <!-- Unity - Joined Circles -->
+    <path d="M190,400 C200,390 210,390 220,400"/>
+  </g>
+
+  <!-- Main Title -->
+  <g text-anchor="middle" fill="#8B4513">
+    <text x="400" y="370" font-size="45" font-family="Arial, sans-serif" font-weight="bold">
+      Saptapadi
+    </text>
+    <text x="400" y="430" font-size="35" font-family="Arial, sans-serif">
+      The Seven Steps
+    </text>
+  </g>
+
+  <!-- Subtitle -->
+  <text x="400" y="480" font-size="25" font-family="Arial, sans-serif" text-anchor="middle" fill="#8B4513">
+    Hindu Marriage Vows
+  </text>
+
+  <!-- Description -->
+  <g text-anchor="middle" fill="#8B4513" font-family="Arial, sans-serif">
+    <text x="400" y="675" font-size="20">
+      A Journey Through the Sacred Vows
+    </text>
+    <text x="400" y="697" font-size="20">
+      of Hindu Marriage
+    </text>
+  </g>
+
+  <!-- Social Media Information -->
+  <g text-anchor="middle" fill="#8B4513" font-family="Arial, sans-serif">
+    <text x="400" y="740" font-size="16">
+      Follow our series exploring each sacred step
+    </text>
+    <text x="400" y="785" font-size="16">
+      #Alphabeta #HinduMarriageVows #Saptapadi #SacredUnion
+    </text>
+  </g>
+</svg>

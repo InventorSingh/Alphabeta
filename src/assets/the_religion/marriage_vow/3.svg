@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="skyGradient3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#FFF8DC"/>
+    </linearGradient>
+    <filter id="glow3">
+      <feGaussianBlur stdDeviation="4" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="800" fill="url(#skyGradient3)"/>
+
+  <!-- Decorative Pattern -->
+  <g opacity="0.1" fill="#8B4513">
+    <rect x="20" y="20" width="760" height="760" rx="15"/>
+  </g>
+
+  <!-- Main Circle -->
+  <circle cx="400" cy="400" r="300" fill="none" stroke="#8B4513" stroke-width="2"/>
+
+  <!-- Central Symbol - Prosperity Vessel (Kalash) -->
+  <g transform="translate(400,400)" fill="none" stroke="#8B4513" stroke-width="2">
+    <!-- Kalash Base -->
+    <path d="M-60,80 Q-80,0 -40,-60 Q0,-80 40,-60 Q80,0 60,80 Z"/>
+    <!-- Decorative patterns on Kalash -->
+    <path d="M-30,-20 Q0,-40 30,-20" stroke-width="1.5"/>
+    <path d="M-40,0 Q0,-20 40,0" stroke-width="1.5"/>
+    <path d="M-45,20 Q0,0 45,20" stroke-width="1.5"/>
+    <!-- Coins/prosperity symbols falling -->
+    <g stroke-width="1.5">
+      <circle cx="-50" cy="-90" r="10"/>
+      <circle cx="50" cy="-90" r="10"/>
+      <circle cx="-30" cy="-120" r="10"/>
+      <circle cx="30" cy="-120" r="10"/>
+      <circle cx="0" cy="-140" r="10"/>
+    </g>
+    <!-- Mango leaves at top -->
+    <path d="M-10,-80 Q-20,-100 -5,-110 Q0,-115 5,-110 Q20,-100 10,-80"/>
+    <path d="M-5,-85 Q-15,-105 0,-115 Q5,-120 10,-115 Q25,-105 15,-85"/>
+  </g>
+
+  <!-- Title -->
+  <g text-anchor="middle" fill="#8B4513">
+    <text x="400" y="150" font-size="40" font-family="Arial, sans-serif" font-weight="bold">
+      Third Step: Sampada
+    </text>
+    <text x="400" y="200" font-size="30" font-family="Arial, sans-serif">
+      The Vow of Prosperity
+    </text>
+  </g>
+
+  <!-- Main Text -->
+  <g text-anchor="middle" fill="#8B4513">
+    <text x="400" y="650" font-size="24" font-family="Arial, sans-serif">
+      "We shall share in life's abundance"
+    </text>
+    <text x="400" y="690" font-size="20" font-family="Arial, sans-serif">
+      Growing wealth through righteous means,
+    </text>
+    <text x="400" y="720" font-size="20" font-family="Arial, sans-serif">
+      ensuring prosperity for our family and community
+    </text>
+  </g>
+
+  <!-- Social Media Handle -->
+  <text x="400" y="780" font-size="16" font-family="Arial, sans-serif" text-anchor="middle" fill="#8B4513">
+    #HinduMarriageVows #Saptapadi
+  </text>
+</svg>

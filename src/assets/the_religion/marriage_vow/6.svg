@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="skyGradient6" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#87CEEB"/>
+      <stop offset="100%" stop-color="#E0FFFF"/>
+    </linearGradient>
+    <filter id="glow6">
+      <feGaussianBlur stdDeviation="4" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="800" fill="url(#skyGradient6)"/>
+
+  <!-- Decorative Pattern -->
+  <g opacity="0.1" fill="#8B4513">
+    <rect x="20" y="20" width="760" height="760" rx="15"/>
+  </g>
+
+  <!-- Main Circle -->
+  <circle cx="400" cy="400" r="300" fill="none" stroke="#a26438" stroke-width="2"/>
+
+  <!-- Central Symbol - Harmony Mandala -->
+  <g transform="translate(400,400)" fill="none" stroke="#8B4513">
+    <!-- Outer Ring -->
+    <circle r="150" stroke-width="2"/>
+    
+    <!-- Middle Rings -->
+    <circle r="120" stroke-width="1.5"/>
+    <circle r="90" stroke-width="1.5"/>
+    
+    <!-- Inner Harmony Symbol -->
+    <g>
+      <!-- Yin-Yang inspired curves -->
+      <path d="M0,-60 A60,60 0 0,1 60,0 A60,60 0 0,1 0,60 A60,60 0 0,0 -60,0 A60,60 0 0,0 0,-60" 
+            stroke-width="2"/>
+      <!-- Small circles -->
+      <circle cx="0" cy="-30" r="10"/>
+      <circle cx="0" cy="30" r="10"/>
+    </g>
+
+    <!-- Radiating Elements -->
+    <g stroke-width="1.5">
+      <!-- North -->
+      <path d="M0,-150 L0,-90"/>
+      <path d="M-15,-147 L-9,-88"/>
+      <path d="M15,-147 L9,-88"/>
+      <!-- South -->
+      <path d="M0,150 L0,90"/>
+      <path d="M-15,147 L-9,88"/>
+      <path d="M15,147 L9,88"/>
+      <!-- East -->
+      <path d="M150,0 L90,0"/>
+      <path d="M147,-15 L88,-9"/>
+      <path d="M147,15 L88,9"/>
+      <!-- West -->
+      <path d="M-150,0 L-90,0"/>
+      <path d="M-147,-15 L-88,-9"/>
+      <path d="M-147,15 L-88,9"/>
+    </g>
+
+    <!-- Decorative Elements -->
+    <g stroke-width="1">
+      <!-- Sacred geometry patterns -->
+      <path d="M-106,-106 A150,150 0 0,1 106,-106" opacity="0.6"/>
+      <path d="M-106,106 A150,150 0 0,0 106,106" opacity="0.6"/>
+      
+      <!-- Corner flourishes -->
+      <path d="M-75,-75 Q-65,-65 -55,-75" opacity="0.8"/>
+      <path d="M75,-75 Q65,-65 55,-75" opacity="0.8"/>
+      <path d="M-75,75 Q-65,65 -55,75" opacity="0.8"/>
+      <path d="M75,75 Q65,65 55,75" opacity="0.8"/>
+    </g>
+  </g>
+
+  <!-- Title -->
+  <g text-anchor="middle" fill="#8B4513">
+    <text x="400" y="150" font-size="40" font-family="Arial, sans-serif" font-weight="bold">
+      Sixth Step: Rtu
+    </text>
+    <text x="400" y="200" font-size="30" font-family="Arial, sans-serif">
+      The Vow of Harmony
+    </text>
+  </g>
+
+  <!-- Main Text -->
+  <g text-anchor="middle" fill="#8B4513">
+    <text x="400" y="650" font-size="24" font-family="Arial, sans-serif">
+      "We shall maintain balance in our union"
+    </text>
+    <text x="400" y="690" font-size="20" font-family="Arial, sans-serif">
+      Living in harmony through all seasons,
+    </text>
+    <text x="400" y="720" font-size="20" font-family="Arial, sans-serif">
+      respecting each other's thoughts and beliefs
+    </text>
+  </g>
+
+  <!-- Social Media Handle -->
+  <text x="400" y="780" font-size="16" font-family="Arial, sans-serif" text-anchor="middle" fill="#8B4513">
+    #HinduMarriageVows #Saptapadi
+  </text>
+</svg>
