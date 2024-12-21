@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 528 816" style="background-color: #ffffff">
+    <defs>
+        <linearGradient id="sunriseGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#FFF3E0;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#FFE0B2;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="overlayGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#FF5722;stop-opacity:0.1" />
+            <stop offset="100%" style="stop-color:#FF9800;stop-opacity:0.1" />
+        </linearGradient>
+        <filter id="shadow">
+            <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+        </filter>
+    </defs>
+    
+    <!-- Background -->
+    <rect width="528" height="816" fill="url(#sunriseGradient)"/>
+    
+    <!-- Decorative Sunrise Arc -->
+    <path d="M0,200 C132,100 396,100 528,200" 
+          fill="#FF9800" 
+          opacity="0.2"/>
+    
+    <!-- Page Title -->
+    <g transform="translate(264, 100)">
+        <text x="0" y="0" 
+              font-family="Arial, sans-serif" 
+              font-size="32" 
+              fill="#E65100" 
+              text-anchor="middle" 
+              filter="url(#shadow)">
+            What is Digital Marketing?
+        </text>
+    </g>
+
+    <!-- Content Box -->
+    <g transform="translate(64, 200)">
+        <rect x="0" y="0" width="400" height="330" rx="10"
+              fill="url(#overlayGradient)"
+              stroke="#FF5722"
+              stroke-width="1"/>
+              
+        <text x="20" y="40" 
+              font-family="Arial, sans-serif" 
+              font-size="18" 
+              fill="#E65100">
+            Digital marketing is the use of online
+        </text>
+        <text x="20" y="65" 
+              font-family="Arial, sans-serif" 
+              font-size="18" 
+              fill="#E65100">
+            platforms, strategies, and tools to
+        </text>
+        <text x="20" y="90" 
+              font-family="Arial, sans-serif" 
+              font-size="18" 
+              fill="#E65100">
+            promote products or services, build a
+        </text>
+        <text x="20" y="115" 
+              font-family="Arial, sans-serif" 
+              font-size="18" 
+              fill="#E65100">
+            brand, and connect with potential
+        </text>
+        <text x="20" y="140" 
+              font-family="Arial, sans-serif" 
+              font-size="18" 
+              fill="#E65100">
+            customers.
+        </text>
+
+        <text x="20" y="180" 
+              font-family="Arial, sans-serif" 
+              font-size="18" 
+              fill="#E65100">
+            Why is it Essential for Business Growth?
+        </text>
+        <text x="20" y="205" 
+              font-family="Arial, sans-serif" 
+              font-size="16" 
+              fill="#F57C00">
+            In today’s world, a strong online
+        </text>
+        <text x="20" y="230" 
+              font-family="Arial, sans-serif" 
+              font-size="16" 
+              fill="#F57C00">
+            presence is vital to staying competitive.
+        </text>
+        <text x="20" y="255" 
+              font-family="Arial, sans-serif" 
+              font-size="16" 
+              fill="#F57C00">
+            It helps you reach a larger, targeted
+        </text>
+        <text x="20" y="280" 
+              font-family="Arial, sans-serif" 
+              font-size="16" 
+              fill="#F57C00">
+            audience and engage with them at every
+        </text>
+        <text x="20" y="305" 
+              font-family="Arial, sans-serif" 
+              font-size="16" 
+              fill="#F57C00">
+            stage of their journey.
+        </text>
+    </g>
+
+    <!-- Decorative Icons -->
+    <g transform="translate(264, 600)">
+        <!-- Strategy Icon -->
+        <circle cx="-80" cy="0" r="40" 
+                fill="#FF5722" 
+                opacity="0.2"/>
+        <text x="-80" y="5" 
+              font-family="Arial, sans-serif" 
+              font-size="12" 
+              fill="#E65100" 
+              text-anchor="middle">
+            Strategy
+        </text>
+
+        <!-- Tools Icon -->
+        <circle cx="80" cy="0" r="40" 
+                fill="#FF5722" 
+                opacity="0.2"/>
+        <text x="80" y="5" 
+              font-family="Arial, sans-serif" 
+              font-size="12" 
+              fill="#E65100" 
+              text-anchor="middle">
+            Tools
+        </text>
+    </g>
+
+    <!-- Bottom Wave -->
+    <path d="M0,816 C132,786 396,786 528,816" 
+          fill="#FFB74D" 
+          opacity="0.3"/>
+</svg>

@@ -22,7 +22,7 @@
   </g>
 
   <!-- Main Circle -->
-  <circle cx="400" cy="400" r="300" fill="none" stroke="#8B4513" stroke-width="2"/>
+  <circle cx="400" cy="400" r="300" fill="none" stroke="#b57c53" stroke-width="2"/>
 
   <!-- Central Symbol - Prosperity Vessel (Kalash) -->
   <g transform="translate(400,400)" fill="none" stroke="#8B4513" stroke-width="2">

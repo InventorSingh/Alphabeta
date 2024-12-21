@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 528 816" style="background-color: #ffffff">
+    <defs>
+        <linearGradient id="sunriseGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#FFF3E0;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#FFE0B2;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="overlayGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#FF5722;stop-opacity:0.1" />
+            <stop offset="100%" style="stop-color:#FF9800;stop-opacity:0.1" />
+        </linearGradient>
+        <filter id="shadow">
+            <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+        </filter>
+    </defs>
+    
+    <!-- Background -->
+    <rect width="528" height="816" fill="url(#sunriseGradient)"/>
+    
+    <!-- Decorative Sunrise Arc -->
+    <path d="M0,200 C132,100 396,100 528,200" 
+          fill="#FF9800" 
+          opacity="0.2"/>
+    
+    <!-- Page Title -->
+    <g transform="translate(264, 100)">
+        <text x="0" y="0" 
+              font-family="Arial, sans-serif" 
+              font-size="32" 
+              fill="#E65100" 
+              text-anchor="middle" 
+              filter="url(#shadow)">
+            Search Engine Optimization
+        </text>
+    </g>
+    
+    <!-- SEO Visual -->
+    <g transform="translate(264, 250)">
+        <!-- Search Bar -->
+        <rect x="-150" y="-25" width="300" height="50" rx="25"
+              fill="white"
+              stroke="#E65100"
+              stroke-width="2"/>
+        <circle cx="115" cy="0" r="15"
+                fill="#FF5722"
+                opacity="0.2"/>
+        <path d="M110,-5 L120,5 M120,-5 L110,5"
+              stroke="#E65100"
+              stroke-width="2"/>
+              
+        <!-- Ranking Numbers -->
+        <g transform="translate(-100, 60)">
+            <circle cx="0" cy="0" r="20" fill="#FF5722" opacity="0.2"/>
+            <text x="0" y="5" 
+                  font-family="Arial, sans-serif" 
+                  font-size="16" 
+                  fill="#E65100" 
+                  text-anchor="middle">
+                1
+            </text>
+        </g>
+        
+        <g transform="translate(0, 60)">
+            <circle cx="0" cy="0" r="20" fill="#FF5722" opacity="0.2"/>
+            <text x="0" y="5" 
+                  font-family="Arial, sans-serif" 
+                  font-size="16" 
+                  fill="#E65100" 
+                  text-anchor="middle">
+                2
+            </text>
+        </g>
+        
+        <g transform="translate(100, 60)">
+            <circle cx="0" cy="0" r="20" fill="#FF5722" opacity="0.2"/>
+            <text x="0" y="5" 
+                  font-family="Arial, sans-serif" 
+                  font-size="16" 
+                  fill="#E65100" 
+                  text-anchor="middle">
+                3
+            </text>
+        </g>
+    </g>
+    
+    <!-- Content Strategy Box -->
+    <g transform="translate(64, 400)">
+        <rect x="0" y="0" width="400" height="150" rx="10"
+              fill="url(#overlayGradient)"
+              stroke="#FF5722"
+              stroke-width="1"/>
+              
+        <text x="20" y="40" 
+              font-family="Arial, sans-serif" 
+              font-size="20" 
+              fill="#E65100">
+            Our SEO Strategy
+        </text>
+        
+        <text x="40" y="80" 
+              font-family="Arial, sans-serif" 
+              font-size="14" 
+              fill="#F57C00">
+            • Keyword Research &amp; Analysis
+        </text>
+        
+        <text x="40" y="110" 
+              font-family="Arial, sans-serif" 
+              font-size="14" 
+              fill="#F57C00">
+            • On-Page Optimization
+        </text>
+        
+        <text x="40" y="140" 
+              font-family="Arial, sans-serif" 
+              font-size="14" 
+              fill="#F57C00">
+            • Technical SEO &amp; Performance
+        </text>
+    </g>
+    
+    <!-- Results Box -->
+    <g transform="translate(64, 600)">
+        <rect x="0" y="0" width="400" height="150" rx="10"
+              fill="url(#overlayGradient)"
+              stroke="#FF5722"
+              stroke-width="1"/>
+              
+        <text x="200" y="40" 
+              font-family="Arial, sans-serif" 
+              font-size="20" 
+              fill="#E65100"
+              text-anchor="middle">
+            Average Client Results
+        </text>
+        
+        <text x="200" y="80" 
+              font-family="Arial, sans-serif" 
+              font-size="24" 
+              fill="#F57C00"
+              text-anchor="middle">
+            +150%
+        </text>
+        
+        <text x="200" y="110" 
+              font-family="Arial, sans-serif" 
+              font-size="14" 
+              fill="#F57C00"
+              text-anchor="middle">
+            Increase in Organic Traffic
+        </text>
+        
+        <text x="200" y="140" 
+              font-family="Arial, sans-serif" 
+              font-size="14" 
+              fill="#F57C00"
+              text-anchor="middle">
+            Within First 6 Months
+        </text>
+    </g>
+    
+    <!-- Bottom Wave -->
+    <path d="M0,816 C132,786 396,786 528,816" 
+          fill="#FFB74D" 
+          opacity="0.3"/>
+</svg>

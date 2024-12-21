@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1200">
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF8C42"/>
+      <stop offset="50%" stop-color="#FFB88C"/>
+      <stop offset="100%" stop-color="#FFE6CC"/>
+    </linearGradient>
+    
+    <linearGradient id="groundGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#965A38"/>
+      <stop offset="100%" stop-color="#723D1C"/>
+    </linearGradient>
+    
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="1200" fill="url(#skyGradient)"/>
+  
+  <!-- Decorative Mandala Behind Sun -->
+  <g transform="translate(400,200)">
+    <circle r="150" fill="none" stroke="#FFE6CC" stroke-width="2" opacity="0.3"/>
+    <circle r="130" fill="none" stroke="#FFE6CC" stroke-width="2" opacity="0.3"/>
+    <circle r="110" fill="none" stroke="#FFE6CC" stroke-width="2" opacity="0.3"/>
+    
+    <!-- Mandala patterns -->
+    <g stroke="#FFE6CC" stroke-width="1" opacity="0.3">
+      <path d="M0,-150 C30,-100 30,-50 0,0 C-30,-50 -30,-100 0,-150"/>
+      <path d="M150,0 C100,30 50,30 0,0 C50,-30 100,-30 150,0"/>
+      <path d="M0,150 C-30,100 -30,50 0,0 C30,50 30,100 0,150"/>
+      <path d="M-150,0 C-100,-30 -50,-30 0,0 C-50,30 -100,30 -150,0"/>
+    </g>
+  </g>
+
+  <!-- Glowing Sun -->
+  <circle cx="400" cy="200" r="80" fill="#FFF3E0" filter="url(#glow)"/>
+  <circle cx="400" cy="200" r="70" fill="#FFFFFF"/>
+
+  <!-- Enhanced Rays -->
+  <g stroke="#FFE6CC" stroke-width="3">
+    <g opacity="0.7">
+      <line x1="400" y1="50" x2="400" y2="0"/>
+      <line x1="550" y1="50" x2="600" y2="0"/>
+      <line x1="600" y1="200" x2="700" y2="200"/>
+      <line x1="550" y1="350" x2="600" y2="400"/>
+      <line x1="400" y1="350" x2="400" y2="400"/>
+      <line x1="250" y1="350" x2="200" y2="400"/>
+      <line x1="200" y1="200" x2="100" y2="200"/>
+      <line x1="250" y1="50" x2="200" y2="0"/>
+    </g>
+    <!-- Additional shorter rays -->
+    <g opacity="0.4">
+      <line x1="475" y1="75" x2="525" y2="25"/>
+      <line x1="525" y1="275" x2="575" y2="325"/>
+      <line x1="325" y1="275" x2="275" y2="325"/>
+      <line x1="325" y1="75" x2="275" y2="25"/>
+    </g>
+  </g>
+
+  <!-- Decorative Border -->
+  <rect x="50" y="400" width="700" height="600" fill="none" stroke="#4B0082" stroke-width="3" rx="10"/>
+  
+  <!-- Title with Sanskrit -->
+  <g text-anchor="middle">
+    <text x="400" y="350" fill="#4B0082" font-size="45" font-family="Arial, sans-serif" font-weight="bold">
+      Hindu Marriage Vows
+    </text>
+    <text x="400" y="390" fill="#4B0082" font-size="25" font-family="Arial, sans-serif" font-style="italic">
+      Saptapadi - The Seven Steps
+    </text>
+  </g>
+
+  <!-- Detailed Vows with Explanations -->
+  <g fill="#4B0082" font-family="Arial, sans-serif">
+    <!-- Each vow with Sanskrit and explanation -->
+    <g font-size="22" font-weight="bold">
+      <text x="100" y="450">1. Nourishment (Annam)</text>
+      <text x="100" y="530">2. Strength (Shakti)</text>
+      <text x="100" y="610">3. Prosperity (Sampada)</text>
+      <text x="100" y="690">4. Happiness (Sukham)</text>
+      <text x="100" y="770">5. Family (Santana)</text>
+      <text x="100" y="850">6. Harmony (Rtu)</text>
+      <text x="100" y="930">7. Unity (Saptapad)</text>
+    </g>
+    
+    <!-- Explanations in smaller text -->
+    <g font-size="16">
+      <text x="120" y="480">To provide nourishment and support to each other</text>
+      <text x="120" y="560">To protect and strengthen each other physically and mentally</text>
+      <text x="120" y="640">To preserve and increase our wealth through righteous means</text>
+      <text x="120" y="720">To share in each other's joy and sorrow</text>
+      <text x="120" y="800">To care for our children and family with devotion</text>
+      <text x="120" y="880">To maintain harmony and respect throughout our lives</text>
+      <text x="120" y="960">To remain lifelong companions and best friends</text>
+    </g>
+  </g>
+
+  <!-- Decorative Ground Elements -->
+  <rect x="0" y="1000" width="800" height="200" fill="url(#groundGradient)"/>
+  <path d="M0,1000 Q400,900 800,1000" fill="#FFBB77" opacity="0.6"/>
+  
+  <!-- Decorative Lotus Flowers -->
+  <g transform="translate(100,1050) scale(0.5)">
+    <path d="M0,0 C20,-20 40,-20 60,0 C40,20 20,20 0,0" fill="#FFC8DD"/>
+    <circle cx="30" cy="0" r="5" fill="#FFB6C1"/>
+  </g>
+  <g transform="translate(700,1050) scale(0.5)">
+    <path d="M0,0 C20,-20 40,-20 60,0 C40,20 20,20 0,0" fill="#FFC8DD"/>
+    <circle cx="30" cy="0" r="5" fill="#FFB6C1"/>
+  </g>
+</svg>

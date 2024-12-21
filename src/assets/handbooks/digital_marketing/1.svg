@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 528 816" style="background-color: #ffffff">
+    <defs>
+        <linearGradient id="sunriseGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#FFF3E0;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#FFE0B2;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="overlayGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#FF5722;stop-opacity:0.1" />
+            <stop offset="100%" style="stop-color:#FF9800;stop-opacity:0.1" />
+        </linearGradient>
+        <filter id="shadow">
+            <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+        </filter>
+    </defs>
+    
+    <!-- Background -->
+    <rect width="528" height="816" fill="url(#sunriseGradient)"/>
+    
+    <!-- Decorative Sunrise Arc -->
+    <path d="M0,400 C132,300 396,300 528,400" 
+          fill="#FF9800" 
+          opacity="0.2"/>
+    
+    <!-- Main Title Container -->
+    <g transform="translate(64, 100)">
+        <rect x="0" y="0" width="400" height="300" rx="20" 
+              fill="url(#overlayGradient)" 
+              stroke="#FF5722" 
+              stroke-width="2"/>
+        
+        <!-- Title -->
+        <text x="200" y="50" 
+              font-family="Arial, sans-serif" 
+              font-size="28" 
+              fill="#E65100" 
+              text-anchor="middle" 
+              filter="url(#shadow)">
+            Welcome to Alphabeta
+        </text>
+        
+        <!-- Subtitle -->
+        <text x="200" y="100" 
+              font-family="Arial, sans-serif" 
+              font-size="18" 
+              fill="#F57C00" 
+              text-anchor="middle">
+            Building Brands Organically
+        </text>
+        
+        <!-- Content -->
+        <text x="200" y="150" 
+              font-family="Arial, sans-serif" 
+              font-size="16" 
+              fill="#E65100" 
+              text-anchor="middle" 
+              text-align="center">
+            Who We Are:
+        </text>
+        <text x="200" y="175" 
+              font-family="Arial, sans-serif" 
+              font-size="14" 
+              fill="#FF8A65" 
+              text-anchor="middle">
+            A passionate team of digital marketers
+        </text>
+        <text x="200" y="195" 
+              font-family="Arial, sans-serif" 
+              font-size="14" 
+              fill="#FF8A65" 
+              text-anchor="middle">
+            specializing in organic brand growth.
+        </text>
+
+        <text x="200" y="240" 
+              font-family="Arial, sans-serif" 
+              font-size="16" 
+              fill="#E65100" 
+              text-anchor="middle" 
+              text-align="center">
+            Our Vision:
+        </text>
+        <text x="200" y="265" 
+              font-family="Arial, sans-serif" 
+              font-size="14" 
+              fill="#FF8A65" 
+              text-anchor="middle">
+            Helping businesses thrive in the
+        </text>
+        <text x="200" y="285" 
+              font-family="Arial, sans-serif" 
+              font-size="14" 
+              fill="#FF8A65" 
+              text-anchor="middle">
+            digital age with meaningful connections.
+        </text>
+    </g>
+
+    <!-- Bottom Box -->
+    <g transform="translate(64, 650)">
+        <rect x="0" y="0" width="400" height="100" rx="10"
+              fill="url(#overlayGradient)"
+              stroke="#FF5722"
+              stroke-width="1"/>
+        
+        <text x="200" y="40" 
+              font-family="Arial, sans-serif" 
+              font-size="16" 
+              fill="#E65100" 
+              text-anchor="middle">
+            Ready to grow your business?
+        </text>
+        
+        <text x="200" y="70" 
+              font-family="Arial, sans-serif" 
+              font-size="14" 
+              fill="#F57C00" 
+              text-anchor="middle">
+            Let us guide you to success.
+        </text>
+    </g>
+
+    <!-- Bottom Wave -->
+    <path d="M0,816 C132,786 396,786 528,816" 
+          fill="#FFB74D" 
+          opacity="0.3"/>
+</svg>

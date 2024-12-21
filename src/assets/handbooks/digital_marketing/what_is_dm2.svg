@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 528 816" style="background-color: #ffffff">
+    <defs>
+        <linearGradient id="sunriseGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#FFF3E0;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#FFE0B2;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="overlayGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#FF5722;stop-opacity:0.1" />
+            <stop offset="100%" style="stop-color:#FF9800;stop-opacity:0.1" />
+        </linearGradient>
+        <filter id="shadow">
+            <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+        </filter>
+    </defs>
+    
+    <!-- Background -->
+    <rect width="528" height="816" fill="url(#sunriseGradient)"/>
+    
+    <!-- Decorative Sunrise Arc -->
+    <path d="M0,200 C132,100 396,100 528,200" 
+          fill="#FF9800" 
+          opacity="0.2"/>
+    
+    <!-- Page Title -->
+    <g transform="translate(264, 100)">
+        <text x="0" y="0" 
+              font-family="Arial, sans-serif" 
+              font-size="32" 
+              fill="#E65100" 
+              text-anchor="middle" 
+              filter="url(#shadow)">
+            Key Components
+        </text>
+        <text x="0" y="40" 
+              font-family="Arial, sans-serif" 
+              font-size="28" 
+              fill="#F57C00" 
+              text-anchor="middle">
+            of Digital Marketing
+        </text>
+    </g>
+
+    <!-- Email Marketing Section -->
+    <g transform="translate(64, 200)">
+        <rect x="0" y="0" width="400" height="140" rx="10"
+              fill="url(#overlayGradient)"
+              stroke="#FF5722"
+              stroke-width="1"/>
+        
+        <text x="20" y="40" 
+              font-family="Arial, sans-serif" 
+              font-size="20" 
+              fill="#E65100">
+            Email Marketing:
+        </text>
+        <text x="40" y="70" 
+              font-family="Arial, sans-serif" 
+              font-size="14" 
+              fill="#F57C00">
+            • Send targeted emails to prospects.
+        </text>
+        <text x="40" y="95" 
+              font-family="Arial, sans-serif" 
+              font-size="14" 
+              fill="#F57C00">
+            • Maintain ongoing communication.
+        </text>
+        <text x="40" y="120" 
+              font-family="Arial, sans-serif" 
+              font-size="14" 
+              fill="#F57C00">
+            • Example: Personalized offers to customers.
+        </text>
+    </g>
+
+    <!-- Paid Advertising Section -->
+    <g transform="translate(64, 360)">
+        <rect x="0" y="0" width="400" height="140" rx="10"
+              fill="url(#overlayGradient)"
+              stroke="#FF5722"
+              stroke-width="1"/>
+        
+        <text x="20" y="40" 
+              font-family="Arial, sans-serif" 
+              font-size="20" 
+              fill="#E65100">
+            Paid Advertising (PPC):
+        </text>
+        <text x="40" y="70" 
+              font-family="Arial, sans-serif" 
+              font-size="14" 
+              fill="#F57C00">
+            • Use Google &amp; Facebook ads.
+        </text>
+        <text x="40" y="95" 
+              font-family="Arial, sans-serif" 
+              font-size="14" 
+              fill="#F57C00">
+            • Reach highly targeted audiences.
+        </text>
+        <text x="40" y="120" 
+              font-family="Arial, sans-serif" 
+              font-size="14" 
+              fill="#F57C00">
+            • Example: SaaS company ROI campaigns.
+        </text>
+    </g>
+
+    <!-- Influencer Marketing Section -->
+    <g transform="translate(64, 520)">
+        <rect x="0" y="0" width="400" height="140" rx="10"
+              fill="url(#overlayGradient)"
+              stroke="#FF5722"
+              stroke-width="1"/>
+        
+        <text x="20" y="40" 
+              font-family="Arial, sans-serif" 
+              font-size="20" 
+              fill="#E65100">
+            Influencer Marketing:
+        </text>
+        <text x="40" y="70" 
+              font-family="Arial, sans-serif" 
+              font-size="14" 
+              fill="#F57C00">
+            • Partner with influencers to promote.
+        </text>
+        <text x="40" y="95" 
+              font-family="Arial, sans-serif" 
+              font-size="14" 
+              fill="#F57C00">
+            • Build credibility and brand exposure.
+        </text>
+        <text x="40" y="120" 
+              font-family="Arial, sans-serif" 
+              font-size="14" 
+              fill="#F57C00">
+            • Example: Beauty influencer reviews.
+        </text>
+    </g>
+
+    <!-- Bottom Wave -->
+    <path d="M0,816 C132,786 396,786 528,816" 
+          fill="#FFB74D" 
+          opacity="0.3"/>
+</svg>
