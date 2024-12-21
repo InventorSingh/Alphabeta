@@ -1,0 +1,124 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "id": "Aek_5t8T26KeuasC87R6a",
+      "type": "text",
+      "x": 497.20001220703125,
+      "y": 146.40000915527344,
+      "width": 383.3564514648729,
+      "height": 98.59999084472655,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "S9e0ufCyfSPYgrBJnCBen"
+      ],
+      "frameId": null,
+      "roundness": null,
+      "seed": 1069219188,
+      "version": 104,
+      "versionNonce": 1393127156,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1734758182910,
+      "link": null,
+      "locked": false,
+      "text": "Alphabeta",
+      "fontSize": 78.87999267578125,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 68.99999999999999,
+      "containerId": null,
+      "originalText": "Alphabeta",
+      "lineHeight": 1.25
+    },
+    {
+      "id": "relo6X2ZCCBFinaCdx9qT",
+      "type": "image",
+      "x": 286.8000183105469,
+      "y": 132.80003356933594,
+      "width": 199.60003662109378,
+      "height": 199.60003662109378,
+      "angle": 0,
+      "strokeColor": "transparent",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "S9e0ufCyfSPYgrBJnCBen"
+      ],
+      "frameId": null,
+      "roundness": null,
+      "seed": 1428781644,
+      "version": 74,
+      "versionNonce": 1205865844,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1734758170755,
+      "link": null,
+      "locked": false,
+      "status": "pending",
+      "fileId": "c61a5f42553f712c16d1f1e31e28bc04e366440c",
+      "scale": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "BeupbRA7_5X2GxKEUr3j0",
+      "type": "rectangle",
+      "x": 250.1999969482422,
+      "y": 112.80000305175781,
+      "width": 686.5999908447266,
+      "height": 248.00001525878906,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "S9e0ufCyfSPYgrBJnCBen"
+      ],
+      "frameId": null,
+      "roundness": {
+        "type": 3
+      },
+      "seed": 2139480820,
+      "version": 78,
+      "versionNonce": 805876684,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1734758170755,
+      "link": null,
+      "locked": false
+    }
+  ],
+  "appState": {
+    "gridSize": null,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {
+    "c61a5f42553f712c16d1f1e31e28bc04e366440c": {
+      "mimeType": "image/svg+xml",
+      "id": "c61a5f42553f712c16d1f1e31e28bc04e366440c",
+      "dataURL": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCI+CiAgPCEtLSBHcmFkaWVudCBEZWZpbml0aW9uIC0tPgogIDxkZWZzPgogICAgPHJhZGlhbEdyYWRpZW50IGlkPSJzdW5yaXNlR3JhZGllbnQiIGN4PSI1MCUiIGN5PSI3MCUiIHI9IjUwJSIgZng9IjUwJSIgZnk9IjcwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNGRjk4MDA7IHN0b3Atb3BhY2l0eToxIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I0ZGRjNFMDsgc3RvcC1vcGFjaXR5OjEiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgPC9kZWZzPgoKICA8IS0tIENpcmNsZSBCYWNrZ3JvdW5kIHdpdGggR3JhZGllbnQgLS0+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iNDUiIGZpbGw9InVybCgjc3VucmlzZUdyYWRpZW50KSIvPgoKICA8IS0tIFRleHQgZm9yIEFscGhhIGFuZCBCZXRhIC0tPgogIDx0ZXh0IHg9IjUwIiB5PSI2NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSI2MCIgZm9udC1mYW1pbHk9Ik1vbnRzZXJyYXQsIHNhbnMtc2VyaWYiIGZpbGw9IiNFNjUxMDAiIGZvbnQtd2VpZ2h0PSJib2xkIiBsZXR0ZXItc3BhY2luZz0iLTkiPgogICAgzrHOsgogIDwvdGV4dD4KPC9zdmc+",
+      "created": 1734758129241,
+      "lastRetrieved": 1734758129241
+    }
+  }
+}

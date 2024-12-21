@@ -1,0 +1,53 @@
+<svg viewBox="0 0 528 816" xmlns="http://www.w3.org/2000/svg">
+    <!-- Definitions -->
+    <defs>
+        <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#f9d423"/>
+            <stop offset="50%" style="stop-color:#f3a683"/>
+            <stop offset="100%" style="stop-color:#ffecd1"/>
+        </linearGradient>
+    </defs>
+
+    <!-- Background -->
+    <rect width="528" height="816" fill="url(#backgroundGradient)"/>
+
+    <!-- Chapter Title -->
+    <g transform="translate(80, 80)">
+        <text font-family="Arial" font-size="14" fill="#7f5539" letter-spacing="2">
+            CHAPTER TWO
+        </text>
+        <text y="40" font-family="Arial" font-size="36" fill="#6d6875" font-weight="bold">
+            Building Together
+        </text>
+    </g>
+
+    <!-- Main Content with Foreign Object -->
+    <foreignObject x="80" y="160" width="368" height="600">
+        <body xmlns="http://www.w3.org/1999/xhtml">
+            <div style="font-family: Arial; font-size: 16px; color: #6d6875; line-height: 1.5;">
+                <p>"With the foundation laid, the community embarked on a journey of collaboration and growth. Neighbors came together to share resources, skills, and dreams. The village became a hub of collective effort, each individual contributing to a vision greater than themselves."</p>
+                <p>"Workshops and discussions became a regular part of village life, where ideas were exchanged and refined. The elders shared their wisdom, while the youth introduced fresh perspectives. It was this harmony of tradition and modernity that defined the community's progress."</p>
+                <p><strong>Strength in Unity</strong></p>
+                <p>"The projects that emerged were as diverse as the people themselves—renewable energy systems, community learning centers, and sustainable farming cooperatives. These achievements were a testament to the strength of working together, building not just for today, but for generations to come."</p>
+            </div>
+        </body>
+    </foreignObject>
+
+    <!-- Illustration of Community Working Together -->
+    <g transform="translate(0, 700)">
+        <!-- People Silhouettes -->
+        <circle cx="100" cy="50" r="15" fill="#6d6875"/>
+        <rect x="90" y="65" width="20" height="30" fill="#6d6875"/>
+        <circle cx="150" cy="50" r="15" fill="#a4c3b2"/>
+        <rect x="140" y="65" width="20" height="30" fill="#a4c3b2"/>
+
+        <!-- Tools and Symbols -->
+        <rect x="200" y="50" width="40" height="10" fill="#ff9f1c"/>
+        <circle cx="300" cy="60" r="10" fill="#ffbf69"/>
+    </g>
+
+    <!-- Page Number -->
+    <text x="264" y="780" text-anchor="middle" font-family="Arial" font-size="12" fill="#6d6875">
+        5
+    </text>
+</svg>

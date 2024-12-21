@@ -1,0 +1,75 @@
+<svg viewBox="0 0 528 816" xmlns="http://www.w3.org/2000/svg">
+    <!-- Definitions for natural light effects -->
+    <defs>
+        <!-- Dawn to dusk gradient -->
+        <linearGradient id="skyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#fff8e7"/>
+            <stop offset="50%" style="stop-color:#fdf1d2"/>
+            <stop offset="100%" style="stop-color:#ffecd1"/>
+        </linearGradient>
+        
+        <!-- Soft light rays -->
+        <linearGradient id="rayGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#ff8c42;stop-opacity:0.1"/>
+            <stop offset="100%" style="stop-color:#ff8c42;stop-opacity:0"/>
+        </linearGradient>
+    </defs>
+    
+    <!-- Base Background -->
+    <rect width="528" height="816" fill="url(#skyGradient)"/>
+    
+    <!-- Light Rays -->
+    <path d="M0 0 L528 200 L528 0 Z" fill="url(#rayGradient)" opacity="0.3"/>
+    <path d="M0 100 L528 400 L528 200 L0 0 Z" fill="url(#rayGradient)" opacity="0.2"/>
+    <path d="M0 200 L528 600 L528 400 L0 100 Z" fill="url(#rayGradient)" opacity="0.1"/>
+    
+    <!-- Atmospheric Haze -->
+    <rect width="528" height="816" fill="#1e3c72" opacity="0.02"/>
+    
+    <!-- Main Content Area -->
+    <g transform="translate(264, 200)" text-anchor="middle">
+        <!-- Quote -->
+        <text font-family="Arial" font-size="16" fill="#2a5298" font-style="italic">
+            "From the rising of the sun to its setting,
+        </text>
+        <text y="25" font-family="Arial" font-size="16" fill="#2a5298" font-style="italic">
+            our journey bridges technology and tradition."
+        </text>
+    </g>
+    
+    <!-- Mission Statement -->
+    <g transform="translate(264, 350)" text-anchor="middle">
+        <text font-family="Arial" font-size="24" fill="#1e3c72" font-weight="bold">
+            Our Mission
+        </text>
+        <text y="40" font-family="Arial" font-size="16" fill="#2a5298">
+            To empower communities through technology,
+        </text>
+        <text y="65" font-family="Arial" font-size="16" fill="#2a5298">
+            making villages better places to live
+        </text>
+        <text y="90" font-family="Arial" font-size="16" fill="#2a5298">
+            in the face of climate change.
+        </text>
+    </g>
+    
+    <!-- Logo with subtle shadow -->
+    <g transform="translate(264, 500)">
+        <text x="-25" y="0" font-family="Arial" font-size="40" fill="#ff8c42" opacity="0.9">αβ</text>
+    </g>
+    
+    <!-- Journey Footer -->
+    <g transform="translate(264, 700)" text-anchor="middle">
+        <text font-family="Arial" font-size="14" fill="#1e3c72">
+            Founded in Haryana • Engineered in Punjab
+        </text>
+        <text y="25" font-family="Arial" font-size="14" fill="#1e3c72">
+            Educated in USA • Built in Canada
+        </text>
+    </g>
+    
+    <!-- Page Number -->
+    <text x="264" y="780" text-anchor="middle" font-family="Arial" font-size="12" fill="#2a5298">
+        i
+    </text>
+</svg>

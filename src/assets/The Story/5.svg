@@ -1,0 +1,55 @@
+<svg viewBox="0 0 528 816" xmlns="http://www.w3.org/2000/svg">
+    <!-- Definitions -->
+    <defs>
+        <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#f9d423"/>
+            <stop offset="50%" style="stop-color:#f3a683"/>
+            <stop offset="100%" style="stop-color:#ffecd1"/>
+        </linearGradient>
+
+        <linearGradient id="foregroundGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#6d6875;stop-opacity:0.8"/>
+            <stop offset="100%" style="stop-color:#a4c3b2;stop-opacity:0.5"/>
+        </linearGradient>
+    </defs>
+
+    <!-- Background -->
+    <rect width="528" height="816" fill="url(#backgroundGradient)"/>
+
+    <!-- Chapter Content -->
+    <foreignObject x="40" y="100" width="448" height="580">
+        <body xmlns="http://www.w3.org/1999/xhtml">
+            <div style="font-family: Arial; font-size: 18px; color: #6d6875; line-height: 1.6;">
+                <h3 style="color: #7f5539;">Building Together</h3>
+                <p>With the foundation laid, the community embarked on a journey of collaboration and growth. Neighbors came together to share resources, skills, and dreams. The village became a hub of collective effort, each individual contributing to a vision greater than themselves.</p>
+                <p>Workshops and discussions became a regular part of village life, where ideas were exchanged and refined. The elders shared their wisdom, while the youth introduced fresh perspectives. It was this harmony of tradition and modernity that defined the community's progress.</p>
+                <h4 style="color: #7f5539;">Strength in Unity</h4>
+                <p>Renewable energy systems, community learning centers, and sustainable farming cooperatives.</p>
+            </div>
+        </body>
+    </foreignObject>
+
+    <!-- Illustration: Nature and Collaboration -->
+    <g transform="translate(0, 700)">
+        <!-- Trees -->
+        <circle cx="100" cy="700" r="50" fill="#a4c3b2"/>
+        <rect x="90" y="700" width="20" height="100" fill="#6d6875"/>
+        <circle cx="300" cy="690" r="60" fill="#a4c3b2"/>
+        <rect x="290" y="690" width="20" height="110" fill="#6d6875"/>
+
+        <!-- People Silhouettes -->
+        <circle cx="150" cy="650" r="20" fill="#7f5539"/>
+        <rect x="140" y="670" width="20" height="40" fill="#7f5539"/>
+        <circle cx="350" cy="670" r="20" fill="#7f5539"/>
+        <rect x="340" y="690" width="20" height="40" fill="#7f5539"/>
+
+        <!-- Tools and Symbols -->
+        <rect x="200" y="700" width="50" height="10" fill="#ff9f1c"/>
+        <circle cx="250" cy="710" r="15" fill="#ffbf69"/>
+    </g>
+
+    <!-- Page Number -->
+    <text x="264" y="780" text-anchor="middle" font-family="Arial" font-size="14" fill="#7f5539">
+        5
+    </text>
+</svg>

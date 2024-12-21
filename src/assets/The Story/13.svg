@@ -1,0 +1,63 @@
+<svg viewBox="0 0 528 816" xmlns="http://www.w3.org/2000/svg">
+    <!-- Definitions -->
+    <defs>
+        <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#f9d423"/>
+            <stop offset="50%" style="stop-color:#f3a683"/>
+            <stop offset="100%" style="stop-color:#ffecd1"/>
+        </linearGradient>
+
+        <linearGradient id="contentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#6d6875;stop-opacity:0.7"/>
+            <stop offset="100%" style="stop-color:#a4c3b2;stop-opacity:0.4"/>
+        </linearGradient>
+    </defs>
+
+    <!-- Background -->
+    <rect width="528" height="816" fill="url(#backgroundGradient)"/>
+
+    <!-- Header -->
+    <g transform="translate(40, 40)">
+        <rect x="0" y="0" width="448" height="80" fill="url(#contentGradient)"/>
+        <text x="20" y="50" font-family="Arial" font-size="18" fill="#fff" font-weight="bold">
+            Inspiring Partnerships
+        </text>
+    </g>
+
+    <!-- Main Content with Foreign Object -->
+    <foreignObject x="40" y="140" width="448" height="520">
+        <body xmlns="http://www.w3.org/1999/xhtml">
+            <div style="font-family: Arial; font-size: 16px; color: #6d6875; line-height: 1.6;">
+                <p>"Collaboration is at the heart of Alphabeta’s mission. By forming partnerships with organizations, individuals, and communities, the journey toward a brighter future becomes a shared endeavor."</p>
+                <p>"Whether it’s working with local leaders to address specific challenges or collaborating with global experts to bring innovative solutions, Alphabeta thrives on the power of connection."</p>
+                <h4 style="color: #7f5539;">Building Together</h4>
+                <p>"Each partnership reflects a commitment to mutual growth and respect. By combining strengths, resources, and ideas, Alphabeta ensures that progress is inclusive and sustainable, benefiting everyone involved."</p>
+            </div>
+        </body>
+    </foreignObject>
+
+    <!-- Illustration: Partnerships and Collaboration -->
+    <g transform="translate(0, 600)">
+        <!-- Hands Shaking Icon -->
+        <rect x="140" y="50" width="100" height="60" rx="15" fill="#6d6875"/>
+        <line x1="150" y1="80" x2="220" y2="80" stroke="#fff8e7" stroke-width="4"/>
+        <circle cx="150" cy="80" r="5" fill="#fff8e7"/>
+        <circle cx="220" cy="80" r="5" fill="#fff8e7"/>
+
+        <!-- Network Icon -->
+        <circle cx="300" cy="80" r="30" fill="#a4c3b2"/>
+        <line x1="300" y1="50" x2="300" y2="110" stroke="#6d6875" stroke-width="2"/>
+        <line x1="270" y1="80" x2="330" y2="80" stroke="#6d6875" stroke-width="2"/>
+
+        <!-- Resource Sharing Icon -->
+        <rect x="380" y="50" width="80" height="60" fill="#ff9f1c"/>
+        <circle cx="400" cy="80" r="10" fill="#fff8e7"/>
+        <line x1="400" y1="70" x2="400" y2="90" stroke="#6d6875" stroke-width="2"/>
+        <line x1="390" y1="80" x2="410" y2="80" stroke="#6d6875" stroke-width="2"/>
+    </g>
+
+    <!-- Page Number -->
+    <text x="264" y="780" text-anchor="middle" font-family="Arial" font-size="14" fill="#7f5539">
+        13
+    </text>
+</svg>

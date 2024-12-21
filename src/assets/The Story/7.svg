@@ -1,0 +1,59 @@
+<svg viewBox="0 0 528 816" xmlns="http://www.w3.org/2000/svg">
+    <!-- Definitions -->
+    <defs>
+        <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#f9d423"/>
+            <stop offset="50%" style="stop-color:#f3a683"/>
+            <stop offset="100%" style="stop-color:#ffecd1"/>
+        </linearGradient>
+
+        <linearGradient id="contentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#6d6875;stop-opacity:0.7"/>
+            <stop offset="100%" style="stop-color:#a4c3b2;stop-opacity:0.4"/>
+        </linearGradient>
+    </defs>
+
+    <!-- Background -->
+    <rect width="528" height="816" fill="url(#backgroundGradient)"/>
+
+    <!-- Header -->
+    <g transform="translate(40, 40)">
+        <rect x="0" y="0" width="448" height="80" fill="url(#contentGradient)"/>
+        <text x="20" y="50" font-family="Arial" font-size="18" fill="#fff" font-weight="bold">
+            Software Solutions
+        </text>
+    </g>
+
+    <!-- Main Content with Foreign Object -->
+    <foreignObject x="40" y="140" width="448" height="520">
+        <body xmlns="http://www.w3.org/1999/xhtml">
+            <div style="font-family: Arial; font-size: 16px; color: #6d6875; line-height: 1.6;">
+                <p>"Technology has always been a powerful tool for transformation. Alphabeta's journey into software solutions began with a simple mission: to bridge gaps and empower communities through innovation."</p>
+                <p>"From creating educational platforms to developing tools for local businesses, the impact was immediate. By listening to the needs of the people, Alphabeta was able to design solutions that were intuitive, accessible, and impactful."</p>
+                <h4 style="color: #7f5539;">Empowering Through Code</h4>
+                <p>"Every line of code written was a step toward empowerment. Whether it was helping a farmer track weather patterns or enabling a student to learn coding remotely, the focus remained on driving real-world impact through digital means."</p>
+            </div>
+        </body>
+    </foreignObject>
+
+    <!-- Illustration: Technology and Impact -->
+    <g transform="translate(0, 600)">
+        <!-- Devices -->
+        <rect x="140" y="50" width="60" height="100" rx="10" fill="#6d6875"/>
+        <rect x="220" y="60" width="150" height="80" rx="15" fill="#a4c3b2"/>
+
+        <!-- Connection Symbol -->
+        <line x1="200" y1="100" x2="300" y2="100" stroke="#ff9f1c" stroke-width="4"/>
+        <circle cx="200" cy="100" r="5" fill="#ffbf69"/>
+        <circle cx="300" cy="100" r="5" fill="#ffbf69"/>
+
+        <!-- Data Representation -->
+        <rect x="180" y="150" width="150" height="10" fill="#ff9f1c"/>
+        <rect x="180" y="170" width="100" height="10" fill="#ff9f1c"/>
+    </g>
+
+    <!-- Page Number -->
+    <text x="264" y="780" text-anchor="middle" font-family="Arial" font-size="14" fill="#7f5539">
+        7
+    </text>
+</svg>

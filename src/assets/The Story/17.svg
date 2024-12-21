@@ -1,0 +1,53 @@
+<svg viewBox="0 0 528 816" xmlns="http://www.w3.org/2000/svg">
+    <!-- Definitions -->
+    <defs>
+        <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#d4e157"/>
+            <stop offset="50%" style="stop-color:#81c784"/>
+            <stop offset="100%" style="stop-color:#4caf50"/>
+        </linearGradient>
+    </defs>
+
+    <!-- Background -->
+    <rect width="528" height="816" fill="url(#backgroundGradient)"/>
+
+    <!-- Title Section -->
+    <g transform="translate(40, 40)">
+        <rect x="0" y="0" width="448" height="80" fill="#388e3c"/>
+        <text x="20" y="50" font-family="Arial" font-size="18" fill="#fff" font-weight="bold">
+            Our First Community Project
+        </text>
+    </g>
+
+    <!-- Main Content with Foreign Object -->
+    <foreignObject x="40" y="140" width="448" height="520">
+        <body xmlns="http://www.w3.org/1999/xhtml">
+            <div style="font-family: Arial; font-size: 16px; color: #2e7d32; line-height: 1.6;">
+                <p>"The Climate Impact Explorer helps communities understand how climate change affects local resources like water, rivers, forests, and parks."</p>
+                <p>"This tool combines real-time data and interactive maps to make environmental information accessible and actionable."</p>
+                <h4 style="color: #1b5e20;">Collaborate and Take Action</h4>
+                <p>"With location-based insights and user contributions, the Explorer encourages everyone to work together for a better future."</p>
+                <p>"Volunteers gain skills in web development, data science, and mapping technologies while making a real impact."</p>
+            </div>
+        </body>
+    </foreignObject>
+
+    <!-- Illustration: Climate Explorer Icon -->
+    <g transform="translate(0, 600)">
+        <!-- Globe -->
+        <circle cx="264" cy="80" r="40" fill="#4caf50"/>
+        <path d="M254 70 A10 10 0 0 1 274 70 A10 10 0 0 1 254 70" fill="#fff"/>
+        <path d="M264 50 L264 110" stroke="#fff" stroke-width="2"/>
+
+        <!-- Trees -->
+        <rect x="100" y="100" width="20" height="40" fill="#2e7d32"/>
+        <circle cx="110" cy="90" r="20" fill="#81c784"/>
+        <rect x="350" y="100" width="20" height="40" fill="#2e7d32"/>
+        <circle cx="360" cy="90" r="20" fill="#81c784"/>
+    </g>
+
+    <!-- Page Number -->
+    <text x="264" y="780" text-anchor="middle" font-family="Arial" font-size="14" fill="#2e7d32">
+        1
+    </text>
+</svg>

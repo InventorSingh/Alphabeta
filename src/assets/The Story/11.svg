@@ -1,0 +1,62 @@
+<svg viewBox="0 0 528 816" xmlns="http://www.w3.org/2000/svg">
+    <!-- Definitions -->
+    <defs>
+        <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#f9d423"/>
+            <stop offset="50%" style="stop-color:#f3a683"/>
+            <stop offset="100%" style="stop-color:#ffecd1"/>
+        </linearGradient>
+
+        <linearGradient id="contentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#6d6875;stop-opacity:0.7"/>
+            <stop offset="100%" style="stop-color:#a4c3b2;stop-opacity:0.4"/>
+        </linearGradient>
+    </defs>
+
+    <!-- Background -->
+    <rect width="528" height="816" fill="url(#backgroundGradient)"/>
+
+    <!-- Header -->
+    <g transform="translate(40, 40)">
+        <rect x="0" y="0" width="448" height="80" fill="url(#contentGradient)"/>
+        <text x="20" y="50" font-family="Arial" font-size="18" fill="#fff" font-weight="bold">
+            Future Projects
+        </text>
+    </g>
+
+    <!-- Main Content with Foreign Object -->
+    <foreignObject x="40" y="140" width="448" height="520">
+        <body xmlns="http://www.w3.org/1999/xhtml">
+            <div style="font-family: Arial; font-size: 16px; color: #6d6875; line-height: 1.6;">
+                <p>"The journey of Alphabeta is one of continuous evolution. As the foundation strengthens, the vision expands. The future is a canvas where bold ideas meet unwavering commitment to community empowerment."</p>
+                <p>"Future projects focus on education, technology, and sustainability. From building smart classrooms to developing green energy grids, every initiative aligns with the goal of creating a thriving, self-reliant society."</p>
+                <h4 style="color: #7f5539;">A Vision Beyond Borders</h4>
+                <p>"Alphabeta’s future is not limited to its origins. By sharing knowledge and fostering partnerships, the organization seeks to inspire change beyond its immediate community, creating ripples of impact worldwide."</p>
+            </div>
+        </body>
+    </foreignObject>
+
+    <!-- Illustration: Future Innovations -->
+    <g transform="translate(0, 600)">
+        <!-- Smart Classroom Icon -->
+        <rect x="100" y="50" width="80" height="60" fill="#6d6875"/>
+        <circle cx="140" cy="50" r="10" fill="#ff9f1c"/>
+        <rect x="120" y="70" width="40" height="10" fill="#ffbf69"/>
+
+        <!-- Green Energy Grid -->
+        <rect x="250" y="50" width="100" height="60" fill="#a4c3b2"/>
+        <line x1="250" y1="50" x2="350" y2="50" stroke="#6d6875" stroke-width="2"/>
+        <line x1="250" y1="110" x2="350" y2="110" stroke="#6d6875" stroke-width="2"/>
+        <circle cx="300" cy="80" r="10" fill="#ff9f1c"/>
+
+        <!-- Globe Icon -->
+        <circle cx="400" cy="80" r="30" fill="#6d6875"/>
+        <path d="M390 70 A10 10 0 0 1 410 70 A10 10 0 0 1 390 70" fill="#fff8e7"/>
+        <path d="M400 50 L400 110" stroke="#fff8e7" stroke-width="2"/>
+    </g>
+
+    <!-- Page Number -->
+    <text x="264" y="780" text-anchor="middle" font-family="Arial" font-size="14" fill="#7f5539">
+        11
+    </text>
+</svg>
