@@ -1,0 +1,45 @@
+<svg viewBox="0 0 528 816" xmlns="http://www.w3.org/2000/svg">
+    <!-- Definitions for natural light effects -->
+    <defs>
+        <!-- Dawn to dusk gradient -->
+        <linearGradient id="skyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#fff8e7"/>
+            <stop offset="50%" style="stop-color:#fdf1d2"/>
+            <stop offset="100%" style="stop-color:#ffecd1"/>
+        </linearGradient>
+    </defs>
+
+    <!-- Background -->
+    <rect width="528" height="816" fill="url(#skyGradient)"/>
+
+    <!-- Title Section -->
+    <g transform="translate(264, 100)" text-anchor="middle">
+        <text font-family="Arial" font-size="36" fill="#1e3c72" font-weight="bold">
+            Design Services
+        </text>
+    </g>
+
+    <!-- Content Section -->
+    <g transform="translate(40, 200)">
+        <foreignObject width="448" height="500">
+            <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, sans-serif; font-size: 16px; color: #2a5298; line-height: 1.6;">
+                <p><strong>Crafting Visual Narratives</strong></p>
+                <p>Alphabeta excels in creating visually compelling designs that resonate with audiences. Our team combines creativity and technical expertise to deliver impactful visual content.</p>
+                <p><strong>Digital Branding and Marketing Solutions</strong></p>
+                <p>We provide end-to-end branding and marketing solutions, including logo design, social media assets, and targeted campaigns. These materials enhance your digital presence and drive engagement with your audience.</p>
+                <p><strong>User-Centric Design</strong></p>
+                <p>Focusing on user experience, we craft designs that are not only aesthetically pleasing but also intuitive and functional, ensuring a seamless interaction for your audience.</p>
+            </div>
+        </foreignObject>
+    </g>
+
+    <!-- Footer with Logo -->
+    <g transform="translate(264, 700)" text-anchor="middle">
+        <text font-family="Arial" font-size="24" fill="#ff8c42" font-weight="bold">αβ</text>
+    </g>
+
+    <!-- Page Number -->
+    <text x="264" y="780" text-anchor="middle" font-family="Arial" font-size="12" fill="#2a5298">
+    
+    </text>
+</svg>
