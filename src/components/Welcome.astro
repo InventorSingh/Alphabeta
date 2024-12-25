@@ -1,193 +1,86 @@
 ---
-import sunriseTheme from '../assets/sunriseTheme.svg';
-import alphabetaLogo from '../assets/alphabeta-logo.svg';
 import Footer from './Footer.astro';
 ---
 
 <div id="container">
-	<img id="background" src={sunriseTheme.src} alt="Sunrise Theme Background" fetchpriority="high" />
-	<main>
-		<section id="hero">
-			<img id="logo" src={alphabetaLogo.src} alt="Alphabeta Logo" />
-			<h1>Technology with a ❤️</h1>
-			<p>
-				Alphabeta combines cutting-edge technology services with a passion for community empowerment. We deliver high-quality software solutions to businesses while helping volunteers learn, grow, and make an impact.
-			</p>
-			<section id="actions">
-				<a class="button" href="/volunteer">Join as a Volunteer</a>
-				<a href="/services" class="button">Hire Us</a>
-				<a href="/community-projects" class="button secondary">Explore Projects</a>
-				<a href="/core-team" class="button secondary">Our Team</a>
-			</section>
-		</section>
+    <!-- Inline SVG Background -->
+    <svg id="background-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="none">
+        <defs>
+            <!-- Subtle Neutral Background Gradient -->
+            <linearGradient id="readingBackground" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#FAFAFA;" /> <!-- Light off-white -->
+                <stop offset="100%" style="stop-color:#ECEFF1;" /> <!-- Pale gray-blue -->
+            </linearGradient>
+        </defs>
 
-		<section id="offerings">
-			<h2>What We Offer</h2>
-			<div class="offer-grid">
-				<div class="offer-card">
-					<h3>For Businesses</h3>
-					<p>
-						Custom software development, marketing services, and skilled team partnerships to bring your projects to life.
-					</p>
-					<a href="/services" class="button">Learn More</a>
-				</div>
-				<div class="offer-card">
-					<h3>For the Community</h3>
-					<p>
-						Volunteer opportunities to build skills in software, marketing, and leadership through real-world projects.
-					</p>
-					<a href="/volunteer" class="button secondary">Get Involved</a>
-				</div>
-			</div>
-		</section>
+        <!-- Background -->
+        <rect width="1920" height="1080" fill="url(#readingBackground)" />
 
-		<section id="projects">
-			<h2>Community Projects</h2>
-			<p>
-				Explore the impactful projects we're building together with our volunteers and partners.
-			</p>
-			<a href="/community-projects" class="button">Explore Projects</a>
-		</section>
-	</main>
+        <!-- Alphabeta Logo -->
+        <g transform="translate(960, 250)" text-anchor="middle">
+            <text x="0" y="0" font-family="Arial, sans-serif" font-size="200" fill="#D84315" font-weight="bold">αβ</text>
+            <text x="0" y="120" font-family="Arial, sans-serif" font-size="48" fill="#37474F">Alphabeta: The Beginning</text>
+        </g>
 
-	<Footer />
+        <!-- Story Introduction -->
+        <g transform="translate(100, 500)">
+            <text x="0" y="0" font-family="Arial, sans-serif" font-size="36" fill="#37474F">
+                Once upon a sunrise, two curious letters, Alpha (α) and Beta (β),
+            </text>
+            <text x="0" y="50" font-family="Arial, sans-serif" font-size="36" fill="#37474F">
+                embarked on a journey to teach the world through stories.
+            </text>
+            <text x="0" y="150" font-family="Arial, sans-serif" font-size="28" fill="#546E7A">
+                With Alpha's wisdom and Beta's curiosity, they invite you to explore
+            </text>
+            <text x="0" y="200" font-family="Arial, sans-serif" font-size="28" fill="#546E7A">
+                technology, learning, and creativity in a vibrant world of discovery.
+            </text>
+        </g>
+
+        <!-- Characters -->
+        <g transform="translate(960, 850)">
+            <!-- Alpha -->
+            <g transform="translate(-200, 0)" text-anchor="middle">
+                <circle cx="0" cy="0" r="100" fill="#CFD8DC" />
+                <text x="0" y="10" font-family="Arial, sans-serif" font-size="100" fill="#37474F">α</text>
+                <text x="0" y="150" font-family="Arial, sans-serif" font-size="24" fill="#546E7A">Alpha: The Mentor</text>
+            </g>
+
+            <!-- Beta -->
+            <g transform="translate(200, 0)" text-anchor="middle">
+                <circle cx="0" cy="0" r="100" fill="#CFD8DC" />
+                <text x="0" y="10" font-family="Arial, sans-serif" font-size="100" fill="#37474F">β</text>
+                <text x="0" y="150" font-family="Arial, sans-serif" font-size="24" fill="#546E7A">Beta: The Explorer</text>
+            </g>
+        </g>
+    </svg>
 </div>
 
 <style>
-	#background {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		filter: blur(30px) brightness(1.2);
-	}
+    #background-svg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
 
-	#container {
-		font-family: 'Montserrat', Arial, sans-serif;
-		height: auto;
-		min-height: 100vh;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		background: linear-gradient(to bottom, #FFF3E0, #FFCC80);
-		color: #E65100;
-		overflow-y: auto;
-	}
+    #container {
+        font-family: 'Montserrat', Arial, sans-serif;
+        height: auto;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #333;
+        overflow-y: auto;
+    }
 
-	main {
-		text-align: center;
-		padding: 2rem;
-	}
-
-	#logo {
-		width: 240px;
-		margin-bottom: 1rem;
-	}
-
-	#hero {
-		padding: 24px;
-		border-radius: 15px;
-		background: rgba(255, 152, 0, 0.15);
-		border: 2px solid #FF9800;
-		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-		margin-bottom: 2.5rem;
-	}
-
-	#hero h1 {
-		font-size: 3rem;
-		margin-bottom: 1rem;
-		font-weight: 700;
-	}
-
-	#hero p {
-		font-size: 1.5rem;
-		margin-bottom: 2rem;
-		line-height: 1.8;
-	}
-
-	#actions {
-		display: flex;
-		gap: 20px;
-		justify-content: center;
-	}
-
-	#actions a {
-		display: inline-block;
-		padding: 12px 24px;
-		color: white;
-		background: linear-gradient(to right, #FFA726, #FF5722);
-		border-radius: 12px;
-		text-decoration: none;
-		transition: all 0.3s ease;
-		font-size: 1.2rem;
-		font-weight: bold;
-	}
-
-	#actions a.secondary {
-		background: linear-gradient(to right, #FFCC80, #FF7043);
-	}
-
-	#actions a:hover {
-		transform: scale(1.05);
-		background: linear-gradient(to right, #E65100, #FF5722);
-	}
-
-	#offerings {
-		margin: 3rem 0;
-		padding: 2rem;
-		background: rgba(255, 183, 77, 0.15);
-		border-radius: 12px;
-		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-	}
-
-	.offer-grid {
-		display: flex;
-		gap: 2rem;
-		justify-content: center;
-		flex-wrap: wrap;
-	}
-
-	.offer-card {
-		background: rgba(255, 152, 0, 0.15);
-		border: 2px solid #FF7043;
-		border-radius: 12px;
-		padding: 1.5rem;
-		width: 300px;
-		text-align: left;
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	}
-
-	.offer-card h3 {
-		font-size: 1.8rem;
-		margin-bottom: 0.8rem;
-	}
-
-	.offer-card p {
-		font-size: 1.1rem;
-		margin-bottom: 1.2rem;
-		line-height: 1.6;
-	}
-
-	#projects {
-		margin: 3rem 0;
-	}
-
-	#projects h2 {
-		font-size: 2.5rem;
-		margin-bottom: 1rem;
-	}
-
-	#projects p {
-		font-size: 1.2rem;
-		margin-bottom: 1.5rem;
-		line-height: 1.8;
-	}
-
-	footer {
-		margin-top: 3rem;
-		font-size: 1rem;
-		color: #FF7043;
-	}
+    main {
+        text-align: center;
+        padding: 2rem;
+        color: #333;
+    }
 </style>
