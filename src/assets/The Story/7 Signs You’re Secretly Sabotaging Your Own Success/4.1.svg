@@ -1,0 +1,52 @@
+<svg viewBox="0 0 528 816" xmlns="http://www.w3.org/2000/svg">
+    <!-- Definitions -->
+    <defs>
+        <!-- Gradient Background -->
+        <linearGradient id="pageGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#1e3c72"/>
+            <stop offset="30%" style="stop-color:#2a5298"/>
+            <stop offset="60%" style="stop-color:#f9d423"/>
+            <stop offset="100%" style="stop-color:#ff4e50"/>
+        </linearGradient>
+    </defs>
+
+    <!-- Background -->
+    <rect width="528" height="816" fill="url(#pageGradient)"/>
+
+    <!-- Title Section -->
+    <g transform="translate(40, 150)">
+        <text font-family="Arial" font-size="36" fill="#FFD700" font-weight="bold">
+            4. Overthinking:
+        </text>
+        <text y="50" font-family="Arial" font-size="32" fill="#FFFFFF" font-weight="bold">
+            Paralyzed by Decisions
+        </text>
+    </g>
+
+    <!-- Description Section -->
+    <g transform="translate(40, 250)">
+        <foreignObject width="448" height="300">
+            <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, sans-serif; font-size: 20px; color: #FFFFFF; line-height: 1.6;">
+                <p>Overthinking keeps you stuck in a loop, preventing progress. It makes simple decisions feel overwhelming.</p>
+                <p><strong>Tip:</strong> Set a time limit for decisions and take action, even if it’s imperfect. Progress is better than perfection.</p>
+            </div>
+        </foreignObject>
+    </g>
+
+    <!-- Visual Section -->
+    <g transform="translate(264, 600)" text-anchor="middle">
+        <!-- Maze Outline -->
+        <rect x="-100" y="-100" width="200" height="200" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+        <path d="M-100,-60 H80 V80 H-60 V-60" fill="none" stroke="#FFD700" stroke-width="3"/>
+
+        <!-- Beta Character -->
+        <g transform="translate(-150, 80)">
+            <circle cx="0" cy="0" r="20" fill="#4682B4"/> <!-- Head -->
+            <circle cx="0" cy="50" r="15" fill="#FFD700"/> <!-- Body -->
+            <text x="0" y="5" font-family="Arial" font-size="24" fill="#FFFFFF" text-anchor="middle" font-weight="bold">β</text>
+            <line x1="0" y1="65" x2="0" y2="100" stroke="#FFD700" stroke-width="4"/> <!-- Leg -->
+            <!-- Expression -->
+            <line x1="-5" y1="10" x2="5" y2="10" stroke="#FFFFFF" stroke-width="3"/> <!-- Flat Mouth -->
+        </g>
+    </g>
+</svg>

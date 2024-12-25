@@ -1,0 +1,45 @@
+<svg viewBox="0 0 528 816" xmlns="http://www.w3.org/2000/svg">
+    <!-- Definitions -->
+    <defs>
+        <!-- Gradient Background -->
+        <linearGradient id="pageGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#1e3c72"/>
+            <stop offset="30%" style="stop-color:#2a5298"/>
+            <stop offset="60%" style="stop-color:#f9d423"/>
+            <stop offset="100%" style="stop-color:#ff4e50"/>
+        </linearGradient>
+    </defs>
+
+    <!-- Background -->
+    <rect width="528" height="816" fill="url(#pageGradient)"/>
+
+    <!-- Title Section -->
+    <g transform="translate(40, 150)">
+        <text font-family="Arial" font-size="32" fill="#FFD700" font-weight="bold">
+            2. Perfectionism:
+        </text>
+        <text y="40" font-family="Arial" font-size="28" fill="#FFFFFF" font-weight="bold">
+            Fear of Starting
+        </text>
+    </g>
+
+    <!-- Description Section -->
+    <g transform="translate(40, 250)">
+        <foreignObject width="448" height="400">
+            <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial, sans-serif; font-size: 18px; color: #FFFFFF; line-height: 1.6;">
+                <p>Waiting for the 'perfect moment' or obsessing over details can stop you from taking the first step. Remember, progress beats perfection.</p>
+                <p><strong>Tip:</strong> Embrace imperfection. Start small, refine later, and celebrate every step forward.</p>
+            </div>
+        </foreignObject>
+    </g>
+
+    <!-- Footer Section -->
+    <g transform="translate(264, 700)" text-anchor="middle">
+        <text font-family="Arial" font-size="20" fill="#FFFFFF" font-weight="bold">
+            Follow αβ for more insights.
+        </text>
+        <text y="30" font-family="Arial" font-size="16" fill="#FFFFFF">
+            Together, we grow and thrive.
+        </text>
+    </g>
+</svg>
