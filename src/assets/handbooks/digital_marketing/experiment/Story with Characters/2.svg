@@ -1,0 +1,253 @@
+<svg
+    width="800"
+    height="600"
+    viewBox="0 0 800 600"
+    xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- 
+    BETTY THE CHICK
+    This SVG depicts Betty standing in a meadow.
+    Betty has a 'beta' (β) emblem, signifying curiosity and growth
+    in the Alphabeta universe.
+  -->
+
+  <!-- ***************  DEFINITIONS  *************** -->
+  <defs>
+    <!-- Sky Gradient -->
+    <linearGradient id="skyGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#AEE1FF" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+
+    <!-- Sun Gradient -->
+    <radialGradient id="sunGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF9AA"/>
+      <stop offset="100%" stop-color="#FFD700"/>
+    </radialGradient>
+
+    <!-- Chick Body Gradient -->
+    <radialGradient id="chickBodyGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF200"/>
+      <stop offset="100%" stop-color="#FFB600"/>
+    </radialGradient>
+
+    <!-- Chick Face Gradient (lighter) -->
+    <radialGradient id="chickFaceGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFCC"/>
+      <stop offset="100%" stop-color="#FFE169"/>
+    </radialGradient>
+
+    <!-- Ground Gradient -->
+    <linearGradient id="grassGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#A4D68E" />
+      <stop offset="100%" stop-color="#66AF50" />
+    </linearGradient>
+
+    <!-- Flower Petal Gradient -->
+    <radialGradient id="flowerPetalGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#FFE6F2" />
+    </radialGradient>
+
+    <!-- Leaves / Stem Gradient -->
+    <linearGradient id="leafGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#66AF50" />
+      <stop offset="100%" stop-color="#387C3A" />
+    </linearGradient>
+  </defs>
+
+
+  <!-- ***************  BACKGROUND  *************** -->
+  <!-- Sky -->
+  <rect
+    x="0"
+    y="0"
+    width="800"
+    height="600"
+    fill="url(#skyGradient)"
+  />
+
+  <!-- Sun -->
+  <circle
+    cx="150"
+    cy="80"
+    r="50"
+    fill="url(#sunGradient)"
+    opacity="0.8"
+  />
+
+  <!-- ***************  FOREGROUND / GROUND  *************** -->
+  <rect
+    x="0"
+    y="400"
+    width="800"
+    height="200"
+    fill="url(#grassGradient)"
+  />
+
+  <!-- Some rolling hills for depth -->
+  <path
+    d="M0,400 
+       Q200,350 400,390
+       Q600,430 800,380
+       L800,600 L0,600 Z"
+    fill="#A4D68E"
+    opacity="0.5"
+  />
+
+  <!-- Distant Trees or shrubs (simple shapes) -->
+  <circle cx="100" cy="390" r="25" fill="#8BBC64" opacity="0.7"/>
+  <circle cx="140" cy="395" r="20" fill="#8BBC64" opacity="0.7"/>
+  <circle cx="700" cy="380" r="30" fill="#8BBC64" opacity="0.7"/>
+  <circle cx="750" cy="385" r="25" fill="#8BBC64" opacity="0.7"/>
+
+  <!-- ***************  FLOWERS / MEADOW DETAILS  *************** -->
+  <!-- Small flower cluster on the left -->
+  <g transform="translate(200,450)">
+    <!-- Stem -->
+    <rect x="0" y="0" width="3" height="20" fill="url(#leafGradient)" />
+    <!-- Petals -->
+    <circle cx="1.5" cy="-5" r="6" fill="url(#flowerPetalGradient)" />
+    <circle cx="-4" cy="0" r="6" fill="url(#flowerPetalGradient)" />
+    <circle cx="1.5" cy="5" r="6" fill="url(#flowerPetalGradient)" />
+    <circle cx="7" cy="0" r="6" fill="url(#flowerPetalGradient)" />
+    <!-- Center of flower -->
+    <circle cx="1.5" cy="0" r="3" fill="#FFD700" />
+  </g>
+
+  <!-- Another flower cluster on the right -->
+  <g transform="translate(600,470)">
+    <!-- Stem -->
+    <rect x="0" y="0" width="3" height="15" fill="url(#leafGradient)" />
+    <!-- Petals -->
+    <circle cx="1.5" cy="-5" r="5" fill="url(#flowerPetalGradient)" />
+    <circle cx="-3" cy="0" r="5" fill="url(#flowerPetalGradient)" />
+    <circle cx="1.5" cy="4" r="5" fill="url(#flowerPetalGradient)" />
+    <circle cx="6" cy="0" r="5" fill="url(#flowerPetalGradient)" />
+    <!-- Center of flower -->
+    <circle cx="1.5" cy="0" r="2.5" fill="#FFD700" />
+  </g>
+
+
+  <!-- ***************  BETTY THE CHICK  *************** -->
+  <!-- Body -->
+  <ellipse
+    cx="400"
+    cy="330"
+    rx="40"
+    ry="50"
+    fill="url(#chickBodyGradient)"
+  />
+
+  <!-- Head -->
+  <circle
+    cx="400"
+    cy="260"
+    r="35"
+    fill="url(#chickBodyGradient)"
+  />
+
+  <!-- Face (lighter area) -->
+  <circle
+    cx="400"
+    cy="265"
+    r="22"
+    fill="url(#chickFaceGradient)"
+  />
+
+  <!-- Eyes -->
+  <circle cx="390" cy="260" r="6" fill="#FFFFFF" />
+  <circle cx="410" cy="260" r="6" fill="#FFFFFF" />
+  <!-- Iris -->
+  <circle cx="390" cy="260" r="3" fill="#000000" />
+  <circle cx="410" cy="260" r="3" fill="#000000" />
+  <!-- Eye Shine -->
+  <circle cx="389" cy="259" r="1.5" fill="#FFFFFF" />
+  <circle cx="409" cy="259" r="1.5" fill="#FFFFFF" />
+
+  <!-- Beak -->
+  <path
+    d="M395,275
+       Q400,277 405,275
+       Q400,285 395,275
+       Z"
+    fill="#FFB347"
+    stroke="#E0963C"
+    stroke-width="1"
+  />
+
+  <!-- Chick Wings -->
+  <!-- Left Wing -->
+  <path
+    d="M360,310
+       Q340,315 340,335
+       Q350,345 365,340
+       Z"
+    fill="#FFDA4B"
+    opacity="0.8"
+  />
+  <!-- Right Wing -->
+  <path
+    d="M440,310
+       Q460,315 460,335
+       Q450,345 435,340
+       Z"
+    fill="#FFDA4B"
+    opacity="0.8"
+  />
+
+  <!-- Beta (β) Emblem on Chest -->
+  <circle
+    cx="400"
+    cy="340"
+    r="10"
+    fill="#FFD700"
+    stroke="#CC9900"
+    stroke-width="1"
+  />
+  <text
+    x="395"
+    y="344"
+    font-family="Georgia, serif"
+    font-size="14"
+    fill="#663300"
+    style="font-weight:bold;"
+  >
+    β
+  </text>
+
+  <!-- Feet -->
+  <path
+    d="M385,380 
+       Q390,390 395,380
+       Z"
+    fill="#CC8400"
+  />
+  <path
+    d="M405,380 
+       Q410,390 415,380
+       Z"
+    fill="#CC8400"
+  />
+
+  <!-- ***************  LIGHTING & SHADOWS  *************** -->
+  <!-- Slight shadow under Betty -->
+  <ellipse
+    cx="400"
+    cy="390"
+    rx="28"
+    ry="10"
+    fill="#000000"
+    opacity="0.2"
+  />
+
+  <!-- Soft highlight on top of the chick's head -->
+  <circle
+    cx="400"
+    cy="245"
+    r="18"
+    fill="#FFFFFF"
+    opacity="0.1"
+  />
+
+</svg>

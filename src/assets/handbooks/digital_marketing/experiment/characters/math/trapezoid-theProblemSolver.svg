@@ -1,0 +1,36 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="800"
+    height="800"
+    viewBox="0 0 800 800"
+>
+  <!-- Trapezoid Body -->
+  <path
+    d="M250,300 L550,300 L500,500 L300,500 Z"
+    fill="#FF6347"
+    stroke="#CD5C5C"
+    stroke-width="10"
+  />
+  <!-- Eyes -->
+  <circle cx="350" cy="350" r="30" fill="#FFFFFF" />
+  <circle cx="450" cy="350" r="30" fill="#FFFFFF" />
+  <circle cx="350" cy="350" r="15" fill="#000000" />
+  <circle cx="450" cy="350" r="15" fill="#000000" />
+  <!-- Mouth -->
+  <path
+    d="M350,400 Q400,430 450,400"
+    stroke="#8B0000"
+    stroke-width="5"
+    fill="none"
+  />
+  <!-- Accessories: Calculator -->
+  <rect
+    x="450"
+    y="400"
+    width="50"
+    height="80"
+    fill="#8B0000"
+    stroke="#FFFFFF"
+    stroke-width="3"
+  />
+</svg>

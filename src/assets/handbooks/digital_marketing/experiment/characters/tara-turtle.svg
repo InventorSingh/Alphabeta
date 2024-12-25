@@ -1,0 +1,155 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="800"
+    height="800"
+    viewBox="0 0 800 800"
+>
+  <!-- ***************  DEFINITIONS *************** -->
+  <defs>
+    <!-- Shell Gradient -->
+    <radialGradient id="shellGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6B8E23" />
+      <stop offset="100%" stop-color="#556B2F" />
+    </radialGradient>
+
+    <!-- Shell Pattern Gradient -->
+    <radialGradient id="patternGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9ACD32" />
+      <stop offset="100%" stop-color="#6B8E23" />
+    </radialGradient>
+
+    <!-- Skin Gradient -->
+    <radialGradient id="skinGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#98FB98" />
+      <stop offset="100%" stop-color="#66CDAA" />
+    </radialGradient>
+
+    <!-- Eye Shine -->
+    <radialGradient id="eyeShine" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#CCCCCC" />
+    </radialGradient>
+  </defs>
+
+  <!-- ***************  TARA THE TURTLE *************** -->
+  <!-- Shell -->
+  <ellipse
+    cx="400"
+    cy="500"
+    rx="200"
+    ry="150"
+    fill="url(#shellGradient)"
+    stroke="#556B2F"
+    stroke-width="10"
+  />
+  <!-- Shell Patterns -->
+  <path
+    d="M400,350 Q420,500 400,650 Q380,500 400,350"
+    fill="url(#patternGradient)"
+  />
+  <path
+    d="M300,500 Q400,460 500,500 Q400,540 300,500"
+    fill="url(#patternGradient)"
+  />
+
+  <!-- Head -->
+  <circle
+    cx="400"
+    cy="280"
+    r="80"
+    fill="url(#skinGradient)"
+    stroke="#66CDAA"
+    stroke-width="5"
+  />
+
+  <!-- Eyes -->
+  <circle cx="370" cy="260" r="20" fill="#FFFFFF" />
+  <circle cx="430" cy="260" r="20" fill="#FFFFFF" />
+  <circle cx="370" cy="260" r="10" fill="#000000" />
+  <circle cx="430" cy="260" r="10" fill="#000000" />
+  <circle cx="365" cy="255" r="5" fill="url(#eyeShine)" />
+  <circle cx="425" cy="255" r="5" fill="url(#eyeShine)" />
+
+  <!-- Nose -->
+  <circle cx="400" cy="290" r="6" fill="#556B2F" />
+
+  <!-- Mouth -->
+  <path
+    d="M380,310 Q400,330 420,310"
+    stroke="#006400"
+    stroke-width="3"
+    fill="none"
+  />
+
+  <!-- Legs -->
+  <ellipse
+    cx="240"
+    cy="500"
+    rx="50"
+    ry="30"
+    fill="url(#skinGradient)"
+    transform="rotate(-30,240,500)"
+  />
+  <ellipse
+    cx="560"
+    cy="500"
+    rx="50"
+    ry="30"
+    fill="url(#skinGradient)"
+    transform="rotate(30,560,500)"
+  />
+  <ellipse
+    cx="330"
+    cy="640"
+    rx="50"
+    ry="30"
+    fill="url(#skinGradient)"
+    transform="rotate(-10,330,640)"
+  />
+  <ellipse
+    cx="470"
+    cy="640"
+    rx="50"
+    ry="30"
+    fill="url(#skinGradient)"
+    transform="rotate(10,470,640)"
+  />
+
+  <!-- Tail -->
+  <path
+    d="M400,650 Q410,670 400,690"
+    stroke="url(#skinGradient)"
+    stroke-width="8"
+    fill="none"
+  />
+
+  <!-- Alpha-Beta Accessory (Arm Band) -->
+  <circle cx="250" cy="500" r="20" fill="#FFD700" />
+  <text
+    x="240"
+    y="505"
+    font-family="Georgia"
+    font-size="20"
+    fill="#663300"
+    style="font-weight:bold;"
+  >
+    α
+  </text>
+
+  <!-- ***************  FINAL TOUCHES *************** -->
+  <!-- Smile Lines -->
+  <path
+    d="M360,310 Q400,370 440,310"
+    stroke="#66CDAA"
+    stroke-width="1"
+    fill="none"
+  />
+
+  <!-- Toes -->
+  <circle cx="230" cy="490" r="10" fill="#98FB98" />
+  <circle cx="250" cy="490" r="10" fill="#98FB98" />
+  <circle cx="330" cy="630" r="10" fill="#98FB98" />
+  <circle cx="350" cy="630" r="10" fill="#98FB98" />
+  <circle cx="450" cy="630" r="10" fill="#98FB98" />
+  <circle cx="470" cy="630" r="10" fill="#98FB98" />
+</svg>

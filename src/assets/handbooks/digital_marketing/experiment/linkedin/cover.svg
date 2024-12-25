@@ -1,0 +1,97 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1584"
+  height="396"
+  viewBox="0 0 1584 396"
+  preserveAspectRatio="xMidYMid meet"
+  style="border: 1px solid #ccc;"
+>
+  <!-- ===================== DEFINITIONS ===================== -->
+  <defs>
+    <!-- Horizontal gradient background -->
+    <linearGradient id="coverGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#FFA07A" /> <!-- Warm peach -->
+      <stop offset="50%"  stop-color="#FF6347" /> <!-- Vibrant orange/red -->
+      <stop offset="100%" stop-color="#6A5ACD" /> <!-- Soft purple -->
+    </linearGradient>
+
+    <!-- Glow filter for the sun -->
+    <filter id="glowFilter" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Symbol for Alpha-Beta in a "praying/praising" posture -->
+    <symbol id="AlphaBetaRaised" viewBox="0 0 200 200">
+      <!-- Person Alpha (left) -->
+      <!-- Head -->
+      <circle cx="60" cy="40" r="10" fill="#6A5ACD" />
+      <!-- Body -->
+      <line x1="60" y1="50" x2="60" y2="120" stroke="#6A5ACD" stroke-width="5" />
+      <!-- Raised arms -->
+      <line x1="60" y1="60" x2="40" y2="30" stroke="#6A5ACD" stroke-width="5" />
+      <line x1="60" y1="60" x2="80" y2="30" stroke="#6A5ACD" stroke-width="5" />
+      <!-- Legs -->
+      <line x1="60" y1="120" x2="50" y2="160" stroke="#6A5ACD" stroke-width="5" />
+      <line x1="60" y1="120" x2="70" y2="160" stroke="#6A5ACD" stroke-width="5" />
+
+      <!-- Person Beta (right) -->
+      <!-- Head -->
+      <circle cx="140" cy="40" r="10" fill="#FF6347" />
+      <!-- Body -->
+      <line x1="140" y1="50" x2="140" y2="120" stroke="#FF6347" stroke-width="5" />
+      <!-- Raised arms -->
+      <line x1="140" y1="60" x2="120" y2="30" stroke="#FF6347" stroke-width="5" />
+      <line x1="140" y1="60" x2="160" y2="30" stroke="#FF6347" stroke-width="5" />
+      <!-- Legs -->
+      <line x1="140" y1="120" x2="130" y2="160" stroke="#FF6347" stroke-width="5" />
+      <line x1="140" y1="120" x2="150" y2="160" stroke="#FF6347" stroke-width="5" />
+    </symbol>
+  </defs>
+
+  <!-- ===================== BACKGROUND ===================== -->
+  <rect
+    x="0" y="0"
+    width="1584" height="396"
+    fill="url(#coverGradient)"
+  />
+
+  <!-- ===================== SUN AT THE TOP ===================== -->
+  <!-- Center horizontally (cx=792), near top (cy=90). -->
+  <circle
+    cx="792" 
+    cy="90"
+    r="80"
+    fill="#FFD700"
+    filter="url(#glowFilter)"
+  />
+
+  <!-- ===================== ALPHA-BETA FIGURES ===================== -->
+  <!-- Center horizontally => x=792 - half symbol width => 792 - 100=692  -->
+  <!-- y=100 to place them below the sun -->
+  <use
+    href="#AlphaBetaRaised"
+    x="692"
+    y="100"
+    width="200"
+    height="200"
+  />
+
+  <!-- ===================== OPTIONAL TITLE/TAGLINE ===================== -->
+  <text
+    x="50%"
+    y="85%"
+    dominant-baseline="middle"
+    text-anchor="middle"
+    font-family="Arial, sans-serif"
+    font-size="48"
+    fill="#FFFFFF"
+    font-weight="bold"
+    style="text-shadow: 2px 2px 4px rgba(0,0,0,0.3)"
+  >
+    ALPHABETA
+  </text>
+</svg>

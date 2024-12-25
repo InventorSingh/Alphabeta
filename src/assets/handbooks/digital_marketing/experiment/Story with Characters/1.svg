@@ -1,0 +1,261 @@
+<svg 
+    width="800" 
+    height="600" 
+    viewBox="0 0 800 600" 
+    xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- 
+    ALPHY THE OWL
+    This SVG depicts a forest scene with Alphy perched on a branch.
+    Alphy has an 'alpha' (α) emblem on its chest, signifying the 'Alpha' 
+    concept for finance/technology leadership.
+  -->
+
+  <!-- ***************  DEFINITIONS  *************** -->
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cce8ff"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+    
+    <!-- Sun Gradient -->
+    <radialGradient id="sunGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF9AA"/>
+      <stop offset="100%" stop-color="#FFD700"/>
+    </radialGradient>
+    
+    <!-- Owl Body Gradient -->
+    <radialGradient id="owlBodyGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9F6F46"/>
+      <stop offset="100%" stop-color="#5E3B1F"/>
+    </radialGradient>
+    
+    <!-- Owl Face Gradient -->
+    <radialGradient id="owlFaceGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F9E3C7"/>
+    </radialGradient>
+    
+    <!-- Branch Gradient -->
+    <linearGradient id="branchGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#79553D"/>
+      <stop offset="100%" stop-color="#4C2F16"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ***************  BACKGROUND  *************** -->
+  <!-- Sky -->
+  <rect 
+    x="0" 
+    y="0" 
+    width="800" 
+    height="600" 
+    fill="url(#bgGradient)" 
+  />
+
+  <!-- Sun -->
+  <circle 
+    cx="150" 
+    cy="100" 
+    r="60" 
+    fill="url(#sunGradient)"
+    opacity="0.8"
+  />
+
+  <!-- Distant Trees Silhouette -->
+  <!-- Left Tree -->
+  <path 
+    d="M100,600 
+       Q140,450 130,400 
+       Q125,370 135,350
+       Q125,330 140,300 
+       Q120,250 150,200
+       L170,200 
+       Q160,350 180,380
+       Q170,400 180,450
+       Q150,550 160,600 
+       Z" 
+    fill="#7CA579" 
+    opacity="0.3" 
+  />
+  <!-- Right Tree -->
+  <path
+    d="M700,600
+       Q660,450 670,400
+       Q675,370 665,350
+       Q675,330 660,300
+       Q680,250 650,200
+       L630,200
+       Q640,350 620,380
+       Q630,400 620,450
+       Q650,550 640,600 
+       Z"
+    fill="#7CA579"
+    opacity="0.3"
+  />
+
+  <!-- ***************  FOREGROUND BRANCH  *************** -->
+  <path 
+    d="M0,500 
+       Q150,480 400,520 
+       Q550,550 800,490 
+       L800,600 L0,600 Z" 
+    fill="#C7D7B3" 
+    opacity="0.4"
+  />
+  <!-- Branch Alphy is perched on -->
+  <path
+    d="M150,420 
+       Q250,430 350,440 
+       Q450,450 600,420
+       L610,430
+       Q480,460 320,450
+       Q220,440 120,430
+       Z"
+    fill="url(#branchGradient)"
+    stroke="#3C2C16"
+    stroke-width="2"
+  />
+  
+  <!-- ***************  ALPHY THE OWL  *************** -->
+  <!-- Owl Body -->
+  <ellipse
+    cx="380"
+    cy="300"
+    rx="40"
+    ry="60"
+    fill="url(#owlBodyGradient)"
+  />
+
+  <!-- Owl Wings (Left and Right) -->
+  <!-- Left Wing -->
+  <path
+    d="M340,290 
+       Q300,300 290,340
+       Q295,360 315,355 
+       Q330,345 340,320 
+       Z"
+    fill="#7F5C35"
+  />
+  <!-- Right Wing -->
+  <path
+    d="M420,290
+       Q460,300 470,340
+       Q465,360 445,355
+       Q430,345 420,320
+       Z"
+    fill="#7F5C35"
+  />
+
+  <!-- Owl Head -->
+  <circle
+    cx="380"
+    cy="240"
+    r="35"
+    fill="url(#owlBodyGradient)"
+  />
+
+  <!-- Owl Face (lighter area) -->
+  <circle
+    cx="380"
+    cy="245"
+    r="25"
+    fill="url(#owlFaceGradient)"
+  />
+
+  <!-- Owl Eyes -->
+  <!-- White part -->
+  <circle cx="370" cy="240" r="7" fill="#FFFFFF" />
+  <circle cx="390" cy="240" r="7" fill="#FFFFFF" />
+  <!-- Iris -->
+  <circle cx="370" cy="240" r="3" fill="#000000" />
+  <circle cx="390" cy="240" r="3" fill="#000000" />
+  <!-- Eye Shine -->
+  <circle cx="369" cy="239" r="1.5" fill="#FFFFFF" />
+  <circle cx="389" cy="239" r="1.5" fill="#FFFFFF" />
+
+  <!-- Owl Beak -->
+  <path
+    d="M375,250
+       Q380,252 385,250
+       Q380,260 375,250
+       Z"
+    fill="#FFB347"
+    stroke="#E0963C"
+    stroke-width="1"
+  />
+
+  <!-- Alpha (α) Emblem on Chest -->
+  <path
+    d="M376,310
+       Q380,305 384,310
+       Q380,320 376,310
+       Z"
+    fill="#FFD700"
+  />
+  <text
+    x="371"
+    y="315"
+    font-family="Georgia, serif"
+    font-size="14"
+    fill="#663300"
+    style="font-weight:bold;"
+  >
+    α
+  </text>
+
+  <!-- Owl Feet -->
+  <path
+    d="M365,360
+       Q370,370 375,360
+       Z"
+    fill="#8B4513"
+  />
+  <path
+    d="M385,360
+       Q390,370 395,360
+       Z"
+    fill="#8B4513"
+  />
+
+  <!-- ***************  LIGHTING & SHADOWS  *************** -->
+  <!-- Slight shadow behind Alphy -->
+  <ellipse
+    cx="380"
+    cy="460"
+    rx="30"
+    ry="10"
+    fill="#000000"
+    opacity="0.2"
+  />
+
+  <!-- Soft highlight on top of the owl's head -->
+  <circle
+    cx="380"
+    cy="225"
+    r="18"
+    fill="white"
+    opacity="0.1"
+  />
+
+  <!-- ***************  OPTIONAL DETAILS  *************** -->
+  <!-- Floating Leaves -->
+  <path
+    d="M300,410 
+       Q310,400 320,410 
+       Q310,420 300,410
+       Z"
+    fill="#5EA55D"
+    opacity="0.7"
+  />
+  <path
+    d="M450,390 
+       Q460,380 470,390 
+       Q460,400 450,390
+       Z"
+    fill="#5EA55D"
+    opacity="0.7"
+  />
+
+</svg>

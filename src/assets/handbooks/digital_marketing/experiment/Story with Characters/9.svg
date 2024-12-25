@@ -1,0 +1,451 @@
+<svg
+    width="1280"
+    height="720"
+    viewBox="0 0 1280 720"
+    xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- 
+    FRAME 5 (16:9 COMIC STYLE): "From Seeds to Harvest"
+    - Alphy & Betty celebrating a full harvest
+    - Continues from Frame 4
+    - READ-ONLY 
+  -->
+
+  <!-- ***************  DEFINITIONS  *************** -->
+  <defs>
+    <!-- Sky Gradient -->
+    <linearGradient id="skySunrise" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFD6E6" />
+      <stop offset="100%" stop-color="#FFECC7" />
+    </linearGradient>
+
+    <!-- Sun Glow (Radial) -->
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFAAA"/>
+      <stop offset="100%" stop-color="#FFD700"/>
+    </radialGradient>
+
+    <!-- Ground Gradient -->
+    <linearGradient id="meadowGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B6E0A6" />
+      <stop offset="100%" stop-color="#7BC47F" />
+    </linearGradient>
+
+    <!-- Owl Body Gradient (Alphy) -->
+    <radialGradient id="alphyBodyGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9F6F46"/>
+      <stop offset="100%" stop-color="#5E3B1F"/>
+    </radialGradient>
+
+    <!-- Owl Face Gradient (Alphy) -->
+    <radialGradient id="alphyFaceGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F9E3C7"/>
+    </radialGradient>
+
+    <!-- Chick Body Gradient (Betty) -->
+    <radialGradient id="bettyBodyGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF200"/>
+      <stop offset="100%" stop-color="#FFB600"/>
+    </radialGradient>
+
+    <!-- Chick Face Gradient (Betty) -->
+    <radialGradient id="bettyFaceGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFCC"/>
+      <stop offset="100%" stop-color="#FFE169"/>
+    </radialGradient>
+  </defs>
+
+
+  <!-- ***************  BACKGROUND & ENVIRONMENT  *************** -->
+  <!-- Sky -->
+  <rect 
+    x="0" 
+    y="0" 
+    width="1280" 
+    height="720" 
+    fill="url(#skySunrise)"
+  />
+
+  <!-- Rising Sun -->
+  <circle
+    cx="220"
+    cy="140"
+    r="90"
+    fill="url(#sunGlow)"
+    opacity="0.8"
+  />
+
+  <!-- Ground (Meadow) -->
+  <rect
+    x="0"
+    y="520"
+    width="1280"
+    height="200"
+    fill="url(#meadowGradient)"
+  />
+
+  <!-- Rolling Hills -->
+  <path
+    d="M0,520 
+       Q320,470 640,500
+       Q960,530 1280,480
+       L1280,720 L0,720 Z"
+    fill="#B2DD9F"
+    opacity="0.5"
+  />
+
+  <!-- Distant trees/bushes -->
+  <circle cx="150" cy="510" r="30" fill="#90C18C" opacity="0.6"/>
+  <circle cx="190" cy="515" r="25" fill="#90C18C" opacity="0.6"/>
+  <circle cx="1130" cy="505" r="35" fill="#90C18C" opacity="0.6"/>
+  <circle cx="1170" cy="510" r="30" fill="#90C18C" opacity="0.6"/>
+
+
+  <!-- ***************  THRIVING GARDEN  *************** -->
+  <!-- Bigger patch of soil -->
+  <ellipse
+    cx="640"
+    cy="540"
+    rx="150"
+    ry="35"
+    fill="#855B3D"
+  />
+  <!-- Tall, healthy plants with leaves or fruits -->
+  <!-- Plant 1 -->
+  <path
+    d="M610,535
+       Q612,490 618,480
+       Q622,490 624,535
+       Z"
+    fill="#75A84F"
+  />
+  <!-- Simple fruit or flower on top -->
+  <circle cx="620" cy="475" r="5" fill="#FF5555"/>
+  
+  <!-- Plant 2 -->
+  <path
+    d="M640,534
+       Q642,480 647,470
+       Q652,480 655,534
+       Z"
+    fill="#75A84F"
+  />
+  <circle cx="650" cy="465" r="6" fill="#EEAA00"/>
+
+  <!-- Plant 3 -->
+  <path
+    d="M670,530
+       Q673,470 680,460
+       Q687,470 690,530
+       Z"
+    fill="#75A84F"
+  />
+  <circle cx="680" cy="455" r="7" fill="#FF5555"/>
+
+  <!-- More seeds or mini sprouts around -->
+  <circle cx="590" cy="545" r="4" fill="#AA7F4B"/>
+  <circle cx="720" cy="542" r="4" fill="#AA7F4B"/>
+  <path
+    d="M695,536
+       Q696,530 698,525
+       Q700,530 702,536
+       Z"
+    fill="#75A84F"
+  />
+
+  <!-- ***************  ALPHY THE OWL (celebrating)  *************** -->
+  <!-- Body -->
+  <ellipse
+    cx="380"
+    cy="470"
+    rx="24"
+    ry="36"
+    fill="url(#alphyBodyGrad)"
+  />
+
+  <!-- Head -->
+  <circle
+    cx="380"
+    cy="430"
+    r="22"
+    fill="url(#alphyBodyGrad)"
+  />
+
+  <!-- Face (lighter) -->
+  <circle
+    cx="380"
+    cy="433"
+    r="14"
+    fill="url(#alphyFaceGrad)"
+  />
+
+  <!-- Eyes -->
+  <circle cx="374" cy="430" r="3.5" fill="#FFFFFF" />
+  <circle cx="386" cy="430" r="3.5" fill="#FFFFFF" />
+  <circle cx="374" cy="430" r="1.8" fill="#000000" />
+  <circle cx="386" cy="430" r="1.8" fill="#000000" />
+  <!-- Eye Highlights -->
+  <circle cx="373.5" cy="429.5" r="0.8" fill="#FFFFFF" />
+  <circle cx="385.5" cy="429.5" r="0.8" fill="#FFFFFF" />
+
+  <!-- Beak -->
+  <path
+    d="M377,438
+       Q380,440 383,438
+       Q380,448 377,438
+       Z"
+    fill="#E2A642"
+    stroke="#C28833"
+    stroke-width="0.8"
+  />
+
+  <!-- Alpha (α) emblem on chest -->
+  <circle
+    cx="380"
+    cy="482"
+    r="6"
+    fill="#FFD700"
+    stroke="#CC9900"
+    stroke-width="0.8"
+  />
+  <text
+    x="377"
+    y="485"
+    font-family="Georgia, serif"
+    font-size="8"
+    fill="#663300"
+    style="font-weight:bold;"
+  >
+    α
+  </text>
+
+  <!-- Wings up (like celebration) -->
+  <path
+    d="M350,450
+       Q335,445 340,430
+       Q350,420 365,430
+       Z"
+    fill="#7F5C35"
+    opacity="0.8"
+  />
+  <path
+    d="M410,450
+       Q425,445 420,430
+       Q410,420 395,430
+       Z"
+    fill="#7F5C35"
+    opacity="0.8"
+  />
+
+  <!-- Feet -->
+  <path
+    d="M370,506 
+       Q374,509 378,506
+       Z"
+    fill="#5B3A1C"
+  />
+  <path
+    d="M382,506 
+       Q386,509 390,506
+       Z"
+    fill="#5B3A1C"
+  />
+
+  <!-- Shadow under Alphy -->
+  <ellipse
+    cx="380"
+    cy="515"
+    rx="20"
+    ry="6"
+    fill="#000000"
+    opacity="0.15"
+  />
+
+
+  <!-- ***************  BETTY THE CHICK (celebrating)  *************** -->
+  <!-- Body -->
+  <ellipse
+    cx="900"
+    cy="480"
+    rx="35"
+    ry="50"
+    fill="url(#bettyBodyGrad)"
+  />
+
+  <!-- Head -->
+  <circle
+    cx="900"
+    cy="440"
+    r="28"
+    fill="url(#bettyBodyGrad)"
+  />
+
+  <!-- Face (lighter) -->
+  <circle
+    cx="900"
+    cy="444"
+    r="16"
+    fill="url(#bettyFaceGrad)"
+  />
+
+  <!-- Eyes -->
+  <circle cx="894" cy="440" r="4.5" fill="#FFFFFF" />
+  <circle cx="906" cy="440" r="4.5" fill="#FFFFFF" />
+  <circle cx="894" cy="440" r="2.4" fill="#000000" />
+  <circle cx="906" cy="440" r="2.4" fill="#000000" />
+  <!-- Eye Shine -->
+  <circle cx="893.5" cy="439.5" r="1" fill="#FFFFFF" />
+  <circle cx="905.5" cy="439.5" r="1" fill="#FFFFFF" />
+
+  <!-- Beak -->
+  <path
+    d="M896,447
+       Q900,450 904,447
+       Q900,457 896,447
+       Z"
+    fill="#FFB347"
+    stroke="#E0963C"
+    stroke-width="0.8"
+  />
+
+  <!-- Wings up (celebrating) -->
+  <path
+    d="M870,450
+       Q855,445 860,430
+       Q870,420 885,430
+       Z"
+    fill="#FFDA4B"
+    opacity="0.8"
+  />
+  <path
+    d="M930,450
+       Q945,445 940,430
+       Q930,420 915,430
+       Z"
+    fill="#FFDA4B"
+    opacity="0.8"
+  />
+
+  <!-- Beta (β) emblem on chest -->
+  <circle
+    cx="900"
+    cy="495"
+    r="7"
+    fill="#FFD700"
+    stroke="#CC9900"
+    stroke-width="0.8"
+  />
+  <text
+    x="897"
+    y="499"
+    font-family="Georgia, serif"
+    font-size="10"
+    fill="#663300"
+    style="font-weight:bold;"
+  >
+    β
+  </text>
+
+  <!-- Feet -->
+  <path
+    d="M885,535 
+       Q890,538 895,535
+       Z"
+    fill="#CC8400"
+  />
+  <path
+    d="M905,535 
+       Q910,538 915,535
+       Z"
+    fill="#CC8400"
+  />
+
+  <!-- Shadow under Betty -->
+  <ellipse
+    cx="900"
+    cy="540"
+    rx="28"
+    ry="8"
+    fill="#000000"
+    opacity="0.15"
+  />
+
+
+  <!-- ***************  COMIC SPEECH BUBBLES  *************** -->
+
+  <!-- Alphy's Speech Bubble -->
+  <rect
+    x="320"
+    y="300"
+    width="340"
+    height="70"
+    rx="15"
+    ry="15"
+    fill="#FFFFFF"
+    stroke="#333333"
+    stroke-width="2"
+  />
+  <polygon
+    points="380,370 360,340 340,355"
+    fill="#FFFFFF"
+    stroke="#333333"
+    stroke-width="2"
+  />
+  <text
+    x="330"
+    y="330"
+    font-family="Arial, sans-serif"
+    font-size="20"
+    fill="#000000"
+  >
+    Alphy: “Our seeds have grown—
+  </text>
+  <text
+    x="330"
+    y="355"
+    font-family="Arial, sans-serif"
+    font-size="20"
+    fill="#000000"
+  >
+    just like our savings!”
+  </text>
+
+  <!-- Betty's Speech Bubble -->
+  <rect
+    x="880"
+    y="300"
+    width="380"
+    height="70"
+    rx="15"
+    ry="15"
+    fill="#FFFFFF"
+    stroke="#333333"
+    stroke-width="2"
+  />
+  <polygon
+    points="1060,370 1060,300 1040,300"
+    fill="#FFFFFF"
+    stroke="#333333"
+    stroke-width="2"
+  />
+  <text
+    x="890"
+    y="330"
+    font-family="Arial, sans-serif"
+    font-size="20"
+    fill="#000000"
+  >
+    Betty: “We did it! And it’s only
+  </text>
+  <text
+    x="890"
+    y="355"
+    font-family="Arial, sans-serif"
+    font-size="20"
+    fill="#000000"
+  >
+    the beginning of our growth!”
+  </text>
+
+</svg>

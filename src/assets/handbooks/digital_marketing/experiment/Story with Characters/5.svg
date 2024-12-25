@@ -1,0 +1,401 @@
+<svg
+    width="1280"
+    height="720"
+    viewBox="0 0 1280 720"
+    xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- 
+    FRAME 1 (16:9 COMIC STYLE): Early Morning in the Meadow
+    - Alphy perched on a tree (left side), with a speech bubble
+    - Betty on the meadow (right side), with a speech bubble
+    - Sunrise background
+    - READ-ONLY 
+  -->
+
+  <!-- ***************  DEFINITIONS  *************** -->
+  <defs>
+    <!-- Sky Gradient for Sunrise -->
+    <linearGradient id="skySunrise" x1="0" y1="0" x2="0" y2="1">
+      <!-- Soft pinkish color at top to faint orange at horizon -->
+      <stop offset="0%" stop-color="#FFD6E6" />
+      <stop offset="100%" stop-color="#FFECC7" />
+    </linearGradient>
+
+    <!-- Sun Glow (Radial) -->
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFAAA"/>
+      <stop offset="100%" stop-color="#FFD700"/>
+    </radialGradient>
+
+    <!-- Ground Gradient -->
+    <linearGradient id="meadowGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B6E0A6" />
+      <stop offset="100%" stop-color="#7BC47F" />
+    </linearGradient>
+
+    <!-- Tree Bark Gradient -->
+    <linearGradient id="treeBarkGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5E3B1F" />
+      <stop offset="100%" stop-color="#3C2C16" />
+    </linearGradient>
+
+    <!-- Owl Body Gradient (Alphy) -->
+    <radialGradient id="alphyBodyGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9F6F46"/>
+      <stop offset="100%" stop-color="#5E3B1F"/>
+    </radialGradient>
+
+    <!-- Owl Face Gradient (Alphy) -->
+    <radialGradient id="alphyFaceGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F9E3C7"/>
+    </radialGradient>
+
+    <!-- Chick Body Gradient (Betty) -->
+    <radialGradient id="bettyBodyGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF200"/>
+      <stop offset="100%" stop-color="#FFB600"/>
+    </radialGradient>
+
+    <!-- Chick Face Gradient (Betty) -->
+    <radialGradient id="bettyFaceGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFCC"/>
+      <stop offset="100%" stop-color="#FFE169"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ***************  BACKGROUND & ENVIRONMENT  *************** -->
+  <!-- Sky (16:9 space) -->
+  <rect 
+    x="0" 
+    y="0" 
+    width="1280" 
+    height="720" 
+    fill="url(#skySunrise)"
+  />
+
+  <!-- Rising Sun -->
+  <circle
+    cx="220"
+    cy="140"
+    r="90"
+    fill="url(#sunGlow)"
+    opacity="0.8"
+  />
+
+  <!-- Ground (Meadow) -->
+  <rect
+    x="0"
+    y="520"
+    width="1280"
+    height="200"
+    fill="url(#meadowGradient)"
+  />
+
+  <!-- Rolling Hills -->
+  <path
+    d="M0,520 
+       Q320,470 640,500
+       Q960,530 1280,480
+       L1280,720 L0,720 Z"
+    fill="#B2DD9F"
+    opacity="0.5"
+  />
+
+  <!-- Some distant trees/bushes -->
+  <circle cx="150" cy="510" r="30" fill="#90C18C" opacity="0.6"/>
+  <circle cx="190" cy="515" r="25" fill="#90C18C" opacity="0.6"/>
+  <circle cx="1130" cy="505" r="35" fill="#90C18C" opacity="0.6"/>
+  <circle cx="1170" cy="510" r="30" fill="#90C18C" opacity="0.6"/>
+
+
+  <!-- ***************  LARGE TREE & BRANCH FOR ALPHY  *************** -->
+  <!-- Tree Trunk (on left) -->
+  <path
+    d="M100,420 
+       Q90,320 100,250
+       L140,250
+       Q130,350 130,420
+       Z"
+    fill="url(#treeBarkGradient)"
+  />
+
+  <!-- Horizontal Branch -->
+  <path
+    d="M140,300
+       Q280,290 400,320
+       Q480,340 540,330
+       L540,340
+       Q480,350 400,345
+       Q280,330 140,330
+       Z"
+    fill="url(#treeBarkGradient)"
+  />
+
+  <!-- ***************  ALPHY THE OWL (perched on branch)  *************** -->
+  <!-- Body -->
+  <ellipse
+    cx="400"
+    cy="315"
+    rx="24"
+    ry="36"
+    fill="url(#alphyBodyGrad)"
+  />
+
+  <!-- Head -->
+  <circle
+    cx="400"
+    cy="270"
+    r="22"
+    fill="url(#alphyBodyGrad)"
+  />
+
+  <!-- Face (lighter area) -->
+  <circle
+    cx="400"
+    cy="273"
+    r="14"
+    fill="url(#alphyFaceGrad)"
+  />
+
+  <!-- Eyes -->
+  <circle cx="394" cy="270" r="3.5" fill="#FFFFFF" />
+  <circle cx="406" cy="270" r="3.5" fill="#FFFFFF" />
+  <circle cx="394" cy="270" r="1.8" fill="#000000" />
+  <circle cx="406" cy="270" r="1.8" fill="#000000" />
+  <!-- Eye Highlights -->
+  <circle cx="393.5" cy="269.5" r="0.8" fill="#FFFFFF" />
+  <circle cx="405.5" cy="269.5" r="0.8" fill="#FFFFFF" />
+
+  <!-- Beak -->
+  <path
+    d="M397,278
+       Q400,280 403,278
+       Q400,288 397,278
+       Z"
+    fill="#E2A642"
+    stroke="#C28833"
+    stroke-width="0.8"
+  />
+
+  <!-- Alpha (α) emblem on chest -->
+  <circle
+    cx="400"
+    cy="322"
+    r="6"
+    fill="#FFD700"
+    stroke="#CC9900"
+    stroke-width="0.8"
+  />
+  <text
+    x="397"
+    y="325"
+    font-family="Georgia, serif"
+    font-size="8"
+    fill="#663300"
+    style="font-weight:bold;"
+  >
+    α
+  </text>
+
+  <!-- Feet (on branch) -->
+  <path
+    d="M390,348 
+       Q394,351 398,348
+       Z"
+    fill="#5B3A1C"
+  />
+  <path
+    d="M402,348 
+       Q406,351 410,348
+       Z"
+    fill="#5B3A1C"
+  />
+
+  <!-- Owl Shadow -->
+  <ellipse
+    cx="400"
+    cy="355"
+    rx="18"
+    ry="6"
+    fill="#000000"
+    opacity="0.15"
+  />
+
+
+  <!-- ***************  BETTY THE CHICK (on the meadow)  *************** -->
+  <!-- Body -->
+  <ellipse
+    cx="950"
+    cy="570"
+    rx="35"
+    ry="50"
+    fill="url(#bettyBodyGrad)"
+  />
+
+  <!-- Head -->
+  <circle
+    cx="950"
+    cy="530"
+    r="28"
+    fill="url(#bettyBodyGrad)"
+  />
+
+  <!-- Face (lighter) -->
+  <circle
+    cx="950"
+    cy="534"
+    r="16"
+    fill="url(#bettyFaceGrad)"
+  />
+
+  <!-- Eyes -->
+  <circle cx="944" cy="530" r="4.5" fill="#FFFFFF" />
+  <circle cx="956" cy="530" r="4.5" fill="#FFFFFF" />
+  <circle cx="944" cy="530" r="2.4" fill="#000000" />
+  <circle cx="956" cy="530" r="2.4" fill="#000000" />
+  <!-- Eye Shine -->
+  <circle cx="943.5" cy="529.5" r="1" fill="#FFFFFF" />
+  <circle cx="955.5" cy="529.5" r="1" fill="#FFFFFF" />
+
+  <!-- Beak -->
+  <path
+    d="M946,537
+       Q950,540 954,537
+       Q950,547 946,537
+       Z"
+    fill="#FFB347"
+    stroke="#E0963C"
+    stroke-width="0.8"
+  />
+
+  <!-- Wings -->
+  <!-- Left Wing -->
+  <path
+    d="M910,560
+       Q895,565 900,580
+       Q910,585 925,575
+       Z"
+    fill="#FFDA4B"
+    opacity="0.8"
+  />
+  <!-- Right Wing -->
+  <path
+    d="M990,560
+       Q1005,565 1000,580
+       Q990,585 975,575
+       Z"
+    fill="#FFDA4B"
+    opacity="0.8"
+  />
+
+  <!-- Beta (β) emblem on chest -->
+  <circle
+    cx="950"
+    cy="585"
+    r="7"
+    fill="#FFD700"
+    stroke="#CC9900"
+    stroke-width="0.8"
+  />
+  <text
+    x="947"
+    y="589"
+    font-family="Georgia, serif"
+    font-size="10"
+    fill="#663300"
+    style="font-weight:bold;"
+  >
+    β
+  </text>
+
+  <!-- Feet -->
+  <path
+    d="M935,615 
+       Q940,618 945,615
+       Z"
+    fill="#CC8400"
+  />
+  <path
+    d="M955,615 
+       Q960,618 965,615
+       Z"
+    fill="#CC8400"
+  />
+
+  <!-- Shadow under Chick -->
+  <ellipse
+    cx="950"
+    cy="620"
+    rx="28"
+    ry="8"
+    fill="#000000"
+    opacity="0.15"
+  />
+
+
+  <!-- ***************  COMIC SPEECH BUBBLES  *************** -->
+
+  <!-- Alphy's Speech Bubble -->
+  <!-- 1) The bubble background (rounded rect) -->
+  <rect
+    x="440"
+    y="190"
+    width="260"
+    height="80"
+    rx="15" 
+    ry="15"
+    fill="#FFFFFF"
+    stroke="#333333"
+    stroke-width="2"
+  />
+  <!-- 2) The tail (triangle) pointing toward Alphy -->
+  <polygon
+    points="420,230 440,215 440,245"
+    fill="#FFFFFF"
+    stroke="#333333"
+    stroke-width="2"
+  />
+  <!-- 3) The text -->
+  <text
+    x="450"
+    y="220"
+    font-family="Arial, sans-serif"
+    font-size="20"
+    fill="#000000"
+  >
+    Alphy: “What a beautiful morning!”
+  </text>
+
+  <!-- Betty's Speech Bubble -->
+  <!-- 1) The bubble background -->
+  <rect
+    x="680"
+    y="400"
+    width="300"
+    height="70"
+    rx="15"
+    ry="15"
+    fill="#FFFFFF"
+    stroke="#333333"
+    stroke-width="2"
+  />
+  <!-- 2) The tail -->
+  <polygon
+    points="980,470 980,400 960,400"
+    fill="#FFFFFF"
+    stroke="#333333"
+    stroke-width="2"
+  />
+  <!-- 3) The text -->
+  <text
+    x="690"
+    y="435"
+    font-family="Arial, sans-serif"
+    font-size="20"
+    fill="#000000"
+  >
+    Betty: “I can’t wait to see those sprouts!”
+  </text>
+
+</svg>

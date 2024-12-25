@@ -1,0 +1,41 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="800"
+    height="800"
+    viewBox="0 0 800 800"
+>
+  <!-- Rectangle Body -->
+  <rect
+    x="200"
+    y="250"
+    width="400"
+    height="300"
+    fill="#87CEFA"
+    stroke="#4682B4"
+    stroke-width="10"
+  />
+  <!-- Eyes -->
+  <circle cx="300" cy="350" r="30" fill="#FFFFFF" />
+  <circle cx="500" cy="350" r="30" fill="#FFFFFF" />
+  <circle cx="300" cy="350" r="15" fill="#000000" />
+  <circle cx="500" cy="350" r="15" fill="#000000" />
+  <!-- Mouth -->
+  <path
+    d="M300,450 Q400,480 500,450"
+    stroke="#8B0000"
+    stroke-width="5"
+    fill="none"
+  />
+  <!-- Accessories: Clipboard -->
+  <rect
+    x="500"
+    y="300"
+    width="50"
+    height="100"
+    fill="#4682B4"
+    stroke="#FFFFFF"
+    stroke-width="3"
+    rx="5"
+    ry="5"
+  />
+</svg>

@@ -1,0 +1,91 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="800"
+    height="800"
+    viewBox="0 0 800 800"
+>
+  <!-- ***************  DEFINITIONS *************** -->
+  <defs>
+    <!-- Body Gradient -->
+    <linearGradient id="betaBodyGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#87CEFA" />
+      <stop offset="100%" stop-color="#4682B4" />
+    </linearGradient>
+
+    <!-- Eye Shine -->
+    <radialGradient id="eyeShine" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#CCCCCC" />
+    </radialGradient>
+  </defs>
+
+  <!-- ***************  BETA (β) CHARACTER *************** -->
+  <!-- Body (Letter β Base Shape) -->
+  <path
+    d="M400,200 Q550,200 550,300 Q500,400 400,300 Q350,400 500,500 Q550,600 400,600 Q250,600 250,500 Q300,400 400,500 Q450,400 400,200"
+    fill="url(#betaBodyGradient)"
+    stroke="#4682B4"
+    stroke-width="10"
+  />
+
+  <!-- Eyes -->
+  <circle cx="370" cy="280" r="20" fill="#FFFFFF" />
+  <circle cx="430" cy="280" r="20" fill="#FFFFFF" />
+  <circle cx="370" cy="280" r="10" fill="#000000" />
+  <circle cx="430" cy="280" r="10" fill="#000000" />
+  <circle cx="365" cy="275" r="5" fill="url(#eyeShine)" />
+  <circle cx="425" cy="275" r="5" fill="url(#eyeShine)" />
+
+  <!-- Mouth -->
+  <path
+    d="M380,320 Q400,340 420,320"
+    stroke="#8B0000"
+    stroke-width="3"
+    fill="none"
+  />
+
+  <!-- Arms -->
+  <ellipse
+    cx="320"
+    cy="450"
+    rx="30"
+    ry="60"
+    fill="url(#betaBodyGradient)"
+    transform="rotate(-30,320,450)"
+  />
+  <ellipse
+    cx="480"
+    cy="450"
+    rx="30"
+    ry="60"
+    fill="url(#betaBodyGradient)"
+    transform="rotate(30,480,450)"
+  />
+
+  <!-- Legs -->
+  <ellipse
+    cx="330"
+    cy="650"
+    rx="40"
+    ry="80"
+    fill="url(#betaBodyGradient)"
+    transform="rotate(-15,330,650)"
+  />
+  <ellipse
+    cx="470"
+    cy="650"
+    rx="40"
+    ry="80"
+    fill="url(#betaBodyGradient)"
+    transform="rotate(15,470,650)"
+  />
+
+  <!-- Accessory: Bowtie -->
+  <polygon
+    points="380,350 400,330 420,350 400,370"
+    fill="#FFD700"
+    stroke="#DAA520"
+    stroke-width="2"
+  />
+
+</svg>

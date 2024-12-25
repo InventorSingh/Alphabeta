@@ -1,0 +1,165 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="800"
+    height="800"
+    viewBox="0 0 800 800"
+>
+  <!-- ***************  DEFINITIONS *************** -->
+  <defs>
+    <!-- Body Gradient -->
+    <radialGradient id="bodyGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8B4513" />
+      <stop offset="100%" stop-color="#5C3317" />
+    </radialGradient>
+
+    <!-- Inner Fur Gradient -->
+    <radialGradient id="innerFurGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFE4B5" />
+      <stop offset="100%" stop-color="#D2B48C" />
+    </radialGradient>
+
+    <!-- Tail Gradient -->
+    <linearGradient id="tailGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8B4513" />
+      <stop offset="100%" stop-color="#5C3317" />
+    </linearGradient>
+
+    <!-- Eye Shine -->
+    <radialGradient id="eyeShine" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#CCCCCC" />
+    </radialGradient>
+  </defs>
+
+  <!-- ***************  MILA THE MONKEY *************** -->
+  <!-- Body -->
+  <ellipse
+    cx="400"
+    cy="500"
+    rx="140"
+    ry="180"
+    fill="url(#bodyGradient)"
+  />
+
+  <!-- Head -->
+  <circle
+    cx="400"
+    cy="350"
+    r="120"
+    fill="url(#bodyGradient)"
+    stroke="#6F4E37"
+    stroke-width="5"
+  />
+
+  <!-- Face (Inner Fur) -->
+  <ellipse
+    cx="400"
+    cy="380"
+    rx="90"
+    ry="80"
+    fill="url(#innerFurGradient)"
+  />
+
+  <!-- Ears -->
+  <circle cx="290" cy="330" r="30" fill="url(#bodyGradient)" />
+  <circle cx="510" cy="330" r="30" fill="url(#bodyGradient)" />
+  <circle cx="290" cy="330" r="15" fill="url(#innerFurGradient)" />
+  <circle cx="510" cy="330" r="15" fill="url(#innerFurGradient)" />
+
+  <!-- Eyes -->
+  <circle cx="370" cy="340" r="20" fill="#FFFFFF" />
+  <circle cx="430" cy="340" r="20" fill="#FFFFFF" />
+  <circle cx="370" cy="340" r="10" fill="#000000" />
+  <circle cx="430" cy="340" r="10" fill="#000000" />
+  <circle cx="365" cy="335" r="5" fill="url(#eyeShine)" />
+  <circle cx="425" cy="335" r="5" fill="url(#eyeShine)" />
+
+  <!-- Nose -->
+  <circle cx="400" cy="380" r="10" fill="#6F4E37" />
+
+  <!-- Mouth -->
+  <path
+    d="M380,400 Q400,420 420,400"
+    stroke="#8B0000"
+    stroke-width="3"
+    fill="none"
+  />
+
+  <!-- Arms -->
+  <ellipse
+    cx="260"
+    cy="520"
+    rx="30"
+    ry="90"
+    fill="url(#bodyGradient)"
+    transform="rotate(-20,260,520)"
+  />
+  <ellipse
+    cx="540"
+    cy="520"
+    rx="30"
+    ry="90"
+    fill="url(#bodyGradient)"
+    transform="rotate(20,540,520)"
+  />
+
+  <!-- Legs -->
+  <ellipse
+    cx="320"
+    cy="700"
+    rx="40"
+    ry="90"
+    fill="url(#bodyGradient)"
+    transform="rotate(-10,320,700)"
+  />
+  <ellipse
+    cx="480"
+    cy="700"
+    rx="40"
+    ry="90"
+    fill="url(#bodyGradient)"
+    transform="rotate(10,480,700)"
+  />
+
+  <!-- Tail -->
+  <path
+    d="M540,650 Q600,580 620,720"
+    stroke="url(#tailGradient)"
+    stroke-width="20"
+    fill="none"
+  />
+
+  <!-- Alpha-Beta Accessory (Necklace) -->
+  <circle cx="400" cy="440" r="20" fill="#FFD700" />
+  <text
+    x="390"
+    y="445"
+    font-family="Georgia"
+    font-size="20"
+    fill="#663300"
+    style="font-weight:bold;"
+  >
+    β
+  </text>
+
+  <!-- ***************  FINAL TOUCHES *************** -->
+  <!-- Smile Lines -->
+  <path
+    d="M360,400 Q400,450 440,400"
+    stroke="#6F4E37"
+    stroke-width="1"
+    fill="none"
+  />
+
+  <!-- Finger Details -->
+  <circle cx="250" cy="580" r="10" fill="#FFE4B5" />
+  <circle cx="270" cy="580" r="10" fill="#FFE4B5" />
+  <circle cx="530" cy="580" r="10" fill="#FFE4B5" />
+  <circle cx="550" cy="580" r="10" fill="#FFE4B5" />
+
+  <!-- Toes -->
+  <circle cx="300" cy="770" r="10" fill="#FFE4B5" />
+  <circle cx="340" cy="770" r="10" fill="#FFE4B5" />
+  <circle cx="460" cy="770" r="10" fill="#FFE4B5" />
+  <circle cx="500" cy="770" r="10" fill="#FFE4B5" />
+</svg>

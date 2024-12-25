@@ -1,0 +1,188 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="800"
+    height="800"
+    viewBox="0 0 800 800"
+>
+  <!-- ***************  DEFINITIONS *************** -->
+  <defs>
+    <!-- Fur Gradient -->
+    <radialGradient id="furGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F0E68C" />
+    </radialGradient>
+
+    <!-- Ear Gradient -->
+    <linearGradient id="earGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFDAB9" />
+      <stop offset="100%" stop-color="#FFC0CB" />
+    </linearGradient>
+
+    <!-- Inner Fur Gradient -->
+    <radialGradient id="innerFurGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFACD" />
+      <stop offset="100%" stop-color="#FFD700" />
+    </radialGradient>
+
+    <!-- Eye Shine -->
+    <radialGradient id="eyeShine" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#CCCCCC" />
+    </radialGradient>
+  </defs>
+
+  <!-- ***************  RAVI THE RABBIT *************** -->
+  <!-- Body -->
+  <ellipse
+    cx="400"
+    cy="500"
+    rx="120"
+    ry="160"
+    fill="url(#furGradient)"
+    stroke="#D2B48C"
+    stroke-width="5"
+  />
+
+  <!-- Head -->
+  <circle
+    cx="400"
+    cy="350"
+    r="100"
+    fill="url(#furGradient)"
+    stroke="#D2B48C"
+    stroke-width="5"
+  />
+
+  <!-- Face (Inner Fur) -->
+  <ellipse
+    cx="400"
+    cy="370"
+    rx="70"
+    ry="60"
+    fill="url(#innerFurGradient)"
+  />
+
+  <!-- Ears -->
+  <ellipse
+    cx="350"
+    cy="220"
+    rx="30"
+    ry="80"
+    fill="url(#furGradient)"
+    stroke="#D2B48C"
+    stroke-width="5"
+    transform="rotate(-20,350,220)"
+  />
+  <ellipse
+    cx="450"
+    cy="220"
+    rx="30"
+    ry="80"
+    fill="url(#furGradient)"
+    stroke="#D2B48C"
+    stroke-width="5"
+    transform="rotate(20,450,220)"
+  />
+  <!-- Inner Ear -->
+  <ellipse
+    cx="350"
+    cy="220"
+    rx="15"
+    ry="60"
+    fill="url(#earGradient)"
+    transform="rotate(-20,350,220)"
+  />
+  <ellipse
+    cx="450"
+    cy="220"
+    rx="15"
+    ry="60"
+    fill="url(#earGradient)"
+    transform="rotate(20,450,220)"
+  />
+
+  <!-- Eyes -->
+  <circle cx="370" cy="330" r="20" fill="#FFFFFF" />
+  <circle cx="430" cy="330" r="20" fill="#FFFFFF" />
+  <circle cx="370" cy="330" r="10" fill="#000000" />
+  <circle cx="430" cy="330" r="10" fill="#000000" />
+  <circle cx="365" cy="325" r="5" fill="url(#eyeShine)" />
+  <circle cx="425" cy="325" r="5" fill="url(#eyeShine)" />
+
+  <!-- Nose -->
+  <circle cx="400" cy="360" r="8" fill="#FF6347" />
+
+  <!-- Mouth -->
+  <path
+    d="M390,370 Q400,380 410,370"
+    stroke="#8B0000"
+    stroke-width="2"
+    fill="none"
+  />
+
+  <!-- Teeth -->
+  <rect
+    x="395"
+    y="370"
+    width="10"
+    height="10"
+    fill="#FFFFFF"
+    stroke="#CCCCCC"
+    stroke-width="1"
+  />
+
+  <!-- Arms -->
+  <ellipse
+    cx="300"
+    cy="500"
+    rx="30"
+    ry="80"
+    fill="url(#furGradient)"
+    transform="rotate(-30,300,500)"
+  />
+  <ellipse
+    cx="500"
+    cy="500"
+    rx="30"
+    ry="80"
+    fill="url(#furGradient)"
+    transform="rotate(30,500,500)"
+  />
+
+  <!-- Legs -->
+  <ellipse
+    cx="320"
+    cy="700"
+    rx="50"
+    ry="90"
+    fill="url(#furGradient)"
+    transform="rotate(-15,320,700)"
+  />
+  <ellipse
+    cx="480"
+    cy="700"
+    rx="50"
+    ry="90"
+    fill="url(#furGradient)"
+    transform="rotate(15,480,700)"
+  />
+
+  <!-- Tail -->
+  <circle
+    cx="400"
+    cy="630"
+    r="30"
+    fill="url(#innerFurGradient)"
+    stroke="#D2B48C"
+    stroke-width="3"
+  />
+
+ 
+
+  <!-- ***************  FINAL TOUCHES *************** -->
+  <!-- Toes -->
+  <circle cx="300" cy="760" r="10" fill="#FFFFFF" />
+  <circle cx="320" cy="760" r="10" fill="#FFFFFF" />
+  <circle cx="480" cy="760" r="10" fill="#FFFFFF" />
+  <circle cx="500" cy="760" r="10" fill="#FFFFFF" />
+</svg>

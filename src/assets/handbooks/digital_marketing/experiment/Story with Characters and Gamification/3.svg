@@ -1,0 +1,160 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1920"
+    height="1080"
+    viewBox="0 0 1920 1080"
+>
+  <!-- ***************  BACKGROUND *************** -->
+  <!-- Sky Gradient -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B5E3FF" />
+      <stop offset="100%" stop-color="#E6F7FF" />
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFD700" />
+      <stop offset="100%" stop-color="#FFA500" />
+    </radialGradient>
+    <linearGradient id="creekGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#87CEEB" />
+      <stop offset="100%" stop-color="#4682B4" />
+    </linearGradient>
+    <radialGradient id="gemGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFF00" />
+      <stop offset="100%" stop-color="#FFD700" />
+    </radialGradient>
+    <linearGradient id="logoGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0000FF" />
+      <stop offset="100%" stop-color="#00FFFF" />
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#skyGradient)" />
+  
+  <!-- Clouds -->
+  <ellipse cx="300" cy="200" rx="150" ry="60" fill="#FFFFFF" opacity="0.8" />
+  <ellipse cx="500" cy="250" rx="200" ry="80" fill="#FFFFFF" opacity="0.7" />
+  <ellipse cx="1200" cy="150" rx="180" ry="70" fill="#FFFFFF" opacity="0.8" />
+  <ellipse cx="1700" cy="250" rx="220" ry="90" fill="#FFFFFF" opacity="0.6" />
+
+  <!-- Sun -->
+  <circle cx="200" cy="200" r="120" fill="url(#sunGlow)" opacity="0.9" />
+
+  <!-- Crystal Creek -->
+  <path
+    d="M0,800 Q400,750 960,770 T1920,720 L1920,1080 L0,1080 Z"
+    fill="url(#creekGradient)"
+  />
+
+  <!-- Riverbank -->
+  <path
+    d="M0,770 Q400,730 960,750 T1920,700 L1920,770 L0,770 Z"
+    fill="#228B22"
+    opacity="0.8"
+  />
+
+  <!-- ***************  CHARACTERS *************** -->
+  <!-- Leo the Lion -->
+  <ellipse cx="500" cy="800" rx="80" ry="120" fill="#FFA500" />
+  <circle cx="500" cy="700" r="100" fill="#FFD700" />
+  <circle cx="500" cy="670" r="60" fill="#FFFACD" />
+  <circle cx="470" cy="660" r="12" fill="#FFFFFF" />
+  <circle cx="530" cy="660" r="12" fill="#FFFFFF" />
+  <circle cx="470" cy="660" r="6" fill="#000" />
+  <circle cx="530" cy="660" r="6" fill="#000" />
+  <path
+    d="M490,690 Q500,710 510,690"
+    stroke="#000"
+    stroke-width="3"
+    fill="none"
+  />
+  <circle cx="500" cy="850" r="20" fill="#FFD700" />
+  <text x="490" y="860" font-family="Georgia" font-size="20" fill="#663300">
+    α
+  </text>
+
+  <!-- Ravi the Rabbit -->
+  <ellipse cx="1200" cy="820" rx="60" ry="100" fill="#F0E68C" />
+  <circle cx="1200" cy="720" r="50" fill="#FFFACD" />
+  <circle cx="1180" cy="710" r="8" fill="#FFFFFF" />
+  <circle cx="1220" cy="710" r="8" fill="#FFFFFF" />
+  <circle cx="1180" cy="710" r="4" fill="#000" />
+  <circle cx="1220" cy="710" r="4" fill="#000" />
+  <path
+    d="M1185,730 Q1200,750 1215,730"
+    stroke="#000"
+    stroke-width="2"
+    fill="none"
+  />
+  <circle cx="1200" cy="900" r="15" fill="#FFD700" />
+  <text x="1190" y="910" font-family="Georgia" font-size="16" fill="#663300">
+    β
+  </text>
+
+  <!-- ***************  GLASS JAR WITH NOTE *************** -->
+  <rect
+    x="800"
+    y="770"
+    width="80"
+    height="100"
+    rx="15"
+    ry="15"
+    fill="none"
+    stroke="#4682B4"
+    stroke-width="5"
+  />
+  <polygon points="820,800 840,780 860,800 840,820" fill="url(#gemGlow)" />
+
+  <!-- ***************  TEXT AND CTA *************** -->
+  <rect
+    x="0"
+    y="950"
+    width="1920"
+    height="130"
+    fill="#000"
+    opacity="0.7"
+  />
+  <text
+    x="960"
+    y="1010"
+    text-anchor="middle"
+    font-family="Arial"
+    font-size="48"
+    fill="#FFFFFF"
+  >
+    🌟 "The First Clue!" 🌟
+  </text>
+  <text
+    x="960"
+    y="1050"
+    text-anchor="middle"
+    font-family="Arial"
+    font-size="32"
+    fill="#FFD700"
+  >
+    📖 Learn the full story at [YourWebsite.com]!
+  </text>
+
+  <!-- ***************  αβ LOGO *************** -->
+  <g transform="translate(1800, 50)">
+    <text
+      x="0"
+      y="0"
+      font-family="Georgia"
+      font-size="50"
+      fill="url(#logoGradient)"
+      style="font-weight:bold;"
+    >
+      α
+    </text>
+    <text
+      x="70"
+      y="0"
+      font-family="Georgia"
+      font-size="50"
+      fill="url(#logoGradient)"
+      style="font-weight:bold;"
+    >
+      β
+    </text>
+  </g>
+</svg>

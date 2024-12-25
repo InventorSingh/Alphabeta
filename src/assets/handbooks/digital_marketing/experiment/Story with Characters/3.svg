@@ -1,0 +1,331 @@
+<svg
+    width="800"
+    height="600"
+    viewBox="0 0 800 600"
+    xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- 
+    FRAME 1: Early Morning in the Meadow
+    This scene shows the meadow at sunrise:
+    - Alphy perched on a branch (left side).
+    - Betty hopping around (right/middle).
+    - Soft sunrise sky & ground elements.
+  -->
+
+  <!-- ***************  DEFINITIONS  *************** -->
+  <defs>
+    <!-- Sky Gradient for Sunrise -->
+    <linearGradient id="skySunrise" x1="0" y1="0" x2="0" y2="1">
+      <!-- Soft pinkish color at top to faint orange at horizon -->
+      <stop offset="0%" stop-color="#FFD6E6" />
+      <stop offset="100%" stop-color="#FFECC7" />
+    </linearGradient>
+
+    <!-- Sun Glow (Radial) -->
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFAAA" />
+      <stop offset="100%" stop-color="#FFD700" />
+    </radialGradient>
+
+    <!-- Ground Gradient -->
+    <linearGradient id="meadowGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B6E0A6" />
+      <stop offset="100%" stop-color="#7BC47F" />
+    </linearGradient>
+
+    <!-- Tree Bark Gradient -->
+    <linearGradient id="treeBarkGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5E3B1F" />
+      <stop offset="100%" stop-color="#3C2C16" />
+    </linearGradient>
+
+    <!-- Owl Body Gradient (Alphy) -->
+    <radialGradient id="alphyBodyGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9F6F46"/>
+      <stop offset="100%" stop-color="#5E3B1F"/>
+    </radialGradient>
+
+    <!-- Owl Face Gradient (Alphy) -->
+    <radialGradient id="alphyFaceGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F9E3C7"/>
+    </radialGradient>
+
+    <!-- Chick Body Gradient (Betty) -->
+    <radialGradient id="bettyBodyGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF200"/>
+      <stop offset="100%" stop-color="#FFB600"/>
+    </radialGradient>
+
+    <!-- Chick Face Gradient (Betty) -->
+    <radialGradient id="bettyFaceGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFCC"/>
+      <stop offset="100%" stop-color="#FFE169"/>
+    </radialGradient>
+
+  </defs>
+
+  <!-- ***************  BACKGROUND & ENVIRONMENT  *************** -->
+  <!-- Sky -->
+  <rect 
+    x="0" 
+    y="0" 
+    width="800" 
+    height="600" 
+    fill="url(#skySunrise)"
+  />
+
+  <!-- Rising Sun -->
+  <circle
+    cx="140"
+    cy="100"
+    r="60"
+    fill="url(#sunGlow)"
+    opacity="0.8"
+  />
+
+  <!-- Ground -->
+  <rect
+    x="0"
+    y="400"
+    width="800"
+    height="200"
+    fill="url(#meadowGradient)"
+  />
+
+  <!-- Gentle Rolling Hills -->
+  <path
+    d="M0,400 
+       Q200,360 400,390
+       Q600,420 800,380
+       L800,600 L0,600 Z"
+    fill="#B2DD9F"
+    opacity="0.5"
+  />
+
+  <!-- Some distant trees/bushes -->
+  <circle cx="100" cy="390" r="25" fill="#90C18C" opacity="0.6"/>
+  <circle cx="130" cy="395" r="20" fill="#90C18C" opacity="0.6"/>
+  <circle cx="730" cy="385" r="30" fill="#90C18C" opacity="0.6"/>
+  <circle cx="760" cy="390" r="25" fill="#90C18C" opacity="0.6"/>
+
+
+  <!-- ***************  TREE BRANCH FOR ALPHY  *************** -->
+  <!-- Trunk (left side) -->
+  <path
+    d="M70,250 
+       Q60,150 70,100
+       L100,100
+       Q90,180 90,250
+       Z"
+    fill="url(#treeBarkGradient)"
+  />
+  <!-- Branch extending -->
+  <path
+    d="M100,200
+       Q180,190 250,210
+       Q300,230 350,220
+       L350,230
+       Q300,240 250,235
+       Q180,220 100,220
+       Z"
+    fill="url(#treeBarkGradient)"
+  />
+
+  <!-- ***************  ALPHY THE OWL (perched on branch)  *************** -->
+  <!-- Body -->
+  <ellipse
+    cx="260"
+    cy="205"
+    rx="16"
+    ry="24"
+    fill="url(#alphyBodyGrad)"
+  />
+  <!-- Head -->
+  <circle
+    cx="260"
+    cy="170"
+    r="14"
+    fill="url(#alphyBodyGrad)"
+  />
+  <!-- Face (lighter area) -->
+  <circle
+    cx="260"
+    cy="173"
+    r="9"
+    fill="url(#alphyFaceGrad)"
+  />
+  <!-- Eyes -->
+  <circle cx="255" cy="170" r="2.5" fill="#FFFFFF" />
+  <circle cx="265" cy="170" r="2.5" fill="#FFFFFF" />
+  <circle cx="255" cy="170" r="1.2" fill="#000000" />
+  <circle cx="265" cy="170" r="1.2" fill="#000000" />
+  <!-- Tiny highlight in eyes -->
+  <circle cx="254.5" cy="169.5" r="0.5" fill="#FFFFFF" />
+  <circle cx="264.5" cy="169.5" r="0.5" fill="#FFFFFF" />
+
+  <!-- Beak -->
+  <path
+    d="M257,177
+       Q260,179 263,177
+       Q260,185 257,177
+       Z"
+    fill="#E2A642"
+    stroke="#C28833"
+    stroke-width="0.5"
+  />
+
+  <!-- Alpha (α) emblem on chest -->
+  <circle
+    cx="260"
+    cy="210"
+    r="4"
+    fill="#FFD700"
+    stroke="#CC9900"
+    stroke-width="0.5"
+  />
+  <text
+    x="258"
+    y="212"
+    font-family="Georgia, serif"
+    font-size="5"
+    fill="#663300"
+    style="font-weight:bold;"
+  >
+    α
+  </text>
+
+  <!-- Feet (perched) -->
+  <path
+    d="M252,228 
+       Q254,230 256,228
+       Z"
+    fill="#5B3A1C"
+  />
+  <path
+    d="M264,228 
+       Q266,230 268,228
+       Z"
+    fill="#5B3A1C"
+  />
+
+  <!-- Shadow under Owl -->
+  <ellipse
+    cx="260"
+    cy="236"
+    rx="12"
+    ry="5"
+    fill="#000000"
+    opacity="0.15"
+  />
+
+
+  <!-- ***************  BETTY THE CHICK (on the meadow)  *************** -->
+  <!-- Body -->
+  <ellipse
+    cx="550"
+    cy="370"
+    rx="25"
+    ry="35"
+    fill="url(#bettyBodyGrad)"
+  />
+  <!-- Head -->
+  <circle
+    cx="550"
+    cy="330"
+    r="20"
+    fill="url(#bettyBodyGrad)"
+  />
+  <!-- Face (lighter) -->
+  <circle
+    cx="550"
+    cy="333"
+    r="12"
+    fill="url(#bettyFaceGrad)"
+  />
+
+  <!-- Eyes -->
+  <circle cx="544" cy="330" r="3.5" fill="#FFFFFF" />
+  <circle cx="556" cy="330" r="3.5" fill="#FFFFFF" />
+  <circle cx="544" cy="330" r="1.8" fill="#000000" />
+  <circle cx="556" cy="330" r="1.8" fill="#000000" />
+  <!-- Eye Shine -->
+  <circle cx="543.5" cy="329.5" r="0.8" fill="#FFFFFF" />
+  <circle cx="555.5" cy="329.5" r="0.8" fill="#FFFFFF" />
+
+  <!-- Beak -->
+  <path
+    d="M546,337
+       Q550,339 554,337
+       Q550,345 546,337
+       Z"
+    fill="#FFB347"
+    stroke="#E0963C"
+    stroke-width="0.5"
+  />
+
+  <!-- Wings -->
+  <!-- Left Wing -->
+  <path
+    d="M520,355
+       Q505,360 510,375
+       Q520,380 530,370
+       Z"
+    fill="#FFDA4B"
+    opacity="0.8"
+  />
+  <!-- Right Wing -->
+  <path
+    d="M580,355
+       Q595,360 590,375
+       Q580,380 570,370
+       Z"
+    fill="#FFDA4B"
+    opacity="0.8"
+  />
+
+  <!-- Beta (β) emblem -->
+  <circle
+    cx="550"
+    cy="380"
+    r="5"
+    fill="#FFD700"
+    stroke="#CC9900"
+    stroke-width="0.5"
+  />
+  <text
+    x="547.5"
+    y="383"
+    font-family="Georgia, serif"
+    font-size="7"
+    fill="#663300"
+    style="font-weight:bold;"
+  >
+    β
+  </text>
+
+  <!-- Feet -->
+  <path
+    d="M538,405 
+       Q542,408 546,405
+       Z"
+    fill="#CC8400"
+  />
+  <path
+    d="M554,405 
+       Q558,408 562,405
+       Z"
+    fill="#CC8400"
+  />
+
+  <!-- Shadow under Chick -->
+  <ellipse
+    cx="550"
+    cy="410"
+    rx="20"
+    ry="6"
+    fill="#000000"
+    opacity="0.15"
+  />
+
+</svg>

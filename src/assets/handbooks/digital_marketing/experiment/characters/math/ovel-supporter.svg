@@ -1,0 +1,36 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="800"
+    height="800"
+    viewBox="0 0 800 800"
+>
+  <!-- Oval Body -->
+  <ellipse
+    cx="400"
+    cy="400"
+    rx="200"
+    ry="300"
+    fill="#FFA07A"
+    stroke="#CD5C5C"
+    stroke-width="10"
+  />
+  <!-- Eyes -->
+  <circle cx="350" cy="300" r="30" fill="#FFFFFF" />
+  <circle cx="450" cy="300" r="30" fill="#FFFFFF" />
+  <circle cx="350" cy="300" r="15" fill="#000000" />
+  <circle cx="450" cy="300" r="15" fill="#000000" />
+  <!-- Mouth -->
+  <path
+    d="M350,400 Q400,450 450,400"
+    stroke="#8B0000"
+    stroke-width="5"
+    fill="none"
+  />
+  <!-- Accessories: Scarf -->
+  <path
+    d="M300,400 Q400,500 500,400"
+    fill="#FF6347"
+    stroke="#CD5C5C"
+    stroke-width="5"
+  />
+</svg>

@@ -1,0 +1,353 @@
+<svg
+    width="1280"
+    height="720"
+    viewBox="0 0 1280 720"
+    xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- 
+    FRAME 2: The First Clue
+    - Late morning background
+    - Leo the Lion and Ravi the Rabbit at Crystal Creek
+    - Floating glass jar with glowing note
+    - αβ logo in the top-right corner
+    - Suspense and intrigue through composition
+    -->
+
+  <!-- ***************  DEFINITIONS  *************** -->
+  <defs>
+    <!-- Sky Gradient for Late Morning -->
+    <linearGradient id="skyLateMorning" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B5E3FF" />
+      <stop offset="100%" stop-color="#E6F7FF" />
+    </linearGradient>
+
+    <!-- Water Gradient for Crystal Creek -->
+    <linearGradient id="creekGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#87CEEB" />
+      <stop offset="100%" stop-color="#4682B4" />
+    </linearGradient>
+
+    <!-- Sun Glow (Radial) -->
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFD700" />
+      <stop offset="100%" stop-color="#FFA500" />
+    </radialGradient>
+
+    <!-- Leo Body Gradient -->
+    <radialGradient id="leoBodyGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#FFA500"/>
+    </radialGradient>
+
+    <!-- Ravi Body Gradient -->
+    <radialGradient id="raviBodyGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F0E68C"/>
+    </radialGradient>
+
+    <!-- Gem Glow -->
+    <radialGradient id="gemGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFF00" />
+      <stop offset="100%" stop-color="#FFD700" />
+    </radialGradient>
+
+    <!-- αβ Logo Gradient -->
+    <linearGradient id="logoGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0000FF" />
+      <stop offset="100%" stop-color="#00FFFF" />
+    </linearGradient>
+  </defs>
+
+  <!-- ***************  BACKGROUND & ENVIRONMENT  *************** -->
+  <!-- Sky -->
+  <rect 
+    x="0" 
+    y="0" 
+    width="1280" 
+    height="720" 
+    fill="url(#skyLateMorning)"
+  />
+
+  <!-- Rising Sun -->
+  <circle
+    cx="220"
+    cy="140"
+    r="90"
+    fill="url(#sunGlow)"
+    opacity="0.7"
+  />
+
+  <!-- Crystal Creek -->
+  <path
+    d="M0,520 
+       Q320,500 640,510
+       Q960,520 1280,490
+       L1280,720 L0,720 Z"
+    fill="url(#creekGradient)"
+  />
+
+  <!-- Riverbank (Greenery) -->
+  <path
+    d="M0,510 
+       Q320,470 640,500
+       Q960,530 1280,480
+       L1280,510 L0,510 Z"
+    fill="#228B22"
+    opacity="0.7"
+  />
+
+  <!-- ***************  ALPHA BETA LOGO  *************** -->
+  <g id="logo" transform="translate(1150, 50)">
+    <!-- Alpha Symbol -->
+    <text
+      x="0"
+      y="0"
+      font-family="Georgia, serif"
+      font-size="40"
+      fill="url(#logoGradient)"
+      style="font-weight:bold;"
+    >
+      α
+    </text>
+    <!-- Beta Symbol -->
+    <text
+      x="40"
+      y="0"
+      font-family="Georgia, serif"
+      font-size="40"
+      fill="url(#logoGradient)"
+      style="font-weight:bold;"
+    >
+      β
+    </text>
+  </g>
+
+  <!-- ***************  CHARACTERS  *************** -->
+  <!-- Leo the Lion -->
+  <!-- Body -->
+  <ellipse
+    cx="400"
+    cy="500"
+    rx="40"
+    ry="60"
+    fill="url(#leoBodyGrad)"
+  />
+
+  <!-- Mane -->
+  <circle
+    cx="400"
+    cy="460"
+    r="45"
+    fill="#FFD700"
+    stroke="#FFA500"
+    stroke-width="2"
+  />
+
+  <!-- Head -->
+  <circle
+    cx="400"
+    cy="440"
+    r="30"
+    fill="url(#leoBodyGrad)"
+  />
+
+  <!-- Face -->
+  <circle
+    cx="400"
+    cy="445"
+    r="15"
+    fill="#FFFACD"
+  />
+
+  <!-- Eyes -->
+  <circle cx="390" cy="440" r="5" fill="#FFFFFF" />
+  <circle cx="410" cy="440" r="5" fill="#FFFFFF" />
+  <circle cx="390" cy="440" r="2" fill="#000000" />
+  <circle cx="410" cy="440" r="2" fill="#000000" />
+
+  <!-- Mouth -->
+  <path
+    d="M395,455 
+       Q400,460 405,455"
+    stroke="#000000"
+    stroke-width="1"
+    fill="none"
+  />
+
+  <!-- Alpha Emblem -->
+  <circle
+    cx="400"
+    cy="550"
+    r="8"
+    fill="#FFD700"
+    stroke="#CC9900"
+    stroke-width="1"
+  />
+  <text
+    x="395"
+    y="555"
+    font-family="Georgia, serif"
+    font-size="10"
+    fill="#663300"
+    style="font-weight:bold;"
+  >
+    α
+  </text>
+
+  <!-- Ravi the Rabbit -->
+  <!-- Body -->
+  <ellipse
+    cx="600"
+    cy="520"
+    rx="20"
+    ry="30"
+    fill="url(#raviBodyGrad)"
+  />
+
+  <!-- Head -->
+  <circle
+    cx="600"
+    cy="490"
+    r="15"
+    fill="url(#raviBodyGrad)"
+  />
+
+  <!-- Face -->
+  <circle
+    cx="600"
+    cy="495"
+    r="7"
+    fill="#FFFACD"
+  />
+
+  <!-- Eyes -->
+  <circle cx="595" cy="490" r="3" fill="#FFFFFF" />
+  <circle cx="605" cy="490" r="3" fill="#FFFFFF" />
+  <circle cx="595" cy="490" r="1.2" fill="#000000" />
+  <circle cx="605" cy="490" r="1.2" fill="#000000" />
+
+  <!-- Smile -->
+  <path
+    d="M595,500 
+       Q600,505 605,500"
+    stroke="#000000"
+    stroke-width="1"
+    fill="none"
+  />
+
+  <!-- Beta Emblem -->
+  <circle
+    cx="600"
+    cy="550"
+    r="5"
+    fill="#FFD700"
+    stroke="#CC9900"
+    stroke-width="1"
+  />
+  <text
+    x="595"
+    y="553"
+    font-family="Georgia, serif"
+    font-size="6"
+    fill="#663300"
+    style="font-weight:bold;"
+  >
+    β
+  </text>
+
+  <!-- ***************  FLOATING JAR & NOTE  *************** -->
+  <!-- Glass Jar -->
+  <rect
+    x="500"
+    y="490"
+    width="40"
+    height="60"
+    rx="10"
+    ry="10"
+    fill="none"
+    stroke="#4682B4"
+    stroke-width="2"
+  />
+
+  <!-- Glowing Note -->
+  <polygon
+    points="510,510 520,500 530,510 520,520"
+    fill="url(#gemGlow)"
+  />
+
+  <!-- ***************  SPEECH BUBBLES  *************** -->
+  <!-- Leo's Speech Bubble -->
+  <rect
+    x="300"
+    y="400"
+    width="300"
+    height="80"
+    rx="15"
+    ry="15"
+    fill="#FFFFFF"
+    stroke="#333333"
+    stroke-width="2"
+  />
+  <polygon
+    points="460,480 440,450 440,480"
+    fill="#FFFFFF"
+    stroke="#333333"
+    stroke-width="2"
+  />
+  <text
+    x="310"
+    y="430"
+    font-family="Arial, sans-serif"
+    font-size="18"
+    fill="#000000"
+  >
+    Leo: “Look! A glowing note inside
+  </text>
+  <text
+    x="310"
+    y="455"
+    font-family="Arial, sans-serif"
+    font-size="18"
+    fill="#000000"
+  >
+    this jar. Let’s open it!”
+  </text>
+
+  <!-- Ravi's Speech Bubble -->
+  <rect
+    x="650"
+    y="400"
+    width="300"
+    height="80"
+    rx="15"
+    ry="15"
+    fill="#FFFFFF"
+    stroke="#333333"
+    stroke-width="2"
+  />
+  <polygon
+    points="850,480 850,400 830,400"
+    fill="#FFFFFF"
+    stroke="#333333"
+    stroke-width="2"
+  />
+  <text
+    x="660"
+    y="430"
+    font-family="Arial, sans-serif"
+    font-size="18"
+    fill="#000000"
+  >
+    Ravi: “Could this be a clue
+  </text>
+  <text
+    x="660"
+    y="455"
+    font-family="Arial, sans-serif"
+    font-size="18"
+    fill="#000000"
+  >
+    to find the Golden Seeds?”
+  </text>
+
+</svg>

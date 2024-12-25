@@ -1,0 +1,87 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1584"
+  height="396"
+  viewBox="0 0 1584 396"
+  preserveAspectRatio="xMidYMid meet"
+>
+  <!-- ===================== DEFINITIONS ===================== -->
+  <defs>
+    <!-- Horizontal gradient background -->
+    <linearGradient id="coverGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#FFA07A" /><!-- Peach -->
+      <stop offset="50%"  stop-color="#FF6347" /><!-- Orange/red -->
+      <stop offset="100%" stop-color="#6A5ACD" /><!-- Purple -->
+    </linearGradient>
+
+    <!-- Glow filter for the sun and the text -->
+    <filter id="glowFilter" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Symbol for Alpha & Beta in a raised-arms posture (300×300) -->
+    <symbol id="AlphaBetaRaised" viewBox="0 0 300 300">
+      <!-- Alpha (left) -->
+      <circle cx="90" cy="60" r="14" fill="#6A5ACD" />
+      <line x1="90" y1="74" x2="90" y2="180" stroke="#6A5ACD" stroke-width="8" />
+      <line x1="90" y1="90" x2="60" y2="40" stroke="#6A5ACD" stroke-width="8" />
+      <line x1="90" y1="90" x2="120" y2="40" stroke="#6A5ACD" stroke-width="8" />
+      <line x1="90" y1="180" x2="70" y2="250" stroke="#6A5ACD" stroke-width="8" />
+      <line x1="90" y1="180" x2="110" y2="250" stroke="#6A5ACD" stroke-width="8" />
+
+      <!-- Beta (right) -->
+      <circle cx="210" cy="60" r="14" fill="#FF6347" />
+      <line x1="210" y1="74" x2="210" y2="180" stroke="#FF6347" stroke-width="8" />
+      <line x1="210" y1="90" x2="180" y2="40" stroke="#FF6347" stroke-width="8" />
+      <line x1="210" y1="90" x2="240" y2="40" stroke="#FF6347" stroke-width="8" />
+      <line x1="210" y1="180" x2="190" y2="250" stroke="#FF6347" stroke-width="8" />
+      <line x1="210" y1="180" x2="230" y2="250" stroke="#FF6347" stroke-width="8" />
+    </symbol>
+  </defs>
+
+  <!-- ===================== BACKGROUND ===================== -->
+  <rect
+    x="0" y="0"
+    width="1584" height="396"
+    fill="url(#coverGradient)"
+  />
+
+  <!-- ===================== SUN ON LEFT ===================== -->
+  <!-- Centered at x=200 for horizontal clarity, y=198 for vertical mid -->
+  <circle
+    cx="200"
+    cy="198"
+    r="100"
+    fill="#FFD700"
+    filter="url(#glowFilter)"
+  />
+
+  <!-- ===================== ALPHA & BETA (CENTER) ===================== -->
+  <!-- Placed at (x=650,y=50), so each figure is quite large. -->
+  <use
+    href="#AlphaBetaRaised"
+    x="650"
+    y="50"
+    width="300"
+    height="300"
+  />
+
+  <!-- ===================== LARGE “αβ” TEXT ON THE RIGHT ===================== -->
+  <text
+    x="1250"
+    y="50%"
+    dominant-baseline="middle"
+    text-anchor="middle"
+    font-family="Arial, sans-serif"
+    font-size="120"
+    fill="#FFFFFF"
+    font-weight="bold"
+    filter="url(#glowFilter)"
+  >
+    αβ
+  </text>
+</svg>

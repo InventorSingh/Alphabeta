@@ -1,0 +1,475 @@
+<svg
+    width="1280"
+    height="720"
+    viewBox="0 0 1280 720"
+    xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- 
+    FRAME 4 (16:9 COMIC STYLE): "The Beta Test"
+    - Alphy & Betty measuring / observing sprouts
+    - Continues from Frame 3
+    - READ-ONLY 
+  -->
+
+  <!-- ***************  DEFINITIONS  *************** -->
+  <defs>
+    <!-- Sky Gradient -->
+    <linearGradient id="skySunrise" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFD6E6" />
+      <stop offset="100%" stop-color="#FFECC7" />
+    </linearGradient>
+
+    <!-- Sun Glow (Radial) -->
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFAAA"/>
+      <stop offset="100%" stop-color="#FFD700"/>
+    </radialGradient>
+
+    <!-- Ground Gradient -->
+    <linearGradient id="meadowGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B6E0A6" />
+      <stop offset="100%" stop-color="#7BC47F" />
+    </linearGradient>
+
+    <!-- Owl Body Gradient (Alphy) -->
+    <radialGradient id="alphyBodyGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9F6F46"/>
+      <stop offset="100%" stop-color="#5E3B1F"/>
+    </radialGradient>
+
+    <!-- Owl Face Gradient (Alphy) -->
+    <radialGradient id="alphyFaceGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F9E3C7"/>
+    </radialGradient>
+
+    <!-- Chick Body Gradient (Betty) -->
+    <radialGradient id="bettyBodyGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF200"/>
+      <stop offset="100%" stop-color="#FFB600"/>
+    </radialGradient>
+
+    <!-- Chick Face Gradient (Betty) -->
+    <radialGradient id="bettyFaceGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFCC"/>
+      <stop offset="100%" stop-color="#FFE169"/>
+    </radialGradient>
+  </defs>
+
+
+  <!-- ***************  BACKGROUND & ENVIRONMENT  *************** -->
+  <!-- Sky -->
+  <rect 
+    x="0" 
+    y="0" 
+    width="1280" 
+    height="720" 
+    fill="url(#skySunrise)"
+  />
+
+  <!-- Rising Sun -->
+  <circle
+    cx="220"
+    cy="140"
+    r="90"
+    fill="url(#sunGlow)"
+    opacity="0.8"
+  />
+
+  <!-- Ground (Meadow) -->
+  <rect
+    x="0"
+    y="520"
+    width="1280"
+    height="200"
+    fill="url(#meadowGradient)"
+  />
+
+  <!-- Rolling Hills -->
+  <path
+    d="M0,520 
+       Q320,470 640,500
+       Q960,530 1280,480
+       L1280,720 L0,720 Z"
+    fill="#B2DD9F"
+    opacity="0.5"
+  />
+
+  <!-- Distant trees/bushes -->
+  <circle cx="150" cy="510" r="30" fill="#90C18C" opacity="0.6"/>
+  <circle cx="190" cy="515" r="25" fill="#90C18C" opacity="0.6"/>
+  <circle cx="1130" cy="505" r="35" fill="#90C18C" opacity="0.6"/>
+  <circle cx="1170" cy="510" r="30" fill="#90C18C" opacity="0.6"/>
+
+
+  <!-- ***************  GARDEN WITH SPROUTS  *************** -->
+  <!-- Soil patch -->
+  <ellipse
+    cx="640"
+    cy="540"
+    rx="110"
+    ry="25"
+    fill="#855B3D"
+  />
+  <!-- Several sprouts at different growth stages -->
+  <!-- Sprout 1 (short) -->
+  <path
+    d="M610,535
+       Q612,525 614,520
+       Q616,525 618,535
+       Z"
+    fill="#75A84F"
+  />
+  <!-- Sprout 2 (medium) -->
+  <path
+    d="M640,534
+       Q642,520 645,515
+       Q648,520 649,534
+       Z"
+    fill="#75A84F"
+  />
+  <!-- Sprout 3 (taller) -->
+  <path
+    d="M670,532
+       Q672,510 675,500
+       Q678,510 680,532
+       Z"
+    fill="#75A84F"
+  />
+  <!-- Seeds on the ground -->
+  <circle cx="590" cy="540" r="3" fill="#AA7F4B"/>
+  <circle cx="620" cy="542" r="3" fill="#AA7F4B"/>
+  <circle cx="660" cy="541" r="3" fill="#AA7F4B"/>
+  <circle cx="700" cy="539" r="3" fill="#AA7F4B"/>
+
+
+  <!-- ***************  ALPHY THE OWL (measuring data)  *************** -->
+  <!-- Body -->
+  <ellipse
+    cx="420"
+    cy="470"
+    rx="24"
+    ry="36"
+    fill="url(#alphyBodyGrad)"
+  />
+
+  <!-- Head -->
+  <circle
+    cx="420"
+    cy="430"
+    r="22"
+    fill="url(#alphyBodyGrad)"
+  />
+
+  <!-- Face (lighter) -->
+  <circle
+    cx="420"
+    cy="433"
+    r="14"
+    fill="url(#alphyFaceGrad)"
+  />
+
+  <!-- Eyes -->
+  <circle cx="414" cy="430" r="3.5" fill="#FFFFFF" />
+  <circle cx="426" cy="430" r="3.5" fill="#FFFFFF" />
+  <circle cx="414" cy="430" r="1.8" fill="#000000" />
+  <circle cx="426" cy="430" r="1.8" fill="#000000" />
+  <!-- Eye Highlights -->
+  <circle cx="413.5" cy="429.5" r="0.8" fill="#FFFFFF" />
+  <circle cx="425.5" cy="429.5" r="0.8" fill="#FFFFFF" />
+
+  <!-- Beak -->
+  <path
+    d="M417,438
+       Q420,440 423,438
+       Q420,448 417,438
+       Z"
+    fill="#E2A642"
+    stroke="#C28833"
+    stroke-width="0.8"
+  />
+
+  <!-- Alpha (α) emblem on chest -->
+  <circle
+    cx="420"
+    cy="482"
+    r="6"
+    fill="#FFD700"
+    stroke="#CC9900"
+    stroke-width="0.8"
+  />
+  <text
+    x="417"
+    y="485"
+    font-family="Georgia, serif"
+    font-size="8"
+    fill="#663300"
+    style="font-weight:bold;"
+  >
+    α
+  </text>
+
+  <!-- Feet -->
+  <path
+    d="M410,506 
+       Q414,509 418,506
+       Z"
+    fill="#5B3A1C"
+  />
+  <path
+    d="M422,506 
+       Q426,509 430,506
+       Z"
+    fill="#5B3A1C"
+  />
+
+  <!-- Owl Shadow -->
+  <ellipse
+    cx="420"
+    cy="515"
+    rx="20"
+    ry="6"
+    fill="#000000"
+    opacity="0.15"
+  />
+
+  <!-- Alphy holding a clipboard or chart -->
+  <rect
+    x="435"
+    y="450"
+    width="20"
+    height="30"
+    fill="#CCCCCC"
+    stroke="#999999"
+    stroke-width="1"
+    rx="3"
+    ry="3"
+    transform="rotate(-10, 445, 465)"
+  />
+  <!-- Some lines on the chart to indicate data -->
+  <line
+    x1="440" y1="458"
+    x2="453" y2="458"
+    stroke="#666666"
+    stroke-width="1"
+  />
+  <line
+    x1="440" y1="465"
+    x2="453" y2="465"
+    stroke="#666666"
+    stroke-width="1"
+  />
+  <line
+    x1="440" y1="472"
+    x2="453" y2="472"
+    stroke="#666666"
+    stroke-width="1"
+  />
+
+
+  <!-- ***************  BETTY THE CHICK (taking notes)  *************** -->
+  <!-- Body -->
+  <ellipse
+    cx="880"
+    cy="490"
+    rx="35"
+    ry="50"
+    fill="url(#bettyBodyGrad)"
+  />
+
+  <!-- Head -->
+  <circle
+    cx="880"
+    cy="450"
+    r="28"
+    fill="url(#bettyBodyGrad)"
+  />
+
+  <!-- Face (lighter) -->
+  <circle
+    cx="880"
+    cy="454"
+    r="16"
+    fill="url(#bettyFaceGrad)"
+  />
+
+  <!-- Eyes -->
+  <circle cx="874" cy="450" r="4.5" fill="#FFFFFF" />
+  <circle cx="886" cy="450" r="4.5" fill="#FFFFFF" />
+  <circle cx="874" cy="450" r="2.4" fill="#000000" />
+  <circle cx="886" cy="450" r="2.4" fill="#000000" />
+  <!-- Eye Shine -->
+  <circle cx="873.5" cy="449.5" r="1" fill="#FFFFFF" />
+  <circle cx="885.5" cy="449.5" r="1" fill="#FFFFFF" />
+
+  <!-- Beak -->
+  <path
+    d="M876,457
+       Q880,460 884,457
+       Q880,467 876,457
+       Z"
+    fill="#FFB347"
+    stroke="#E0963C"
+    stroke-width="0.8"
+  />
+
+  <!-- Wings -->
+  <!-- Left Wing (holding a pencil) -->
+  <path
+    d="M850,480
+       Q835,485 840,500
+       Q850,505 865,495
+       Z"
+    fill="#FFDA4B"
+    opacity="0.8"
+  />
+  <!-- Pencil shape -->
+  <rect
+    x="845"
+    y="485"
+    width="6"
+    height="16"
+    fill="#F4A460"
+    stroke="#CC7A29"
+    stroke-width="1"
+    transform="rotate(20, 845, 485)"
+  />
+  <!-- Pencil tip -->
+  <polygon
+    points="845,501 849,501 847,505"
+    fill="#000000"
+    transform="rotate(20, 845, 505)"
+  />
+
+  <!-- Right Wing -->
+  <path
+    d="M910,480
+       Q925,485 920,500
+       Q910,505 895,495
+       Z"
+    fill="#FFDA4B"
+    opacity="0.8"
+  />
+
+  <!-- Beta (β) emblem on chest -->
+  <circle
+    cx="880"
+    cy="505"
+    r="7"
+    fill="#FFD700"
+    stroke="#CC9900"
+    stroke-width="0.8"
+  />
+  <text
+    x="877"
+    y="509"
+    font-family="Georgia, serif"
+    font-size="10"
+    fill="#663300"
+    style="font-weight:bold;"
+  >
+    β
+  </text>
+
+  <!-- Feet -->
+  <path
+    d="M865,545 
+       Q870,548 875,545
+       Z"
+    fill="#CC8400"
+  />
+  <path
+    d="M885,545 
+       Q890,548 895,545
+       Z"
+    fill="#CC8400"
+  />
+
+  <!-- Shadow under Betty -->
+  <ellipse
+    cx="880"
+    cy="550"
+    rx="28"
+    ry="8"
+    fill="#000000"
+    opacity="0.15"
+  />
+
+
+  <!-- ***************  COMIC SPEECH BUBBLES  *************** -->
+
+  <!-- Alphy's Speech Bubble -->
+  <rect
+    x="370"
+    y="320"
+    width="320"
+    height="70"
+    rx="15"
+    ry="15"
+    fill="#FFFFFF"
+    stroke="#333333"
+    stroke-width="2"
+  />
+  <polygon
+    points="390,390 370,370 370,405"
+    fill="#FFFFFF"
+    stroke="#333333"
+    stroke-width="2"
+  />
+  <text
+    x="380"
+    y="350"
+    font-family="Arial, sans-serif"
+    font-size="20"
+    fill="#000000"
+  >
+    Alphy: “Time to gather data—
+  </text>
+  <text
+    x="380"
+    y="375"
+    font-family="Arial, sans-serif"
+    font-size="20"
+    fill="#000000"
+  >
+    that’s how we measure success!”
+  </text>
+
+  <!-- Betty's Speech Bubble -->
+  <rect
+    x="810"
+    y="320"
+    width="360"
+    height="70"
+    rx="15"
+    ry="15"
+    fill="#FFFFFF"
+    stroke="#333333"
+    stroke-width="2"
+  />
+  <polygon
+    points="990,390 990,320 975,320"
+    fill="#FFFFFF"
+    stroke="#333333"
+    stroke-width="2"
+  />
+  <text
+    x="820"
+    y="350"
+    font-family="Arial, sans-serif"
+    font-size="20"
+    fill="#000000"
+  >
+    Betty: “Yes! Let’s measure these 
+  </text>
+  <text
+    x="820"
+    y="375"
+    font-family="Arial, sans-serif"
+    font-size="20"
+    fill="#000000"
+  >
+    sprouts and see what works best!”
+  </text>
+
+</svg>

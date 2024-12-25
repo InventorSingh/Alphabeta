@@ -1,0 +1,139 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="800"
+    height="800"
+    viewBox="0 0 800 800"
+>
+  <!-- ***************  DEFINITIONS *************** -->
+  <defs>
+    <!-- Mane Gradient -->
+    <radialGradient id="maneGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFA500" />
+      <stop offset="100%" stop-color="#FF4500" />
+    </radialGradient>
+
+    <!-- Fur Gradient -->
+    <radialGradient id="furGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFD700" />
+      <stop offset="100%" stop-color="#FFA500" />
+    </radialGradient>
+
+    <!-- Inner Fur Gradient -->
+    <radialGradient id="innerFurGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFACD" />
+      <stop offset="100%" stop-color="#FFD700" />
+    </radialGradient>
+
+    <!-- Eye Shine -->
+    <radialGradient id="eyeShine" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#CCCCCC" />
+    </radialGradient>
+  </defs>
+
+  <!-- ***************  LEO THE LION *************** -->
+  <!-- Mane -->
+  <circle
+    cx="400"
+    cy="400"
+    r="200"
+    fill="url(#maneGradient)"
+    stroke="#FF6347"
+    stroke-width="10"
+  />
+
+  <!-- Head -->
+  <circle
+    cx="400"
+    cy="400"
+    r="150"
+    fill="url(#furGradient)"
+    stroke="#DAA520"
+    stroke-width="5"
+  />
+
+  <!-- Face (Inner Fur) -->
+  <ellipse
+    cx="400"
+    cy="430"
+    rx="120"
+    ry="100"
+    fill="url(#innerFurGradient)"
+  />
+
+  <!-- Eyes -->
+  <circle cx="360" cy="380" r="20" fill="#FFFFFF" />
+  <circle cx="440" cy="380" r="20" fill="#FFFFFF" />
+  <circle cx="360" cy="380" r="10" fill="#000000" />
+  <circle cx="440" cy="380" r="10" fill="#000000" />
+  <circle cx="355" cy="375" r="5" fill="url(#eyeShine)" />
+  <circle cx="435" cy="375" r="5" fill="url(#eyeShine)" />
+
+  <!-- Nose -->
+  <path
+    d="M380,430 Q400,450 420,430 Q400,440 380,430"
+    fill="#E9967A"
+    stroke="#B22222"
+    stroke-width="2"
+  />
+
+  <!-- Mouth -->
+  <path
+    d="M380,470 Q400,490 420,470"
+    stroke="#8B0000"
+    stroke-width="3"
+    fill="none"
+  />
+
+  <!-- Whiskers -->
+  <line x1="280" y1="430" x2="360" y2="430" stroke="#8B4513" stroke-width="2" />
+  <line x1="440" y1="430" x2="520" y2="430" stroke="#8B4513" stroke-width="2" />
+  <line x1="280" y1="450" x2="360" y2="450" stroke="#8B4513" stroke-width="2" />
+  <line x1="440" y1="450" x2="520" y2="450" stroke="#8B4513" stroke-width="2" />
+
+  <!-- Ears -->
+  <circle cx="270" cy="300" r="40" fill="url(#furGradient)" />
+  <circle cx="530" cy="300" r="40" fill="url(#furGradient)" />
+  <circle cx="270" cy="300" r="20" fill="url(#innerFurGradient)" />
+  <circle cx="530" cy="300" r="20" fill="url(#innerFurGradient)" />
+
+  <!-- Body -->
+  <ellipse
+    cx="400"
+    cy="620"
+    rx="120"
+    ry="160"
+    fill="url(#furGradient)"
+    stroke="#DAA520"
+    stroke-width="5"
+  />
+
+  <!-- Paws -->
+  <circle cx="320" cy="720" r="40" fill="#FFD700" />
+  <circle cx="480" cy="720" r="40" fill="#FFD700" />
+  <circle cx="320" cy="720" r="20" fill="url(#innerFurGradient)" />
+  <circle cx="480" cy="720" r="20" fill="url(#innerFurGradient)" />
+
+  <!-- Tail -->
+  <path
+    d="M500,700 Q550,750 600,700"
+    stroke="#DAA520"
+    stroke-width="10"
+    fill="none"
+  />
+  <circle cx="600" cy="700" r="20" fill="#FF6347" />
+
+  <!-- ***************  FINAL TOUCHES *************** -->
+  <!-- Alpha Emblem on Chest -->
+  <circle cx="400" cy="580" r="20" fill="#FFD700" />
+  <text
+    x="390"
+    y="590"
+    font-family="Georgia"
+    font-size="20"
+    fill="#663300"
+    style="font-weight:bold;"
+  >
+    αβ
+  </text>
+</svg>
