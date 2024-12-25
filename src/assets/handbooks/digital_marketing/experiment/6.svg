@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet">
+  <!-- Background Gradient (Sunrise to Midday) -->
+  <defs>
+    <linearGradient id="sunriseToMidday2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFDD70" />  <!-- Sunrise yellow -->
+      <stop offset="50%" stop-color="#FFA07A" /> <!-- Midday orange -->
+      <stop offset="100%" stop-color="#FFE4B5" /> <!-- Lighter peach -->
+    </linearGradient>
+
+    <filter id="glowSlide2" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#sunriseToMidday2)" />
+
+  <!-- Sun higher than in Slide 1 -->
+  <circle cx="180" cy="80" r="50" fill="#FFD700" />
+
+  <!-- Small Depth Lines -->
+  <g stroke="#FFA500" stroke-width="1">
+    <line x1="110" y1="80" x2="150" y2="80" />
+    <line x1="210" y1="80" x2="250" y2="80" />
+    <line x1="180" y1="40" x2="180" y2="70" />
+    <line x1="180" y1="90" x2="180" y2="120" />
+  </g>
+
+  <!-- Ground Lines for Perspective -->
+  <g stroke="#FFFFFF" stroke-width="0.5">
+    <line x1="0" y1="460" x2="800" y2="460" />
+    <line x1="0" y1="480" x2="800" y2="480" />
+    <line x1="0" y1="500" x2="800" y2="500" />
+  </g>
+
+  <!-- People in STEM (Moved forward a bit) -->
+  <g transform="translate(0, -100)">
+    <!-- Person 1: Alpha-themed -->
+    <circle cx="380" cy="420" r="15" fill="#6A5ACD" />
+    <line x1="380" y1="435" x2="380" y2="490" stroke="#6A5ACD" stroke-width="3" />
+    <line x1="365" y1="470" x2="380" y2="450" stroke="#6A5ACD" stroke-width="3" />
+    <line x1="395" y1="470" x2="380" y2="450" stroke="#6A5ACD" stroke-width="3" />
+
+    <!-- Person 2: Beta-themed -->
+    <circle cx="440" cy="420" r="15" fill="#FF6347" />
+    <line x1="440" y1="435" x2="440" y2="490" stroke="#FF6347" stroke-width="3" />
+    <line x1="425" y1="470" x2="440" y2="450" stroke="#FF6347" stroke-width="3" />
+    <line x1="455" y1="470" x2="440" y2="450" stroke="#FF6347" stroke-width="3" />
+  </g>
+
+  <!-- Symbolic Tech (Gear) - Slightly rotated to show forward movement -->
+  <g transform="translate(650, 70) rotate(15)">
+    <circle cx="0" cy="0" r="30" fill="none" stroke="#FFFFFF" stroke-width="3" />
+    <line x1="0" y1="-20" x2="0" y2="-40" stroke="#FFFFFF" stroke-width="3" />
+    <line x1="0" y1="20" x2="0" y2="40" stroke="#FFFFFF" stroke-width="3" />
+    <line x1="-30" y1="0" x2="-50" y2="0" stroke="#FFFFFF" stroke-width="3" />
+    <line x1="30" y1="0" x2="50" y2="0" stroke="#FFFFFF" stroke-width="3" />
+  </g>
+
+  <!-- Alphabeta Logo -->
+  <g transform="translate(400, 50)" text-anchor="middle" filter="url(#glowSlide2)">
+    <text x="0" y="15" font-family="Arial" font-size="30" fill="#FF6347" font-weight="bold">αβ</text>
+  </g>
+
+  <!-- Story & Lesson: Cultivating Curiosity -->
+  <g transform="translate(100, 430)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="22" fill="#FFFFFF">
+      Continuing their journey, Alpha and Beta discover:
+    </text>
+    <text x="0" y="30" font-family="Arial, sans-serif" font-size="22" fill="#FFFFFF">
+      **Curiosity** is the spark that ignites every learning adventure.
+    </text>
+    <text x="0" y="70" font-family="Arial, sans-serif" font-size="18" fill="#FFA07A">
+      Building on their sunrise promise, they question the world around them:
+    </text>
+    <text x="0" y="100" font-family="Arial, sans-serif" font-size="18" fill="#FFA07A">
+      “What if we never stop asking 'Why?'”
+    </text>
+  </g>
+</svg>

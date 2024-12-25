@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet">
+  <!-- Background Gradient (Sunset to Dusk) -->
+  <defs>
+    <linearGradient id="sunsetToDusk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF6347" />   <!-- Sunset red -->
+      <stop offset="50%" stop-color="#8A2BE2" />  <!-- Transition to twilight purple -->
+      <stop offset="100%" stop-color="#191970" /> <!-- Dusk navy blue -->
+    </linearGradient>
+
+    <filter id="glowSlide5" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#sunsetToDusk)" />
+
+  <!-- Dusk Sun (very low, near horizon) -->
+  <circle cx="700" cy="140" r="30" fill="#FFD700" />
+
+  <!-- People in STEM (Celebration posture, pointing upward) -->
+  <g transform="translate(0, 20)">
+    <!-- Person 1 -->
+    <circle cx="380" cy="430" r="15" fill="#6A5ACD" />
+    <line x1="380" y1="445" x2="380" y2="500" stroke="#6A5ACD" stroke-width="3" />
+    <line x1="365" y1="480" x2="380" y2="460" stroke="#6A5ACD" stroke-width="3" />
+    <line x1="395" y1="480" x2="380" y2="460" stroke="#6A5ACD" stroke-width="3" />
+
+    <!-- Person 2 -->
+    <circle cx="440" cy="430" r="15" fill="#FF6347" />
+    <line x1="440" y1="445" x2="440" y2="500" stroke="#FF6347" stroke-width="3" />
+    <line x1="425" y1="480" x2="440" y2="460" stroke="#FF6347" stroke-width="3" />
+    <line x1="455" y1="480" x2="440" y2="460" stroke="#FF6347" stroke-width="3" />
+  </g>
+
+  <!-- Subtle stars or sparkles in the sky to suggest evening wonder -->
+  <g fill="#FFFFFF">
+    <circle cx="100" cy="50" r="2" />
+    <circle cx="150" cy="70" r="1.5" />
+    <circle cx="250" cy="40" r="2" />
+    <circle cx="300" cy="100" r="1.5" />
+    <circle cx="500" cy="60" r="2" />
+    <circle cx="550" cy="90" r="1.5" />
+    <circle cx="650" cy="50" r="2" />
+    <circle cx="720" cy="80" r="1.5" />
+  </g>
+
+  <!-- Gear icon: integrated into the ground, symbolizing foundation & growth -->
+  <g transform="translate(650, 450)">
+    <circle cx="0" cy="0" r="30" fill="none" stroke="#FFFFFF" stroke-width="3" />
+    <line x1="0" y1="-20" x2="0" y2="-40" stroke="#FFFFFF" stroke-width="3" />
+    <line x1="0" y1="20" x2="0" y2="40" stroke="#FFFFFF" stroke-width="3" />
+    <line x1="-30" y1="0" x2="-50" y2="0" stroke="#FFFFFF" stroke-width="3" />
+    <line x1="30" y1="0" x2="50" y2="0" stroke="#FFFFFF" stroke-width="3" />
+  </g>
+
+  <!-- Alphabeta Logo -->
+  <g transform="translate(400, 60)" text-anchor="middle" filter="url(#glowSlide5)">
+    <text x="0" y="15" font-family="Arial" font-size="30" fill="#FF6347" font-weight="bold">αβ</text>
+  </g>
+
+  <!-- Text: Lighting the Path Forward -->
+  <g transform="translate(100, 180)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="22" fill="#FFFFFF">
+      As dusk settles, Alpha and Beta reflect on their discoveries:
+    </text>
+    <text x="0" y="30" font-family="Arial, sans-serif" font-size="22" fill="#FFFFFF">
+      curiosity, strong foundations, and the power of collaboration.
+    </text>
+    <text x="0" y="70" font-family="Arial, sans-serif" font-size="18" fill="#ADFF2F">
+      Their journey lights a **path forward**—one we can all follow,
+    </text>
+    <text x="0" y="100" font-family="Arial, sans-serif" font-size="18" fill="#ADFF2F">
+      eager to learn, build, and co-create our tomorrow.
+    </text>
+    <text x="0" y="160" font-family="Arial, sans-serif" font-size="18" fill="#FFA07A">
+      Where will your curiosity take you next?
+    </text>
+  </g>
+</svg>

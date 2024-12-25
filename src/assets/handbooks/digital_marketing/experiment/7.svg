@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet">
+  <!-- Background Gradient (Midday to Afternoon) -->
+  <defs>
+    <linearGradient id="middayToAfternoon2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFA07A" />  <!-- Midday orange -->
+      <stop offset="60%" stop-color="#FF7F50" /> <!-- Deeper orange -->
+      <stop offset="100%" stop-color="#87CEEB" /> <!-- Light sky blue -->
+    </linearGradient>
+
+    <filter id="glowSlide3" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#middayToAfternoon2)" />
+
+  <!-- Afternoon Sun, positioned somewhat overhead -->
+  <circle cx="200" cy="80" r="40" fill="#FFD700" />
+
+  <!-- People in STEM: Introducing a "books/steps" concept -->
+  <!-- Simple white "steps" to represent foundational learning -->
+  <g stroke="#FFFFFF" stroke-width="2">
+    <line x1="330" y1="420" x2="370" y2="400" />
+    <line x1="370" y1="400" x2="410" y2="380" />
+    <line x1="410" y1="380" x2="450" y2="360" />
+  </g>
+  <g transform="translate(0, -110)">
+    <!-- Person 1 on lower step -->
+    <circle cx="335" cy="410" r="15" fill="#6A5ACD" />
+    <line x1="335" y1="425" x2="335" y2="480" stroke="#6A5ACD" stroke-width="3" />
+    <line x1="320" y1="460" x2="335" y2="440" stroke="#6A5ACD" stroke-width="3" />
+    <line x1="350" y1="460" x2="335" y2="440" stroke="#6A5ACD" stroke-width="3" />
+
+    <!-- Person 2 on higher step -->
+    <circle cx="415" cy="375" r="15" fill="#FF6347" />
+    <line x1="415" y1="390" x2="415" y2="445" stroke="#FF6347" stroke-width="3" />
+    <line x1="400" y1="425" x2="415" y2="405" stroke="#FF6347" stroke-width="3" />
+    <line x1="430" y1="425" x2="415" y2="405" stroke="#FF6347" stroke-width="3" />
+  </g>
+
+  <!-- Gear icon: stationary, top-right to maintain brand presence -->
+  <circle cx="700" cy="80" r="30" fill="none" stroke="#FFFFFF" stroke-width="3" />
+  <line x1="700" y1="60" x2="700" y2="40" stroke="#FFFFFF" stroke-width="3" />
+  <line x1="700" y1="100" x2="700" y2="120" stroke="#FFFFFF" stroke-width="3" />
+  <line x1="670" y1="80" x2="650" y2="80" stroke="#FFFFFF" stroke-width="3" />
+  <line x1="730" y1="80" x2="750" y2="80" stroke="#FFFFFF" stroke-width="3" />
+
+  <!-- Alphabeta Logo -->
+  <g transform="translate(400, 50)" text-anchor="middle" filter="url(#glowSlide3)">
+    <text x="0" y="15" font-family="Arial" font-size="30" fill="#FF6347" font-weight="bold">αβ</text>
+  </g>
+
+  <!-- Text: Building a Strong Foundation -->
+  <g transform="translate(100, 420)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="22" fill="#FFFFFF">
+      From curiosity grows **foundational knowledge**—
+    </text>
+    <text x="0" y="30" font-family="Arial, sans-serif" font-size="22" fill="#FFFFFF">
+      each concept a step toward greater understanding.
+    </text>
+    <text x="0" y="70" font-family="Arial, sans-serif" font-size="18" fill="#FFDEAD">
+      Building on their questions, Alpha and Beta climb
+    </text>
+    <text x="0" y="100" font-family="Arial, sans-serif" font-size="18" fill="#FFDEAD">
+      one idea at a time, forming a sturdy base for exploration.
+    </text>
+  </g>
+</svg>
