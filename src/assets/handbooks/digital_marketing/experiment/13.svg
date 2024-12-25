@@ -1,0 +1,218 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="800"
+  height="1800"
+  viewBox="0 0 800 1800"
+  preserveAspectRatio="xMidYMid meet"
+  style="border: 1px solid #ccc;"
+>
+  <!-- ========== DEFINITIONS ========== -->
+  <defs>
+    <!-- Vertical gradient from sunrise (top) to sunset (bottom) -->
+    <linearGradient id="sunriseToSunset" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#FFDD70" /><!-- Early morning -->
+      <stop offset="25%"  stop-color="#FFA07A" /><!-- Late morning -->
+      <stop offset="50%"  stop-color="#FF7F50" /><!-- Noon/afternoon -->
+      <stop offset="75%"  stop-color="#FF6347" /><!-- Sunset red -->
+      <stop offset="100%" stop-color="#1E90FF" /><!-- Twilight -->
+    </linearGradient>
+
+    <!-- Soft glow filter for αβ logo -->
+    <filter id="alphaBetaGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- ========== SYMBOLS ========== -->
+
+    <!-- 1) The Sun (simple circle) -->
+    <symbol id="SunSymbol" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="30" fill="#FFD700"/>
+    </symbol>
+
+    <!-- 2) The Gear (symbolic tech) -->
+    <symbol id="GearSymbol" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="20" fill="none" stroke="#FFFFFF" stroke-width="3" />
+      <line x1="50" y1="30" x2="50" y2="10"  stroke="#FFFFFF" stroke-width="3" />
+      <line x1="50" y1="70" x2="50" y2="90"  stroke="#FFFFFF" stroke-width="3" />
+      <line x1="30" y1="50" x2="10" y2="50"  stroke="#FFFFFF" stroke-width="3" />
+      <line x1="70" y1="50" x2="90" y2="50"  stroke="#FFFFFF" stroke-width="3" />
+    </symbol>
+
+    <!-- 3) The αβ Logo -->
+    <symbol id="AlphaBetaSymbol" viewBox="0 0 100 50">
+      <text
+        x="50" y="30"
+        font-family="Arial" font-size="30"
+        fill="#FF6347" font-weight="bold"
+        text-anchor="middle"
+      >
+        αβ
+      </text>
+    </symbol>
+
+    <!-- 4) People: Alpha & Beta standing -->
+    <symbol id="PeopleSymbol" viewBox="0 0 100 100">
+      <!-- Person 1 (Alpha-themed) -->
+      <circle cx="30" cy="30" r="8" fill="#6A5ACD" />
+      <line x1="30" y1="38" x2="30" y2="60" stroke="#6A5ACD" stroke-width="3" />
+      <line x1="20" y1="50" x2="30" y2="42" stroke="#6A5ACD" stroke-width="3" />
+      <line x1="40" y1="50" x2="30" y2="42" stroke="#6A5ACD" stroke-width="3" />
+
+      <!-- Person 2 (Beta-themed) -->
+      <circle cx="70" cy="30" r="8" fill="#FF6347" />
+      <line x1="70" y1="38" x2="70" y2="60" stroke="#FF6347" stroke-width="3" />
+      <line x1="60" y1="50" x2="70" y2="42" stroke="#FF6347" stroke-width="3" />
+      <line x1="80" y1="50" x2="70" y2="42" stroke="#FF6347" stroke-width="3" />
+    </symbol>
+  </defs>
+
+  <!-- ========== BACKGROUND ========== -->
+  <rect 
+    x="0" y="0"
+    width="800" height="1800"
+    fill="url(#sunriseToSunset)"
+  />
+
+  <!-- ========== A SHORT MEANDERING PATH ========== -->
+  <!-- This path stays within x=100..700 and y=150..1600 
+       so text and shapes won't go beyond boundaries. -->
+  <path
+    d="
+      M 150,150
+      C 200,300  400,300  550,400
+      S 650,550  500,700
+      Q 400,850  450,1000
+      T 350,1200
+      S 250,1400  300,1500
+    "
+    fill="none"
+    stroke="#fff"
+    stroke-width="6"
+    stroke-linecap="round"
+    opacity="0.8"
+  />
+
+  <!-- 
+    We'll have 4 stops:
+      STOP 1 (near 150,150)   => Sunrise Intro
+      STOP 2 (near 550,400)   => Cultivating Curiosity
+      STOP 3 (near 450,1000)  => Collaboration / Foundation
+      STOP 4 (near 300,1500)  => Sunset Reflection
+  -->
+
+  <!-- ========== STOP 1: Sunrise Intro ========== -->
+  <!-- People slightly offset from path -->
+  <use href="#PeopleSymbol" x="120" y="120" width="50" height="50" />
+  <!-- Sun near top -->
+  <use href="#SunSymbol" x="80" y="70" width="50" height="50" />
+  <!-- αβ Logo -->
+  <use 
+    href="#AlphaBetaSymbol" 
+    x="160" y="60"
+    width="60" height="30"
+    filter="url(#alphaBetaGlow)"
+  />
+  <!-- Short Text -->
+  <text
+    x="100" y="210"
+    font-family="Arial" font-size="18" fill="#FFFFFF"
+  >
+    Once upon a sunrise, 
+  </text>
+  <text
+    x="100" y="235"
+    font-family="Arial" font-size="18" fill="#FFFFFF"
+  >
+    Alpha (α) and Beta (β) set out
+  </text>
+  <text
+    x="100" y="260"
+    font-family="Arial" font-size="16" fill="#FFA07A"
+  >
+    to share knowledge with the world.
+  </text>
+
+  <!-- ========== STOP 2: Curiosity (at ~550,400) ========== -->
+  <use href="#PeopleSymbol" x="520" y="370" width="50" height="50" />
+  <!-- Perhaps place a gear or smaller sun to hint “tech” / day -->
+  <use href="#GearSymbol" x="580" y="350" width="30" height="30" />
+  <use 
+    href="#AlphaBetaSymbol"
+    x="540" y="320"
+    width="50" height="25"
+    filter="url(#alphaBetaGlow)"
+  />
+  <text
+    x="500" y="430"
+    font-family="Arial" font-size="18" fill="#FFFFFF"
+  >
+    Curiosity sparks discovery—
+  </text>
+  <text
+    x="500" y="455"
+    font-family="Arial" font-size="16" fill="#FFA07A"
+  >
+    “What if we never stop asking 'Why?'”
+  </text>
+
+  <!-- ========== STOP 3: Collaboration / Foundation (~450,1000) ========== -->
+  <use href="#PeopleSymbol" x="420" y="970" width="50" height="50" />
+  <use 
+    href="#AlphaBetaSymbol"
+    x="470" y="940"
+    width="50" height="25"
+    filter="url(#alphaBetaGlow)"
+  />
+  <text
+    x="400" y="1050"
+    font-family="Arial" font-size="18" fill="#FFFFFF"
+  >
+    Through shared ideas,
+  </text>
+  <text
+    x="400" y="1075"
+    font-family="Arial" font-size="18" fill="#FFFFFF"
+  >
+    we build a strong foundation.
+  </text>
+  <text
+    x="400" y="1100"
+    font-family="Arial" font-size="16" fill="#FFDEAD"
+  >
+    Collaboration lights the way!
+  </text>
+
+  <!-- ========== STOP 4: Sunset Reflection (~300,1500) ========== -->
+  <use href="#PeopleSymbol" x="270" y="1470" width="50" height="50" />
+  <!-- Smaller sun near bottom for sunset -->
+  <use href="#SunSymbol" x="220" y="1420" width="40" height="40" />
+  <use 
+    href="#AlphaBetaSymbol"
+    x="320" y="1450"
+    width="50" height="25"
+    filter="url(#alphaBetaGlow)"
+  />
+  <text
+    x="250" y="1530"
+    font-family="Arial" font-size="18" fill="#FFFFFF"
+  >
+    As day ends, they reflect on
+  </text>
+  <text
+    x="250" y="1555"
+    font-family="Arial" font-size="18" fill="#FFFFFF"
+  >
+    curiosity, foundations, and teamwork.
+  </text>
+  <text
+    x="250" y="1580"
+    font-family="Arial" font-size="16" fill="#ADFF2F"
+  >
+    Where will your journey lead next?
+  </text>
+
+</svg>

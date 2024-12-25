@@ -1,0 +1,419 @@
+<svg 
+  width="800" 
+  height="3000" 
+  viewBox="0 0 800 3000" 
+  preserveAspectRatio="xMidYMid meet" 
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <defs>
+    <!-- ========== SLIDE 1: Sunrise to Sunset ========== -->
+    <linearGradient id="slide1Gradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFDD70" /><!-- Sunrise yellow -->
+      <stop offset="50%" stop-color="#FFA07A" /><!-- Midday orange -->
+      <stop offset="100%" stop-color="#1E90FF" /><!-- Sunset blue -->
+    </linearGradient>
+
+    <filter id="glowS1" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- ========== SLIDE 2: Sunrise to Midday ========== -->
+    <linearGradient id="slide2Gradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFDD70" /><!-- Sunrise yellow -->
+      <stop offset="50%" stop-color="#FFA07A" /><!-- Midday orange -->
+      <stop offset="100%" stop-color="#FFE4B5" /><!-- Lighter peach -->
+    </linearGradient>
+    <filter id="glowS2" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- ========== SLIDE 3: Midday to Afternoon ========== -->
+    <linearGradient id="slide3Gradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFA07A" /><!-- Midday orange -->
+      <stop offset="60%" stop-color="#FF7F50" /><!-- Deeper orange -->
+      <stop offset="100%" stop-color="#87CEEB" /><!-- Light sky blue -->
+    </linearGradient>
+    <filter id="glowS3" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- ========== SLIDE 4: Afternoon to Sunset ========== -->
+    <linearGradient id="slide4Gradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF7F50" /><!-- Vibrant orange -->
+      <stop offset="50%" stop-color="#FF6347" /><!-- Sunset red -->
+      <stop offset="100%" stop-color="#1E90FF" /><!-- Evening blue -->
+    </linearGradient>
+    <filter id="glowS4" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- ========== SLIDE 5: Sunset to Dusk ========== -->
+    <linearGradient id="slide5Gradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF6347" /><!-- Sunset red -->
+      <stop offset="50%" stop-color="#8A2BE2" /><!-- Twilight purple -->
+      <stop offset="100%" stop-color="#191970" /><!-- Dusk navy blue -->
+    </linearGradient>
+    <filter id="glowS5" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ========================================================================== -->
+  <!-- ================================ SLIDE 1 ================================= -->
+  <!-- ========================================================================== -->
+  <g transform="translate(0, 0)">
+    <!-- Background -->
+    <rect width="800" height="600" fill="url(#slide1Gradient)" />
+
+    <!-- Circular Sun at Sunrise -->
+    <circle cx="150" cy="100" r="50" fill="#FFD700" />
+
+    <!-- Small Lines for Depth -->
+    <g stroke="#FFA500" stroke-width="1">
+      <line x1="80" y1="100" x2="120" y2="100" />
+      <line x1="180" y1="100" x2="220" y2="100" />
+      <line x1="150" y1="50" x2="150" y2="90" />
+      <line x1="150" y1="110" x2="150" y2="140" />
+    </g>
+
+    <!-- People in STEM (Inclusive Figures) -->
+    <g transform="translate(0, -150)">
+      <!-- Person 1 -->
+      <circle cx="400" cy="400" r="15" fill="#6A5ACD" />
+      <line x1="400" y1="415" x2="400" y2="470" stroke="#6A5ACD" stroke-width="3" />
+      <line x1="385" y1="450" x2="400" y2="430" stroke="#6A5ACD" stroke-width="3" />
+      <line x1="415" y1="450" x2="400" y2="430" stroke="#6A5ACD" stroke-width="3" />
+
+      <!-- Person 2 -->
+      <circle cx="500" cy="400" r="15" fill="#FF6347" />
+      <line x1="500" y1="415" x2="500" y2="470" stroke="#FF6347" stroke-width="3" />
+      <line x1="485" y1="450" x2="500" y2="430" stroke="#FF6347" stroke-width="3" />
+      <line x1="515" y1="450" x2="500" y2="430" stroke="#FF6347" stroke-width="3" />
+    </g>
+
+    <!-- Symbolic Tech (Gear) -->
+    <circle cx="650" cy="100" r="30" fill="none" stroke="#FFFFFF" stroke-width="3" />
+    <line x1="650" y1="80" x2="650" y2="60" stroke="#FFFFFF" stroke-width="3" />
+    <line x1="650" y1="120" x2="650" y2="140" stroke="#FFFFFF" stroke-width="3" />
+    <line x1="620" y1="100" x2="600" y2="100" stroke="#FFFFFF" stroke-width="3" />
+    <line x1="680" y1="100" x2="700" y2="100" stroke="#FFFFFF" stroke-width="3" />
+
+    <!-- Ground Lines for Depth -->
+    <g stroke="#FFFFFF" stroke-width="0.5" transform="translate(0, -90)">
+      <line x1="0" y1="450" x2="800" y2="450" />
+      <line x1="0" y1="470" x2="800" y2="470" />
+      <line x1="0" y1="490" x2="800" y2="490" />
+    </g>
+
+    <!-- Alphabeta Logo -->
+    <g transform="translate(400, 50)" text-anchor="middle" filter="url(#glowS1)">
+      <text x="0" y="15" font-family="Arial" font-size="30" fill="#FF6347" font-weight="bold">αβ</text>
+    </g>
+
+    <!-- Story Introduction -->
+    <g transform="translate(100, 450)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="22" fill="#FFFFFF">
+        Once upon a sunrise, two curious letters, Alpha (α) and Beta (β),
+      </text>
+      <text x="0" y="30" font-family="Arial, sans-serif" font-size="22" fill="#FFFFFF">
+        embarked on a journey to teach the world through stories.
+      </text>
+      <text x="0" y="80" font-family="Arial, sans-serif" font-size="18" fill="#FFA07A">
+        With Alpha's wisdom and Beta's curiosity, they invite you to explore
+      </text>
+      <text x="0" y="110" font-family="Arial, sans-serif" font-size="18" fill="#FFA07A">
+        technology, learning, and creativity in a vibrant world of discovery.
+      </text>
+    </g>
+  </g>
+
+  <!-- ========================================================================== -->
+  <!-- ================================ SLIDE 2 ================================= -->
+  <!-- ========================================================================== -->
+  <g transform="translate(0, 600)">
+    <!-- Background -->
+    <rect width="800" height="600" fill="url(#slide2Gradient)" />
+
+    <!-- Sun higher than in Slide 1 -->
+    <circle cx="180" cy="80" r="50" fill="#FFD700" />
+
+    <!-- Small Depth Lines -->
+    <g stroke="#FFA500" stroke-width="1">
+      <line x1="110" y1="80" x2="150" y2="80" />
+      <line x1="210" y1="80" x2="250" y2="80" />
+      <line x1="180" y1="40" x2="180" y2="70" />
+      <line x1="180" y1="90" x2="180" y2="120" />
+    </g>
+
+    <!-- Ground Lines -->
+    <g stroke="#FFFFFF" stroke-width="0.5">
+      <line x1="0" y1="460" x2="800" y2="460" />
+      <line x1="0" y1="480" x2="800" y2="480" />
+      <line x1="0" y1="500" x2="800" y2="500" />
+    </g>
+
+    <!-- People in STEM (Moved forward) -->
+    <g transform="translate(0, -100)">
+      <!-- Person 1 -->
+      <circle cx="380" cy="420" r="15" fill="#6A5ACD" />
+      <line x1="380" y1="435" x2="380" y2="490" stroke="#6A5ACD" stroke-width="3" />
+      <line x1="365" y1="470" x2="380" y2="450" stroke="#6A5ACD" stroke-width="3" />
+      <line x1="395" y1="470" x2="380" y2="450" stroke="#6A5ACD" stroke-width="3" />
+
+      <!-- Person 2 -->
+      <circle cx="440" cy="420" r="15" fill="#FF6347" />
+      <line x1="440" y1="435" x2="440" y2="490" stroke="#FF6347" stroke-width="3" />
+      <line x1="425" y1="470" x2="440" y2="450" stroke="#FF6347" stroke-width="3" />
+      <line x1="455" y1="470" x2="440" y2="450" stroke="#FF6347" stroke-width="3" />
+    </g>
+
+    <!-- Gear (slightly rotated) -->
+    <g transform="translate(650, 70) rotate(15)">
+      <circle cx="0" cy="0" r="30" fill="none" stroke="#FFFFFF" stroke-width="3" />
+      <line x1="0" y1="-20" x2="0" y2="-40" stroke="#FFFFFF" stroke-width="3" />
+      <line x1="0" y1="20" x2="0" y2="40" stroke="#FFFFFF" stroke-width="3" />
+      <line x1="-30" y1="0" x2="-50" y2="0" stroke="#FFFFFF" stroke-width="3" />
+      <line x1="30" y1="0" x2="50" y2="0" stroke="#FFFFFF" stroke-width="3" />
+    </g>
+
+    <!-- Alphabeta Logo -->
+    <g transform="translate(400, 50)" text-anchor="middle" filter="url(#glowS2)">
+      <text x="0" y="15" font-family="Arial" font-size="30" fill="#FF6347" font-weight="bold">αβ</text>
+    </g>
+
+    <!-- Text: Cultivating Curiosity -->
+    <g transform="translate(100, 430)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="22" fill="#FFFFFF">
+        Continuing their journey, Alpha and Beta discover:
+      </text>
+      <text x="0" y="30" font-family="Arial, sans-serif" font-size="22" fill="#FFFFFF">
+        Curiosity is the spark that ignites every learning adventure.
+      </text>
+      <text x="0" y="70" font-family="Arial, sans-serif" font-size="18" fill="#FFA07A">
+        Building on their sunrise promise, they question the world around them:
+      </text>
+      <text x="0" y="100" font-family="Arial, sans-serif" font-size="18" fill="#FFA07A">
+        “What if we never stop asking 'Why?'”
+      </text>
+    </g>
+  </g>
+
+  <!-- ========================================================================== -->
+  <!-- ================================ SLIDE 3 ================================= -->
+  <!-- ========================================================================== -->
+  <g transform="translate(0, 1200)">
+    <!-- Background -->
+    <rect width="800" height="600" fill="url(#slide3Gradient)" />
+
+    <!-- Afternoon Sun -->
+    <circle cx="200" cy="80" r="40" fill="#FFD700" />
+
+    <!-- Simple white "steps" to represent foundational learning -->
+    <g stroke="#FFFFFF" stroke-width="2">
+      <line x1="330" y1="420" x2="370" y2="400" />
+      <line x1="370" y1="400" x2="410" y2="380" />
+      <line x1="410" y1="380" x2="450" y2="360" />
+    </g>
+    <g transform="translate(0, -100)">
+      <!-- Person 1 on lower step -->
+      <circle cx="335" cy="410" r="15" fill="#6A5ACD" />
+      <line x1="335" y1="425" x2="335" y2="480" stroke="#6A5ACD" stroke-width="3" />
+      <line x1="320" y1="460" x2="335" y2="440" stroke="#6A5ACD" stroke-width="3" />
+      <line x1="350" y1="460" x2="335" y2="440" stroke="#6A5ACD" stroke-width="3" />
+
+      <!-- Person 2 on higher step -->
+      <circle cx="415" cy="375" r="15" fill="#FF6347" />
+      <line x1="415" y1="390" x2="415" y2="445" stroke="#FF6347" stroke-width="3" />
+      <line x1="400" y1="425" x2="415" y2="405" stroke="#FF6347" stroke-width="3" />
+      <line x1="430" y1="425" x2="415" y2="405" stroke="#FF6347" stroke-width="3" />
+    </g>
+
+    <!-- Gear icon -->
+    <circle cx="700" cy="80" r="30" fill="none" stroke="#FFFFFF" stroke-width="3" />
+    <line x1="700" y1="60" x2="700" y2="40" stroke="#FFFFFF" stroke-width="3" />
+    <line x1="700" y1="100" x2="700" y2="120" stroke="#FFFFFF" stroke-width="3" />
+    <line x1="670" y1="80" x2="650" y2="80" stroke="#FFFFFF" stroke-width="3" />
+    <line x1="730" y1="80" x2="750" y2="80" stroke="#FFFFFF" stroke-width="3" />
+
+    <!-- Alphabeta Logo -->
+    <g transform="translate(400, 50)" text-anchor="middle" filter="url(#glowS3)">
+      <text x="0" y="15" font-family="Arial" font-size="30" fill="#FF6347" font-weight="bold">αβ</text>
+    </g>
+
+    <!-- Text: Building a Strong Foundation -->
+    <g transform="translate(100, 420)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="22" fill="#FFFFFF">
+        From curiosity grows foundational knowledge—
+      </text>
+      <text x="0" y="30" font-family="Arial, sans-serif" font-size="22" fill="#FFFFFF">
+        each concept a step toward greater understanding.
+      </text>
+      <text x="0" y="70" font-family="Arial, sans-serif" font-size="18" fill="#FFDEAD">
+        Building on their questions, Alpha and Beta climb
+      </text>
+      <text x="0" y="100" font-family="Arial, sans-serif" font-size="18" fill="#FFDEAD">
+        one idea at a time, forming a sturdy base for exploration.
+      </text>
+    </g>
+  </g>
+
+  <!-- ========================================================================== -->
+  <!-- ================================ SLIDE 4 ================================= -->
+  <!-- ========================================================================== -->
+  <g transform="translate(0, 1800)">
+    <!-- Background -->
+    <rect width="800" height="600" fill="url(#slide4Gradient)" />
+
+    <!-- Sunset sun -->
+    <circle cx="600" cy="100" r="40" fill="#FFD700" />
+
+    <!-- Central Idea Bulb -->
+    <g transform="translate(0, -100)">
+      <!-- Light bulb circle + rays at (400, 360) -->
+      <g>
+        <circle cx="400" cy="360" r="20" fill="#FFFF00" stroke="#FFD700" stroke-width="2" />
+        <line x1="400" y1="340" x2="400" y2="320" stroke="#FFD700" stroke-width="2" />
+        <line x1="400" y1="380" x2="400" y2="400" stroke="#FFD700" stroke-width="2" />
+        <line x1="380" y1="360" x2="360" y2="360" stroke="#FFD700" stroke-width="2" />
+        <line x1="420" y1="360" x2="440" y2="360" stroke="#FFD700" stroke-width="2" />
+        <line x1="388" y1="342" x2="374" y2="328" stroke="#FFD700" stroke-width="2" />
+        <line x1="412" y1="342" x2="426" y2="328" stroke="#FFD700" stroke-width="2" />
+        <line x1="388" y1="378" x2="374" y2="392" stroke="#FFD700" stroke-width="2" />
+        <line x1="412" y1="378" x2="426" y2="392" stroke="#FFD700" stroke-width="2" />
+      </g>
+
+      <!-- Person 1, leaning in -->
+      <circle cx="370" cy="420" r="15" fill="#6A5ACD" />
+      <line x1="370" y1="435" x2="370" y2="480" stroke="#6A5ACD" stroke-width="3" />
+      <line x1="355" y1="460" x2="370" y2="440" stroke="#6A5ACD" stroke-width="3" />
+      <line x1="385" y1="460" x2="370" y2="440" stroke="#6A5ACD" stroke-width="3" />
+
+      <!-- Person 2, leaning in -->
+      <circle cx="430" cy="420" r="15" fill="#FF6347" />
+      <line x1="430" y1="435" x2="430" y2="480" stroke="#FF6347" stroke-width="3" />
+      <line x1="415" y1="460" x2="430" y2="440" stroke="#FF6347" stroke-width="3" />
+      <line x1="445" y1="460" x2="430" y2="440" stroke="#FF6347" stroke-width="3" />
+    </g>
+
+    <!-- Gear icon: rotated more -->
+    <g transform="translate(650, 80) rotate(30)">
+      <circle cx="0" cy="0" r="30" fill="none" stroke="#FFFFFF" stroke-width="3" />
+      <line x1="0" y1="-20" x2="0" y2="-40" stroke="#FFFFFF" stroke-width="3" />
+      <line x1="0" y1="20" x2="0" y2="40" stroke="#FFFFFF" stroke-width="3" />
+      <line x1="-30" y1="0" x2="-50" y2="0" stroke="#FFFFFF" stroke-width="3" />
+      <line x1="30" y1="0" x2="50" y2="0" stroke="#FFFFFF" stroke-width="3" />
+    </g>
+
+    <!-- Alphabeta Logo -->
+    <g transform="translate(400, 50)" text-anchor="middle" filter="url(#glowS4)">
+      <text x="0" y="15" font-family="Arial" font-size="30" fill="#FF6347" font-weight="bold">αβ</text>
+    </g>
+
+    <!-- Text: Collaborating to Innovate -->
+    <g transform="translate(100, 430)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="22" fill="#FFFFFF">
+        Having laid a strong foundation, Alpha and Beta learn:
+      </text>
+      <text x="0" y="30" font-family="Arial, sans-serif" font-size="22" fill="#FFFFFF">
+        Collaboration fuels great innovations.
+      </text>
+      <text x="0" y="70" font-family="Arial, sans-serif" font-size="18" fill="#FFD700">
+        Working with diverse perspectives, they see problems
+      </text>
+      <text x="0" y="100" font-family="Arial, sans-serif" font-size="18" fill="#FFD700">
+        in new ways—and light the spark of creativity together.
+      </text>
+    </g>
+  </g>
+
+  <!-- ========================================================================== -->
+  <!-- ================================ SLIDE 5 ================================= -->
+  <!-- ========================================================================== -->
+  <g transform="translate(0, 2400)">
+    <!-- Background -->
+    <rect width="800" height="600" fill="url(#slide5Gradient)" />
+
+    <!-- Dusk Sun (low) -->
+    <circle cx="700" cy="140" r="30" fill="#FFD700" />
+
+    <!-- People in STEM (Celebration posture) -->
+    <g transform="translate(0, -100)">
+      <!-- Person 1 -->
+      <circle cx="380" cy="430" r="15" fill="#6A5ACD" />
+      <line x1="380" y1="445" x2="380" y2="500" stroke="#6A5ACD" stroke-width="3" />
+      <line x1="365" y1="480" x2="380" y2="460" stroke="#6A5ACD" stroke-width="3" />
+      <line x1="395" y1="480" x2="380" y2="460" stroke="#6A5ACD" stroke-width="3" />
+
+      <!-- Person 2 -->
+      <circle cx="440" cy="430" r="15" fill="#FF6347" />
+      <line x1="440" y1="445" x2="440" y2="500" stroke="#FF6347" stroke-width="3" />
+      <line x1="425" y1="480" x2="440" y2="460" stroke="#FF6347" stroke-width="3" />
+      <line x1="455" y1="480" x2="440" y2="460" stroke="#FF6347" stroke-width="3" />
+    </g>
+
+    <!-- Subtle Stars for Evening Wonder -->
+    <g fill="#FFFFFF">
+      <circle cx="100" cy="50" r="2" />
+      <circle cx="150" cy="70" r="1.5" />
+      <circle cx="250" cy="40" r="2" />
+      <circle cx="300" cy="100" r="1.5" />
+      <circle cx="500" cy="60" r="2" />
+      <circle cx="550" cy="90" r="1.5" />
+      <circle cx="650" cy="50" r="2" />
+      <circle cx="720" cy="80" r="1.5" />
+    </g>
+
+    <!-- Gear icon integrated into the ground -->
+    <g transform="translate(650, 450)">
+      <circle cx="0" cy="0" r="30" fill="none" stroke="#FFFFFF" stroke-width="3" />
+      <line x1="0" y1="-20" x2="0" y2="-40" stroke="#FFFFFF" stroke-width="3" />
+      <line x1="0" y1="20" x2="0" y2="40" stroke="#FFFFFF" stroke-width="3" />
+      <line x1="-30" y1="0" x2="-50" y2="0" stroke="#FFFFFF" stroke-width="3" />
+      <line x1="30" y1="0" x2="50" y2="0" stroke="#FFFFFF" stroke-width="3" />
+    </g>
+
+    <!-- Alphabeta Logo -->
+    <g transform="translate(400, 60)" text-anchor="middle" filter="url(#glowS5)">
+      <text x="0" y="15" font-family="Arial" font-size="30" fill="#FF6347" font-weight="bold">αβ</text>
+    </g>
+
+    <!-- Text: Lighting the Path Forward -->
+    <g transform="translate(100, 440)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="22" fill="#FFFFFF">
+        As dusk settles, Alpha and Beta reflect on their discoveries:
+      </text>
+      <text x="0" y="30" font-family="Arial, sans-serif" font-size="22" fill="#FFFFFF">
+        curiosity, strong foundations, and the power of collaboration.
+      </text>
+      <text x="0" y="70" font-family="Arial, sans-serif" font-size="18" fill="#ADFF2F">
+        Their journey lights a path forward—one we can all follow,
+      </text>
+      <text x="0" y="100" font-family="Arial, sans-serif" font-size="18" fill="#ADFF2F">
+        eager to learn, build, and co-create our tomorrow.
+      </text>
+      <text x="0" y="160" font-family="Arial, sans-serif" font-size="18" fill="#FFA07A">
+        Where will your curiosity take you next?
+      </text>
+    </g>
+  </g>
+</svg>
