@@ -51,32 +51,16 @@
   
 	<!-- Ground Lines for Depth -->
 	<g stroke="#FFFFFF" stroke-width="0.5">
-	  <g transform="translate(0, -90)">
-		<line x1="0" y1="450" x2="100%" y2="450" />
-		<line x1="0" y1="470" x2="100%" y2="470" />
-		<line x1="0" y1="490" x2="100%" y2="490" />
-	  </g>
-	</g>
+    <g transform="translate(000, -90)">
+	  <line x1="0" y1="450" x2="100%" y2="450" />
+	  <line x1="0" y1="470" x2="100%" y2="470" />
+	  <line x1="0" y1="490" x2="100%" y2="490" />
+    </g>
+  </g>
   
 	<!-- Alphabeta Logo -->
 	<g transform="translate(400, 50)" text-anchor="middle" filter="url(#glow)">
 	  <text x="0" y="15" font-family="Arial" font-size="30" fill="#FF6347" font-weight="bold">αβ</text>
-	</g>
-  
-	<!-- Story Introduction -->
-	<g transform="translate(100, 450)">
-	  <text x="0" y="0" font-family="Arial, sans-serif" font-size="22" fill="#FFFFFF">
-		Once upon a sunrise, two curious letters, Alpha (α) and Beta (β),
-	  </text>
-	  <text x="0" y="30" font-family="Arial, sans-serif" font-size="22" fill="#FFFFFF">
-		embarked on a journey to teach the world through stories.
-	  </text>
-	  <text x="0" y="80" font-family="Arial, sans-serif" font-size="18" fill="#FFA07A">
-		With Alpha's wisdom and Beta's curiosity, they invite you to explore
-	  </text>
-	  <text x="0" y="110" font-family="Arial, sans-serif" font-size="18" fill="#FFA07A">
-		technology, learning, and creativity in a vibrant world of discovery.
-	  </text>
 	</g>
   </svg>
   
