@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="celebration-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF4500;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#celebration-gradient)" />
+
+  <!-- Celebration Title -->
+  <text x="50%" y="15%" text-anchor="middle" fill="#FFF" font-family="Arial, sans-serif" font-size="36" font-weight="bold">
+    🎉 Celebrate the Achievements! 🎉
+  </text>
+
+  <!-- Achievements List -->
+  <text x="50%" y="30%" text-anchor="middle" fill="#FFF" font-family="Arial, sans-serif" font-size="20">
+    Three books ready for sale on the Marketplace:
+  </text>
+  <text x="50%" y="37%" text-anchor="middle" fill="#FFF" font-family="Arial, sans-serif" font-size="18">
+    - ChatGPT for Everyone
+  </text>
+  <text x="50%" y="42%" text-anchor="middle" fill="#FFF" font-family="Arial, sans-serif" font-size="18">
+    - AI for Everyone
+  </text>
+  <text x="50%" y="47%" text-anchor="middle" fill="#FFF" font-family="Arial, sans-serif" font-size="18">
+    - Wealthy’s Journey to Financial Wisdom
+  </text>
+
+  <text x="50%" y="55%" text-anchor="middle" fill="#FFF" font-family="Arial, sans-serif" font-size="20">
+    Written the first chapter of our Python book!
+  </text>
+  <text x="50%" y="63%" text-anchor="middle" fill="#FFF" font-family="Arial, sans-serif" font-size="20">
+    Our products are live on:
+  </text>
+  <text x="50%" y="68%" text-anchor="middle" fill="#FFF" font-family="Arial, sans-serif" font-size="18">
+    - Gumroad
+  </text>
+  <text x="50%" y="73%" text-anchor="middle" fill="#FFF" font-family="Arial, sans-serif" font-size="18">
+    - DraftToDigital
+  </text>
+
+  <!-- Celebration Icons -->
+  <g transform="translate(350, 330)">
+    <circle cx="50" cy="50" r="50" fill="#FFF" opacity="0.3" />
+    <text x="50" y="60" text-anchor="middle" fill="#FFD700" font-family="Arial, sans-serif" font-size="24" font-weight="bold">
+      🎊
+    </text>
+  </g>
+  <g transform="translate(450, 330)">
+    <circle cx="50" cy="50" r="50" fill="#FFF" opacity="0.3" />
+    <text x="50" y="60" text-anchor="middle" fill="#FFD700" font-family="Arial, sans-serif" font-size="24" font-weight="bold">
+      🎉
+    </text>
+  </g>
+  <g transform="translate(250, 330)">
+    <circle cx="50" cy="50" r="50" fill="#FFF" opacity="0.3" />
+    <text x="50" y="60" text-anchor="middle" fill="#FFD700" font-family="Arial, sans-serif" font-size="24" font-weight="bold">
+      🎆
+    </text>
+  </g>
+</svg>

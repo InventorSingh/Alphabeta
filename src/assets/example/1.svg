@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" style="background: linear-gradient(to bottom, #FFDDC1, #FFAA85); font-family: Arial, sans-serif;">
+  <rect width="1080" height="1080" fill="url(#gradient)" />
+
+  <defs>
+    <linearGradient id="gradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFDDC1" />
+      <stop offset="100%" stop-color="#FFAA85" />
+    </linearGradient>
+  </defs>
+
+  <text x="50%" y="150" text-anchor="middle" font-size="64" fill="#5A3D2B" font-weight="bold">
+    7 Ways You Might Be
+  </text>
+  <text x="50%" y="220" text-anchor="middle" font-size="50" fill="#5A3D2B" font-weight="bold">
+    Getting in the Way of Your Success
+  </text>
+
+  <g font-size="36" fill="#2E1B0F" font-weight="medium" text-anchor="start" transform="translate(120, 320)">
+    <text y="0">1. Overthinking every decision.</text>
+    <text y="60">2. Setting vague or unrealistic goals.</text>
+    <text y="120">3. Comparing yourself to others.</text>
+    <text y="180">4. Avoiding feedback.</text>
+    <text y="240">5. Fear of failure or taking risks.</text>
+    <text y="300">6. Not prioritizing self-care.</text>
+    <text y="360">7. Ignoring the importance of consistent effort.</text>
+  </g>
+
+  <text x="50%" y="950" text-anchor="middle" font-size="48" fill="#8B4513" font-weight="bold">
+    Let Alphabeta Help You Grow 🌱
+  </text>
+  <text x="50%" y="1020" text-anchor="middle" font-size="32" fill="#8B4513">
+    #SuccessTips #AlphabetaJourney #PersonalGrowth
+  </text>
+
+  <text x="1050" y="1060" text-anchor="end" font-size="24" fill="#8B4513" font-style="italic">
+    αβ - Alphabeta
+  </text>
+</svg>

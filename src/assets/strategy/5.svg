@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="twilight-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2E8B57;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#191970;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#twilight-gradient)" />
+
+  <!-- Header Text -->
+  <text x="50%" y="20%" text-anchor="middle" fill="#FFF" font-family="Arial, sans-serif" font-size="30" font-weight="bold">
+    Summary of Our Strategy
+  </text>
+
+  <!-- Description Text -->
+  <text x="50%" y="35%" text-anchor="middle" fill="#FFF" font-family="Arial, sans-serif" font-size="18">
+    Aligning innovation, community, and technology for sustainable growth.
+  </text>
+
+  <!-- Icons and Labels -->
+  <g transform="translate(100, 200)">
+    <!-- Digital Products Icon -->
+    <circle cx="80" cy="80" r="40" fill="#FF8C00" />
+    <text x="80" y="135" text-anchor="middle" fill="#FFF" font-family="Arial, sans-serif" font-size="16">
+      Digital Products
+    </text>
+  </g>
+
+  <g transform="translate(300, 200)">
+    <!-- Community Engagement Icon -->
+    <circle cx="80" cy="80" r="40" fill="#FFD700" />
+    <text x="80" y="135" text-anchor="middle" fill="#fffefe" font-family="Arial, sans-serif" font-size="16">
+      Community
+    </text>
+  </g>
+
+  <g transform="translate(500, 200)">
+    <!-- Automation Icon -->
+    <circle cx="80" cy="80" r="40" fill="#2E8B57" />
+    <text x="80" y="135" text-anchor="middle" fill="#FFF" font-family="Arial, sans-serif" font-size="16">
+      Automation
+    </text>
+  </g>
+</svg>

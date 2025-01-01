@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="night-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#191970;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#night-gradient)" />
+
+  <!-- Thank You Text -->
+  <text x="50%" y="40%" text-anchor="middle" fill="#FFF" font-family="Arial, sans-serif" font-size="36" font-weight="bold">
+    Thank You!
+  </text>
+
+  <!-- Q&A Invitation -->
+  <text x="50%" y="60%" text-anchor="middle" fill="#FFF" font-family="Arial, sans-serif" font-size="24">
+    Questions or Comments?
+  </text>
+</svg>

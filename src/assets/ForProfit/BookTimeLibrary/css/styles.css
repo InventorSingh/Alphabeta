@@ -1,0 +1,60 @@
+/* 
+  Sample brand colors (replace with your own logo's palette)
+  Teal:      #008080
+  Soft Gold: #FFB347
+  Light BG:  #F8F9F9
+*/
+
+/* ======= Root Variables (Optional) ======= */
+:root {
+  --brand-primary: #008080;
+  --brand-secondary: #FFB347;
+  --brand-light: #F8F9F9;
+}
+
+/* ======= Utility Classes ======= */
+
+/* Primary brand background */
+.bg-brand-primary {
+  background-color: var(--brand-primary) !important;
+}
+
+/* Secondary brand background */
+.bg-brand-secondary {
+  background-color: var(--brand-secondary) !important;
+}
+
+/* Lighter brand background */
+.bg-brand-light {
+  background-color: var(--brand-light) !important;
+}
+
+/* Text color referencing brand primary */
+.text-brand-primary {
+  color: var(--brand-primary) !important;
+}
+
+/* Button outline style referencing brand primary */
+.btn-outline-brand-primary {
+  color: var(--brand-primary) !important;
+  border-color: var(--brand-primary) !important;
+}
+
+.btn-outline-brand-primary:hover {
+  color: #fff !important;
+  background-color: var(--brand-primary) !important;
+  border-color: var(--brand-primary) !important;
+}
+
+/* ======= Additional Styling ======= */
+
+/* Make text more readable with a shadow */
+.text-shadow {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Cards Hover Effect */
+.card:hover {
+  transform: translateY(-2px);
+  transition: transform 0.3s ease-in-out;
+}
