@@ -26,6 +26,52 @@ import Library from './Library.astro';
         <!-- Circular Sun at Sunrise -->
         <circle cx="150" cy="100" r="50" fill="#FFD700" />
         
+        <!-- Enhanced Twinkling Stars -->
+        <g id="stars">
+            <!-- Each star is now a composite of shapes -->
+            <g class="star" transform="translate(100,50)" filter="url(#starGlow)">
+                <path d="M0,0 L2,-2 L0,-6 L-2,-2 L-6,0 L-2,2 L0,6 L2,2 L6,0 L2,-2 Z" 
+                      fill="white" class="twinkle-1"/>
+                <circle r="1" fill="white" class="twinkle-core-1"/>
+            </g>
+            
+            <g class="star" transform="translate(200,30)" filter="url(#starGlow)">
+                <path d="M0,0 L1.5,-1.5 L0,-4.5 L-1.5,-1.5 L-4.5,0 L-1.5,1.5 L0,4.5 L1.5,1.5 L4.5,0 L1.5,-1.5 Z" 
+                      fill="white" class="twinkle-2"/>
+                <circle r="0.75" fill="white" class="twinkle-core-2"/>
+            </g>
+            
+            <g class="star" transform="translate(300,80)" filter="url(#starGlow)">
+                <path d="M0,0 L2.5,-2.5 L0,-7.5 L-2.5,-2.5 L-7.5,0 L-2.5,2.5 L0,7.5 L2.5,2.5 L7.5,0 L2.5,-2.5 Z" 
+                      fill="white" class="twinkle-3"/>
+                <circle r="1.25" fill="white" class="twinkle-core-3"/>
+            </g>
+            
+            <g class="star" transform="translate(400,20)" filter="url(#starGlow)">
+                <path d="M0,0 L2,-2 L0,-6 L-2,-2 L-6,0 L-2,2 L0,6 L2,2 L6,0 L2,-2 Z" 
+                      fill="white" class="twinkle-1"/>
+                <circle r="1" fill="white" class="twinkle-core-1"/>
+            </g>
+            
+            <g class="star" transform="translate(500,60)" filter="url(#starGlow)">
+                <path d="M0,0 L1.8,-1.8 L0,-5.4 L-1.8,-1.8 L-5.4,0 L-1.8,1.8 L0,5.4 L1.8,1.8 L5.4,0 L1.8,-1.8 Z" 
+                      fill="white" class="twinkle-2"/>
+                <circle r="0.9" fill="white" class="twinkle-core-2"/>
+            </g>
+            
+            <g class="star" transform="translate(600,40)" filter="url(#starGlow)">
+                <path d="M0,0 L2.3,-2.3 L0,-6.9 L-2.3,-2.3 L-6.9,0 L-2.3,2.3 L0,6.9 L2.3,2.3 L6.9,0 L2.3,-2.3 Z" 
+                      fill="white" class="twinkle-3"/>
+                <circle r="1.15" fill="white" class="twinkle-core-3"/>
+            </g>
+            
+            <g class="star" transform="translate(700,90)" filter="url(#starGlow)">
+                <path d="M0,0 L1.7,-1.7 L0,-5.1 L-1.7,-1.7 L-5.1,0 L-1.7,1.7 L0,5.1 L1.7,1.7 L5.1,0 L1.7,-1.7 Z" 
+                      fill="white" class="twinkle-1"/>
+                <circle r="0.85" fill="white" class="twinkle-core-1"/>
+            </g>
+        </g>
+
         <!-- Small Lines for Depth -->
         <g stroke="#FFA500" stroke-width="1">
             <line x1="80" y1="100" x2="120" y2="100" />
@@ -89,3 +135,55 @@ import Library from './Library.astro';
 
 	<Library />
 </div>
+<style>
+    /* Enhanced twinkling animations */
+    @keyframes twinkle-1 {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.3; transform: scale(0.8); }
+    }
+
+    @keyframes twinkle-2 {
+        0%, 100% { opacity: 0.8; transform: scale(0.9); }
+        50% { opacity: 0.4; transform: scale(1.1); }
+    }
+
+    @keyframes twinkle-3 {
+        0%, 100% { opacity: 0.9; transform: scale(1.1); }
+        50% { opacity: 0.5; transform: scale(0.9); }
+    }
+
+    @keyframes core-pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.7; }
+    }
+
+    /* Apply animations to star elements */
+    .twinkle-1 {
+        animation: twinkle-1 3s infinite ease-in-out;
+    }
+
+    .twinkle-2 {
+        animation: twinkle-2 4s infinite ease-in-out;
+    }
+
+    .twinkle-3 {
+        animation: twinkle-3 5s infinite ease-in-out;
+    }
+
+    .twinkle-core-1 {
+        animation: core-pulse 3s infinite ease-in-out;
+    }
+
+    .twinkle-core-2 {
+        animation: core-pulse 4s infinite ease-in-out;
+    }
+
+    .twinkle-core-3 {
+        animation: core-pulse 5s infinite ease-in-out;
+    }
+
+    /* Make stars more visible against the background */
+    .star {
+        mix-blend-mode: screen;
+    }
+</style>
