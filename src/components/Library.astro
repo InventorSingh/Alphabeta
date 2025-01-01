@@ -1,4 +1,6 @@
 ---
+import BooksList from "./BooksList.astro";
+
 const toggleChatbot = () => {
     const chatbot = document.getElementById('chatbot');
     chatbot.style.display = chatbot.style.display === 'none' ? 'flex' : 'none';
@@ -161,21 +163,7 @@ const sendMessage = () => {
         <p>Discover the joy of learning and the power of community at Alphabeta's Library.</p>
     </div>
 
-    <div class="books" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; padding: 1rem;">
-        <!-- Placeholder for Book Cards -->
-        <div class="book" style="width: 200px; border: 1px solid #ddd; padding: 1rem; border-radius: 5px; background-color: #fff;">
-            <div style="height: 150px; background-color: #f0f0f0; margin-bottom: 1rem;">
-                Book Cover
-            </div>
-            <h3 style="font-size: 1.2rem; margin: 0;">Book Title</h3>
-            <p style="font-size: 0.9rem; color: #555;">Author Name</p>
-        </div>
-        <div class="book" style="width: 200px; border: 1px solid #ddd; padding: 1rem; border-radius: 5px; background-color: #fff;">
-            <div style="height: 150px; background-color: #f0f0f0; margin-bottom: 1rem;">Book Cover</div>
-            <h3 style="font-size: 1.2rem; margin: 0;">Book Title</h3>
-            <p style="font-size: 0.9rem; color: #555;">Author Name</p>
-        </div>
-    </div>
+    <BooksList />
 
     <section class="section" id="about">
         <h2>About Us</h2>

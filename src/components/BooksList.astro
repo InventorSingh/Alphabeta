@@ -1,0 +1,24 @@
+---
+const books = [
+    { title: "Sample Book", author: "John Doe", cover: "Book Cover", pdf: "/books/AI For Everyone.pdf" }
+];
+---
+<div class="books" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; padding: 1rem;">
+    {books.map(book => (
+        // books card
+        <div class="books" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; padding: 1rem;">
+        <!-- AI for Everyone Book Card -->
+        <div class="book" style="width: 200px; border: 1px solid #ddd; padding: 1rem; border-radius: 5px; background-color: #fff;">
+            <!-- SVG Book Cover -->
+            <div style="width: 100%; height: 150px; overflow: hidden; border-radius: 5px;">
+                <img src="/books/ai-for-everyone.svg" alt="AI for Everyone Cover" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <h3 style="font-size: 1rem; margin: 0.5rem 0 0;">AI for Everyone</h3>
+            <p style="font-size: 0.8rem; color: #555; margin: 0;">By Gurprit Singh</p>
+            <a href="/books/ai-for-everyone.pdf" target="_blank" style="display: inline-block; margin-top: 0.5rem; padding: 0.5rem; background-color: #4CAF50; color: white; text-decoration: none; text-align: center; border-radius: 3px;">Read Book</a>
+        </div>
+    </div>
+
+        // end books card
+    ))}
+</div>
