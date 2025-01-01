@@ -135,51 +135,53 @@ import Library from './Library.astro';
 
 	<Library />
 </div>
+
+
 <style>
-    /* Enhanced twinkling animations */
+    /* Enhanced twinkling animations with faster timings */
     @keyframes twinkle-1 {
         0%, 100% { opacity: 1; transform: scale(1); }
-        50% { opacity: 0.3; transform: scale(0.8); }
+        50% { opacity: 0.2; transform: scale(0.85); }
     }
 
     @keyframes twinkle-2 {
-        0%, 100% { opacity: 0.8; transform: scale(0.9); }
-        50% { opacity: 0.4; transform: scale(1.1); }
+        0%, 100% { opacity: 0.9; transform: scale(0.95); }
+        50% { opacity: 0.3; transform: scale(1.1); }
     }
 
     @keyframes twinkle-3 {
-        0%, 100% { opacity: 0.9; transform: scale(1.1); }
-        50% { opacity: 0.5; transform: scale(0.9); }
+        0%, 100% { opacity: 1; transform: scale(1.05); }
+        50% { opacity: 0.4; transform: scale(0.9); }
     }
 
     @keyframes core-pulse {
         0%, 100% { opacity: 1; }
-        50% { opacity: 0.7; }
+        50% { opacity: 0.6; }
     }
 
-    /* Apply animations to star elements */
+    /* Apply faster animations to star elements */
     .twinkle-1 {
-        animation: twinkle-1 3s infinite ease-in-out;
+        animation: twinkle-1 1.5s infinite ease-in-out;
     }
 
     .twinkle-2 {
-        animation: twinkle-2 4s infinite ease-in-out;
+        animation: twinkle-2 2s infinite ease-in-out;
     }
 
     .twinkle-3 {
-        animation: twinkle-3 5s infinite ease-in-out;
+        animation: twinkle-3 2.5s infinite ease-in-out;
     }
 
     .twinkle-core-1 {
-        animation: core-pulse 3s infinite ease-in-out;
+        animation: core-pulse 1.5s infinite ease-in-out;
     }
 
     .twinkle-core-2 {
-        animation: core-pulse 4s infinite ease-in-out;
+        animation: core-pulse 2s infinite ease-in-out;
     }
 
     .twinkle-core-3 {
-        animation: core-pulse 5s infinite ease-in-out;
+        animation: core-pulse 2.5s infinite ease-in-out;
     }
 
     /* Make stars more visible against the background */
