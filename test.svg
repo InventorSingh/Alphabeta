@@ -1,0 +1,31 @@
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg" style="background: #e8f5e9;">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="minimalSunrise" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#76c7c0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffcc80;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#minimalSunrise)" />
+
+  <!-- Minimal Earth Icon -->
+  <circle cx="1700" cy="900" r="100" fill="#4caf50" />
+  <circle cx="1700" cy="900" r="90" fill="none" stroke="#ffffff" stroke-width="5" />
+  
+  <!-- Alpha Beta Logo -->
+  <text x="1700" y="910" font-size="70" font-family="'Arial', sans-serif" text-anchor="middle" fill="#ffffff" font-weight="bold">αβ</text>
+
+  <!-- Quote Text -->
+  <text x="960" y="400" font-size="80" font-family="'Arial', sans-serif" text-anchor="middle" fill="#2e7d32" font-weight="bold">Sustainability isn’t enough.</text>
+  <text x="960" y="500" font-size="100" font-family="'Arial', sans-serif" text-anchor="middle" fill="#1b5e20" font-weight="bold">We need Regeneration.</text>
+
+  <!-- Author Name -->
+  <text x="960" y="650" font-size="50" font-family="'Arial', sans-serif" text-anchor="middle" fill="#2e7d32" font-weight="normal">— Gurprit Singh</text>
+
+  <!-- Decorative Element -->
+  <path d="M700,800 C900,750 1020,750 1220,800" fill="none" stroke="#43a047" stroke-width="5" />
+
+  <!-- Leaf Decorations -->
+  <circle cx="700" cy="800" r="8" fill="#43a047" />
+  <circle cx="1220" cy="800" r="8" fill="#43a047" />
+</svg>
