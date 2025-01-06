@@ -1,209 +1,120 @@
 ---
-import ProductsList from "./ProductsList.astro";
-
-const toggleChatbot = () => {
-    const chatbot = document.getElementById('chatbot');
-    chatbot.style.display = chatbot.style.display === 'none' ? 'flex' : 'none';
-};
-
-const sendMessage = () => {
-    const userInput = document.getElementById('user-input');
-    const messages = document.getElementById('chatbot-messages');
-
-    if (userInput.value.trim() === '') return;
-
-    const userMessage = document.createElement('div');
-    userMessage.textContent = userInput.value;
-    userMessage.style.textAlign = 'right';
-    userMessage.style.margin = '10px';
-    userMessage.style.backgroundColor = '#e0f7fa';
-    userMessage.style.padding = '10px';
-    userMessage.style.borderRadius = '8px';
-
-    messages.appendChild(userMessage);
-
-    const botMessage = document.createElement('div');
-    botMessage.textContent = 'Thank you for your question! Our team will get back to you shortly.';
-    botMessage.style.margin = '10px';
-    botMessage.style.backgroundColor = '#f1f1f1';
-    botMessage.style.padding = '10px';
-    botMessage.style.borderRadius = '8px';
-
-    messages.appendChild(botMessage);
-
-    userInput.value = '';
-};
+import { onMount } from "astro";
 ---
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alphabeta: Regenerative Living Systems</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-        }
-        nav a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-        }
-        nav a:hover {
-            background-color: #575757;
-        }
-        .hero {
-            padding: 50px;
-            text-align: center;
-            background-color: #f1f1f1;
-        }
-        .section {
-            padding: 20px;
-            margin: 20px;
-            background: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-        #chatbot {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 300px;
-            background: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 8px;
-            display: none;
-            flex-direction: column;
-            overflow: hidden;
-        }
-        #chatbot header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-        #chatbot-messages {
-            padding: 10px;
-            height: 200px;
-            overflow-y: auto;
-            flex-grow: 1;
-        }
-        #chatbot-input {
-            display: flex;
-            border-top: 1px solid #ddd;
-        }
-        #chatbot-input input {
-            flex-grow: 1;
-            padding: 10px;
-            border: none;
-        }
-        #chatbot-input button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-        }
-        #chatbot-input button:hover {
-            background-color: #45a049;
-        }
-        #chatbot-toggle {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 24px;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
+
+<script>
+    // Placeholder for any interactive features you want to add later
+    onMount(() => {
+        console.log("FutureSkool Landing Page Loaded");
+    });
+</script>
+
+<main>
     <header>
-        <h1>Alphabeta: Regenerative Living Systems</h1>
+        <h1>FutureSkool: Regenerative Tree Plantation Project</h1>
         <p>Growing Life, Building Community, Restoring Earth</p>
     </header>
 
     <nav>
-        <a href="#about">About Us</a>
-        <a href="#projects">Our Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">About the Project</a>
+        <a href="#impact">Our Impact</a>
+        <a href="#donate">Donate Now</a>
     </nav>
 
     <div class="hero">
-        <h2>Transforming Urban Spaces into Living Ecosystems</h2>
-        <p>Join us in creating a future where knowledge, sustainability, and community thrive together. Explore our regenerative living systems and contribute to real-world solutions.</p>
+        <h2>Help Us Transform Villages with Tree Plantations</h2>
+        <p>Join us in creating a greener future for rural communities by supporting our tree plantation project in Badhana. Together, we can build water wells, plant fruit-producing trees, and create habitats for wildlife.</p>
+        <a href="#donate" class="donate-btn">Donate Now</a>
     </div>
 
-    <section class="section" id="projects">
-        <h2>Our Regenerative Systems</h2>
-        <ul>
-            <li><strong>Living Products:</strong> Mycelium-integrated planters, composting systems, and seed-saving kits.</li>
-            <li><strong>Knowledge Platform:</strong> Open-source guides, community skill-sharing, and seasonal growing calendars.</li>
-            <li><strong>Community Infrastructure:</strong> Tool libraries, seed banks, and food preservation hubs.</li>
-            <li><strong>Circular Systems:</strong> Water harvesting, greywater processing, and renewable energy integration.</li>
-            <li><strong>Community Wealth Building:</strong> Apprenticeship programs, local currencies, and urban farming incubators.</li>
-            <li><strong>Ecosystem Regeneration:</strong> Native plant propagation, soil building, and climate resilience projects.</li>
-        </ul>
-
-        <ProductsList />
-    </section>
-
     <section class="section" id="about">
-        <h2>About Us</h2>
-        <p>At Alphabeta, we believe that everyone deserves access to sustainable living systems that regenerate both the environment and the community. We offer innovative solutions to help grow food, improve air quality, and create healthier, more resilient spaces.</p>
+        <h2>About the Project</h2>
+        <p>The FutureSkool Regenerative Tree Plantation Project aims to bring sustainable change to villages by planting fruit tree guilds around water wells. Our first project is in Badhana, where we will build community water wells surrounded by trees to provide food, shade, and biodiversity. We will integrate technology like IoT devices to monitor environmental health and empower local communities with knowledge and tools to create a self-sustaining ecosystem.</p>
     </section>
 
-    <section class="section" id="get-involved">
-        <h2>Get Involved</h2>
-        <p>We're looking for partners, volunteers, and contributors to join us in creating sustainable living systems. Whether you want to help with urban gardening, community hubs, or regenerative design, there's a place for you at Alphabeta.</p>
+    <section class="section" id="impact">
+        <h2>Our Impact</h2>
+        <ul>
+            <li>🌱 Plant 1,000+ trees in villages</li>
+            <li>💧 Build sustainable water wells for communities</li>
+            <li>📡 Integrate IoT devices to monitor soil and air quality</li>
+            <li>🌍 Support biodiversity and create habitats for wildlife</li>
+            <li>📚 Educate communities on regenerative practices</li>
+        </ul>
     </section>
 
-    <section class="section" id="contact">
-        <h2>Contact Us</h2>
-        <p>Have questions or want to support our mission? Reach out to us at:</p>
-        <p>Email: singh.gurprit@outlook.com | Phone: +1-438-722-3299</p>
+    <section class="section" id="donate">
+        <h2>How You Can Help</h2>
+        <p>Your support can make a lasting impact on rural communities. With your donation, we can build water wells, plant trees, and create sustainable living systems. Help us achieve our mission to restore nature and empower people.</p>
+        <a href="#" class="donate-btn">Donate Now</a>
     </section>
 
     <footer>
-        <p>&copy; 2025 Alphabeta. All Rights Reserved.</p>
+        <p>&copy; 2025 FutureSkool. All Rights Reserved.</p>
+        <p>Email: info@futureskool.ca | Phone: +1-438-722-3299</p>
     </footer>
+</main>
 
-    <div id="chatbot">
-        <header>Ask Alphabeta!</header>
-        <div id="chatbot-messages"></div>
-        <div id="chatbot-input">
-            <input type="text" id="user-input" placeholder="Type your question here...">
-            <button onClick={sendMessage}>Send</button>
-        </div>
-    </div>
-    <button id="chatbot-toggle" onClick={toggleChatbot}>&#128172;</button>
-</body>
+<style>
+    main {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
+    }
+    header {
+        background-color: #4CAF50;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+    nav {
+        text-align: center;
+        padding: 10px 0;
+    }
+    nav a {
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        background-color: #4CAF50;
+        margin: 0 5px;
+        border-radius: 5px;
+    }
+    nav a:hover {
+        background-color: #45a049;
+    }
+    .hero {
+        padding: 50px;
+        text-align: center;
+        background-color: #e0f7fa;
+    }
+    .section {
+        padding: 40px;
+        margin: 20px;
+        background: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+    .donate-btn {
+        display: block;
+        width: 200px;
+        margin: 20px auto;
+        padding: 15px;
+        text-align: center;
+        background-color: #4CAF50;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 18px;
+    }
+    .donate-btn:hover {
+        background-color: #45a049;
+    }
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #333;
+        color: white;
+    }
+</style>
