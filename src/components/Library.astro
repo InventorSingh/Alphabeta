@@ -3,12 +3,19 @@ import ProductsList from "./ProductsList.astro";
 
 const toggleChatbot = () => {
     const chatbot = document.getElementById('chatbot');
-    chatbot.style.display = chatbot.style.display === 'none' ? 'flex' : 'none';
+    if (chatbot) {
+        chatbot.style.display = chatbot.style.display === 'none' ? 'flex' : 'none';
+    }
 };
 
 const sendMessage = () => {
     const userInput = document.getElementById('user-input');
     const messages = document.getElementById('chatbot-messages');
+
+    if (!userInput || !messages) {
+        console.error('Required DOM elements are missing.');
+        return;
+    }
 
     if (userInput.value.trim() === '') return;
 
@@ -23,7 +30,7 @@ const sendMessage = () => {
     messages.appendChild(userMessage);
 
     const botMessage = document.createElement('div');
-    botMessage.textContent = 'Thank you for your message! Our first AI Agent will focus on climate change research and spreading awareness on social media. Together, we can create a better world.';
+    botMessage.textContent = 'Thank you for your message! Together, we can build a sustainable future for our community.';
     botMessage.style.margin = '10px';
     botMessage.style.backgroundColor = '#f1f1f1';
     botMessage.style.padding = '10px';
@@ -33,176 +40,181 @@ const sendMessage = () => {
 
     userInput.value = '';
 };
+
+const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    const form = event.target;
+
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+        const response = await fetch('/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+        });
+
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
+        alert('Thank you for reaching out! We will get back to you shortly.');
+        form.reset();
+    } catch (error) {
+        console.error('Error submitting the form:', error);
+        alert('There was an issue submitting your message. Please try again later.');
+    }
+};
 ---
 
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FutureSkool - Empowering Tomorrow</title>
+    <title>Alphabeta - Building a Greener Future</title>
     <style>
-      /* General Styles */
       body {
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
         color: #333;
         line-height: 1.6;
+        background: linear-gradient(to bottom, #e8f5e9, #ffffff);
       }
+
       header {
-        background: #4caf50;
+        background: #2e7d32;
         color: white;
         padding: 1rem 0;
         text-align: center;
       }
+
       header h1 {
-        font-size: 2.5rem;
-      }
-      header p {
-        margin: 0.5rem 0 1rem;
+        font-size: 3rem;
+        font-family: 'Georgia', serif;
       }
 
       nav {
-        background: #333;
-        color: #fff;
+        background: #1b5e20;
+        color: white;
         display: flex;
         justify-content: center;
-        padding: 0.5rem 0;
+        padding: 0.8rem 0;
       }
+
       nav a {
         color: white;
         text-decoration: none;
-        margin: 0 1rem;
-        font-size: 1rem;
+        margin: 0 1.5rem;
+        font-size: 1.2rem;
+        font-weight: bold;
         transition: color 0.3s;
       }
+
       nav a:hover {
-        color: #4caf50;
+        color: #a5d6a7;
       }
 
       section {
-        padding: 2rem;
+        padding: 3rem;
         text-align: center;
+        position: relative;
       }
+
       section h2 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-        color: #4caf50;
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        color: #388e3c;
       }
+
       section p {
         max-width: 800px;
-        margin: 0.5rem auto;
-      }
-
-      .cta {
-        background: #f4f4f4;
-        padding: 2rem;
-        margin: 2rem 0;
-        text-align: center;
-      }
-      .cta a {
-        display: inline-block;
-        margin-top: 1rem;
-        padding: 0.8rem 1.5rem;
-        background: #4caf50;
-        color: white;
-        text-decoration: none;
-        font-size: 1rem;
-        border-radius: 5px;
-        transition: background 0.3s;
-      }
-      .cta a:hover {
-        background: #333;
-      }
-
-      form {
-        max-width: 500px;
         margin: 0 auto;
-        background: #fff;
-        padding: 1.5rem;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 1.1rem;
+        position: relative;
+        z-index: 1;
       }
-      form label {
-        display: block;
-        margin-bottom: 0.5rem;
-        font-weight: bold;
-      }
-      form input,
-      form textarea {
+
+      .svg-background {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        padding: 0.8rem;
-        margin-bottom: 1rem;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-      }
-      form button {
-        width: 100%;
-        padding: 0.8rem;
-        background: #4caf50;
-        color: white;
-        border: none;
-        font-size: 1rem;
-        cursor: pointer;
-        border-radius: 5px;
-        transition: background 0.3s;
-      }
-      form button:hover {
-        background: #333;
+        height: 100%;
+        z-index: 0;
+        opacity: 0.3;
       }
 
       footer {
-        background: #333;
+        background: #2e7d32;
         color: white;
         text-align: center;
-        padding: 1rem 0;
+        padding: 1.5rem 0;
         margin-top: 2rem;
       }
+
       footer p {
-        margin: 0;
-        font-size: 0.9rem;
+        margin: 0.5rem 0;
+        font-size: 1rem;
+      }
+
+      footer a {
+        color: #a5d6a7;
+        text-decoration: none;
       }
     </style>
   </head>
   <body>
     <header>
-      <h1>FutureSkool</h1>
-      <p>Empowering Everyone to Build a Better Tomorrow</p>
+      <h1>Alphabeta</h1>
+      <p>Rebuilding Our Village and Ecosystem</p>
     </header>
 
     <nav>
       <a href="#about">About Us</a>
-      <a href="#programs">Programs</a>
+      <a href="#projects">Our Projects</a>
       <a href="#join">Join Us</a>
       <a href="#contact">Contact</a>
     </nav>
 
     <section id="about">
-      <h2>About FutureSkool</h2>
+      <svg class="svg-background" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <rect width="100%" height="100%" fill="#a5d6a7" />
+        <circle cx="50" cy="50" r="40" fill="#4caf50" />
+        <path d="M30 70 Q50 20 70 70" stroke="#2e7d32" stroke-width="2" fill="none" />
+      </svg>
+      <h2>About Alphabeta</h2>
       <p>
-        At FutureSkool, our mission is to build AI Agents that help research solutions for global challenges and empower people to create a better world. Our first AI Agent will focus on climate change awareness by conducting research and spreading valuable insights on social media.
+        Alphabeta is on a mission to create a greener future by empowering communities and enhancing biodiversity. Our initiatives focus on planting Tree Guilds that provide food for both wildlife and locals while improving the environment.
       </p>
     </section>
 
-    <section id="programs">
+    <section id="projects">
+      <svg class="svg-background" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <rect width="100%" height="100%" fill="#e8f5e9" />
+        <circle cx="30" cy="50" r="20" fill="#4caf50" />
+        <circle cx="70" cy="50" r="20" fill="#81c784" />
+      </svg>
       <h2>Our Projects</h2>
       <p>
-        - <strong>Climate Change Awareness AI Agent</strong>: Conducts climate change research and spreads awareness through social media.<br />
-        - <strong>Food Security AI Agent</strong>: Focuses on researching solutions to improve food security worldwide.
+        - <strong>Tree Guild Planting:</strong> Strategically planting native trees to support wildlife and provide local food.<br />
+        - <strong>AI for Climate:</strong> Developing AI tools to research climate change and assist in sustainable planning.<br />
+        - <strong>Community Engagement:</strong> Workshops and events to raise awareness and involve locals in sustainability.
       </p>
     </section>
 
-    <section id="join" class="cta">
+    <section id="join">
       <h2>Join Our Volunteer Network</h2>
       <p>
-        Help us build a better future by joining our volunteer network. As a volunteer, you can assist in shaping our AI projects and spreading impactful messages.
+        Be part of the change! Join our network of passionate volunteers and help us make a lasting impact on our environment and community.
       </p>
       <a href="#contact">Sign Up to Volunteer</a>
     </section>
 
     <section id="contact">
       <h2>Contact Us</h2>
-      <form id="contactForm">
+      <form id="contactForm" onsubmit="handleFormSubmit(event)">
         <label for="name">Your Name</label>
         <input type="text" id="name" name="name" placeholder="Enter your name" required />
 
@@ -217,16 +229,8 @@ const sendMessage = () => {
     </section>
 
     <footer>
-      <p>&copy; 2025 FutureSkool | All Rights Reserved</p>
-      <p><a href="mailto:info@FutureSkool.ca" style="color: #4caf50; text-decoration: none;">info@FutureSkool.ca</a></p>
+      <p>&copy; 2025 Alphabeta | All Rights Reserved</p>
+      <p><a href="mailto:info@alphabeta.org">info@alphabeta.org</a></p>
     </footer>
-
-    <script>
-      document.getElementById('contactForm').addEventListener('submit', function (e) {
-        e.preventDefault();
-        alert('Thank you for reaching out! We will get back to you shortly.');
-        e.target.reset();
-      });
-    </script>
   </body>
 </html>
