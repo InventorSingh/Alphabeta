@@ -1,0 +1,133 @@
+= Protecting a Simple HTTP API
+
+Let's build an HTTP API to demonstrate securing it with Spring Security OAuth support.
+
+First, go to the https://start.spring.io[Spring Initializr] and add the following dependencies:
+
+* `Spring for RabbitMQ`
+* `Spring Integration`
+* `Spring Web`
+* `OAuth2 Resource Server`
+* `Spring Data JDBC`
+* `PostgreSQL Driver`
+
+Name the project `api` with the group `bootiful`. Click `Generate`, unzip the `.zip` file, and open the project in your IDE.
+
+We'll create a simple domain: customer data, like a CRM (customer relationship manager). Each `Customer` entity has an `id`, `name`, and `email`.
+
+[source,java]
+-----
+include::api/src/main/java/bootiful/api/Customer.java[]
+-----
+
+We'll use a Spring Data JDBC repository to manage this data.
+
+[source,java]
+-----
+include::api/src/main/java/bootiful/api/CustomerRepository.java[]
+-----
+
+Define the SQL table `customer` in the schema.
+
+[source,sql]
+-----
+include::api/src/main/resources/schema.sql[]
+-----
+
+Insert some `customer` records to have initial data.
+
+[source,sql]
+-----
+include::api/src/main/resources/data.sql[]
+-----
+
+Create an HTTP controller to access the data using Spring MVC.
+
+[source,java]
+-----
+include::api/src/main/java/bootiful/api/CustomerHttpController.java[]
+-----
+
+We'll secure this with Spring Security's OAuth support. To verify authentication, create an endpoint that returns the current authenticated user's username.
+
+[source,java]
+-----
+include::api/src/main/java/bootiful/api/MeHttpController.java[]
+-----
+
+Next, we'll integrate with RabbitMQ to send messages to another service called `processor`. This service will handle tasks like sending emails, which should be processed asynchronously.
+
+[source,java]
+-----
+include::api/src/main/java/bootiful/api/EmailController.java[]
+-----
+
+Use Spring Integration to route requests to RabbitMQ. The `IntegrationFlow` transforms requests into JSON and sends them to the broker.
+
+[source,java]
+-----
+include::api/src/main/java/bootiful/api/EmailRequestsIntegrationFlowConfiguration.java[]
+-----
+
+<1> Inbound adapters translate real-world events into Spring `Message<T>` objects.
+<2> Messages pass through the `MessageChannel`...
+<3> ...and are transformed into JSON payloads.
+<4> The outbound AMQP adapter sends the JSON data to RabbitMQ.
+
+Configure Spring Security's Resource Server to protect API requests by validating OAuth 2 tokens.
+
+[source,properties]
+----
+include::api/src/main/resources/application.properties[]
+----
+<1> The issuer URI for validating JWT tokens.
+<2> RabbitMQ connection settings.
+<3> PostgreSQL database connection settings.
+<4> Run the application on port `8081`.
+
+WARNING: Do not hardcode credentials in a production application. Use environment variables or secure configuration services.
+
+Start the application and test the `/customers` endpoint.
+
+[source,shell]
+----
+curl http://localhost:8081/customers
+----
+
+It will fail because it requires authentication. Obtain a JWT token using the client credentials.
+
+[source,shell]
+----
+curl -X POST \
+     -H "Authorization: Basic $(echo -n 'crm:crm' | base64)" \
+     -H "Content-Type: application/x-www-form-urlencoded" \
+     -d "grant_type=client_credentials&scope=user.read" \
+     http://localhost:8080/oauth2/token
+----
+
+Extract the `access_token` from the response.
+
+[source,shell]
+----
+TOKEN=$( curl -X POST \
+     -H "Authorization: Basic $(echo -n 'crm:crm' | base64)" \
+     -H "Content-Type: application/x-www-form-urlencoded" \
+     -d "grant_type=client_credentials&scope=user.read" \
+     http://localhost:8080/oauth2/token | jq -r  .access_token )
+----
+
+You can also use Spring's `RestTemplate` to obtain the token.
+
+[source,java]
+----
+include::api/src/main/java/bootiful/api/ClientCredentialsClient.java[]
+----
+
+Use the token to access the `/customers` endpoint.
+
+[source,shell]
+-----
+curl -H "Authorization: Bearer $TOKEN" http://localhost:8081/customers
+-----
+
+Now you have a secure HTTP API. By specifying the `issuer-uri` in the properties file, you can protect any microservice with the same configuration.

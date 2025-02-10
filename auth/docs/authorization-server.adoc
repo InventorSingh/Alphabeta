@@ -1,0 +1,102 @@
+Spring Authorization Server
+
+* A Spring Authorization Server instance (`authorization-server`)
+* A backend HTTP API protected by Spring Security's OAuth 2 Resource Server (`api`)
+* A headless RabbitMQ-powered microservice with Spring Integration, protected by Spring Security's OAuth 2 Resource Server (`processor`)
+* A static JavaScript application (`static`)
+* A Spring Cloud Gateway instance acting as an OAuth 2 token relay and client, forwarding requests to the backend HTTP API and static JavaScript assets with the token.
+
+We'll start with the main event, the Spring Authorization Server. Everything after that works with any other OAuth 2 IDP. But you may find you don't need any other OAuth 2 IDP.
+
+== Try it out!
+
+Before we dive in, let's try it out! Clone the code from https://github.com/spring-tips/spring-authorization-server.
+
+* In the root folder, run `docker compose up`
+* In `authorization-service`, run `run.sh`
+* In `gateway`, run `run.sh`
+* In `api`, run `run.sh`
+* In `processor`, run `run.sh`
+* In `static`, run `run.sh`
+* Visit `http://127.0.0.1:8082` (use the IP, not `localhost`) in the browser.
+* Login with `jlong`/`password`, and consent when prompted.
+* Click on the `email` button to kick off work in the `processor`. You should see indications in the console that your message has been sent.
+
+There are many moving parts, but we have a JavaScript/HTML 5 client, a backend HTTP API, and a headless backoffice process, all secured with the Spring Authorization Server.
+
+Shut everything down, and we'll start from scratch.
+
+== Docker Compose and our Middleware
+
+Restart the Docker images for PostgreSQL and RabbitMQ. Their configuration is in the `docker-compose.yml` file in the root of this project.
+
+[source,yaml]
+----
+include::docker-compose.yml[]
+----
+
+Start them up before we proceed.
+
+[source,shell]
+----
+docker compose up
+----
+
+RabbitMQ will run on the usual port with user `user` and password `password`. PostgreSQL will run on the usual port with user `postgres`, schema `postgres`, and password `postgres`.
+
+== Stand up a Spring Authorization Server Instance
+
+Go to https://start.spring.io, specify a group ID and an artifact ID (e.g., `bootiful:authorization-server`), and add `OAuth2 Authorization Server` as a dependency. Add `GraalVM Native Support` if desired. Open the downloaded project in your IDE.
+
+Run the following command from the root of the unzipped archive: `idea build.gradle`.
+
+You have a new Spring Boot Authorization Server. We need to specify *users* and *clients*.
+
+=== Users
+
+Users are defined by username, password, and associated information. The easiest way is to have one user described using Spring Boot's properties.
+
+[source,properties]
+----
+include::authorization-server/snippets/default-user.properties[]
+----
+
+For more users, define a bean of type `InMemoryUserDetailsManager`.
+
+[code,java]
+----
+include::./authorization-server/snippets/UserDetailsConfiguration.java[]
+----
+
+This configuration gives us two users:
+
+* `jlong` with password `password` and roles `USER`
+* `rwinch` with password `p@ssw0rd` and roles `USER` and `ADMIN`
+
+This is fine for development. For production, you'll want something more durable.
+
+=== OAuth Clients
+
+An OAuth client defines how a program interacts with an OAuth IDP. Clients correspond to programs that authenticate on behalf of users.
+
+For example, when you log in to Yelp.com using Google, Yelp.com is an OAuth client of Google.
+
+Clients must specify a client ID, client secret, and scopes. Scopes are permissions or claims.
+
+The simplest way to register clients in the Spring Authorization Server is to use properties in `application.properties` or `application.yaml`.
+
+[source,yaml]
+----
+include::authorization-server/snippets/registered-clients.yaml[]
+----
+
+<1> Encode a password for the client secret using the `spring` CLI: `spring encodepassword BLAH`, where `BLAH` is the string to encode.
+<2> `authorization-grant-types` refers to the use case for the authentication flow.
+<3> Specify the redirect URI for the web application.
+<4> Specify the scopes.
+
+Run the application: `./gradlew bootRun`, `./mvnw spring-boot:run`, or run the main method from your IDE.
+
+Congratulations on your first deployment of the Spring Authorization Server.
+
+For durable state, consider using JDBC. For more on these possibilities, check out this https://www.youtube.com/watch?v=aC_siBP8rx8&list=PLgGXSWYM2FpPw8rV0tZoMiJYSCiLhPnOc&index=31[video].
