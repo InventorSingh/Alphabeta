@@ -1,0 +1,67 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background Gradient (Sky) -->
+    <defs>
+        <linearGradient id="skyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#1e3c72"/>
+            <stop offset="50%" style="stop-color:#2a5298"/>
+            <stop offset="100%" style="stop-color:#ff8c42"/>
+        </linearGradient>
+
+        <!-- Sun Glow Effect -->
+        <radialGradient id="sunGlow" cx="50%" cy="30%" r="50%">
+            <stop offset="0%" style="stop-color:#ffcc33; stop-opacity:0.8"/>
+            <stop offset="100%" style="stop-color:#ffcc33; stop-opacity:0"/>
+        </radialGradient>
+    </defs>
+
+    <!-- Sky Background -->
+    <rect width="1920" height="1080" fill="url(#skyGradient)"/>
+
+    <!-- Sun -->
+    <circle cx="960" cy="200" r="150" fill="url(#sunGlow)"/>
+
+    <!-- Hills and Nature -->
+    <path d="M0 850 Q400 700, 800 850 T1920 850 L1920 1080 L0 1080 Z" fill="#2a5298"/>
+    <path d="M0 870 Q300 750, 700 870 T1920 870 L1920 1080 L0 1080 Z" fill="#1e3c72"/>
+    
+    <!-- Path (Journey) -->
+    <path d="M960 1080 Q1000 900, 1100 800 T1300 600 T1450 500 T1600 350 T1750 250" 
+          stroke="#ffd700" stroke-width="15" fill="none" stroke-linecap="round"/>
+
+    <!-- Trees along the journey -->
+    <circle cx="1050" cy="830" r="40" fill="#1e3c72"/>
+    <rect x="1040" y="870" width="20" height="60" fill="#784421"/>
+    
+    <circle cx="1280" cy="630" r="40" fill="#1e3c72"/>
+    <rect x="1270" y="670" width="20" height="60" fill="#784421"/>
+
+    <circle cx="1500" cy="480" r="40" fill="#1e3c72"/>
+    <rect x="1490" y="520" width="20" height="60" fill="#784421"/>
+
+    <!-- Journey Labels -->
+    <text x="960" y="900" font-family="Arial" font-size="40" fill="#fff8e7" text-anchor="middle">
+        Founded in Haryana
+    </text>
+    <text x="1100" y="750" font-family="Arial" font-size="40" fill="#fff8e7" text-anchor="middle">
+        Engineered in Punjab
+    </text>
+    <text x="1300" y="580" font-family="Arial" font-size="40" fill="#fff8e7" text-anchor="middle">
+        Educated in the USA
+    </text>
+    <text x="1500" y="450" font-family="Arial" font-size="40" fill="#fff8e7" text-anchor="middle">
+        Built in Canada
+    </text>
+
+    <!-- Title -->
+    <text x="960" y="150" font-family="Arial" font-size="80" fill="#fff8e7" text-anchor="middle" font-weight="bold">
+        Our Journey
+    </text>
+
+    <!-- Footer -->
+    <text x="960" y="1000" font-family="Arial" font-size="32" fill="#ffd700" text-anchor="middle">
+        A Path of Innovation and Global Impact
+    </text>
+
+    <!-- Logo -->
+    <text x="910" y="1040" font-family="Arial" font-size="60" fill="#ff8c42">αβ</text>
+</svg>

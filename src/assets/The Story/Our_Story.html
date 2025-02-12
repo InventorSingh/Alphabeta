@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story | Alphabeta</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1e3c72; /* Deep blue background */
+            color: #fff8e7; /* Light text */
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #ff8c42; /* Orange accent */
+            text-align: center;
+            padding: 40px 20px;
+            color: #fff;
+        }
+        header h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        .highlight {
+            color: #ff8c42;
+            font-weight: bold;
+        }
+        .svg-container {
+            margin: 40px 0;
+        }
+        .journey-path {
+            margin-top: 20px;
+        }
+        footer {
+            background-color: #2a5298; /* Secondary blue */
+            color: #fff8e7;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        /* For SVG depth effects */
+        .svg-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background SVG for Depth -->
+    <svg class="svg-background" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+        <circle cx="600" cy="200" r="150" fill="#ff8c42" opacity="0.1" />
+        <circle cx="1400" cy="800" r="200" fill="#2a5298" opacity="0.2" />
+        <circle cx="900" cy="500" r="250" fill="#1e3c72" opacity="0.3" />
+    </svg>
+
+    <!-- Header -->
+    <header>
+        <h1>Our Story</h1>
+        <p>Empowering innovation, inspiring growth, and building futures.</p>
+    </header>
+
+    <!-- Section 1: Introduction -->
+    <section>
+        <div class="content">
+            <h2>Welcome to Alphabeta</h2>
+            <p>
+                Alphabeta is more than just a name – it’s our philosophy. The Greek letters Alpha (α) and Beta (β) represent the journey of innovation and collaboration, where great ideas take their first step and evolve through teamwork and progress. Founded on a commitment to harnessing technology for good, Alphabeta stands at the intersection of creativity and impact.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section 2: Mission & Vision -->
+    <section style="background-color: #2a5298;">
+        <div class="content" style="color: #fff8e7;">
+            <h2>Our Mission</h2>
+            <p>
+                To connect ideas, technology, and people, creating solutions that empower businesses, foster collaboration, and drive social change.
+            </p>
+            <h2>Our Vision</h2>
+            <p>
+                A world where innovation bridges gaps, transforms industries, and uplifts communities.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section 3: Our Journey -->
+    <section>
+        <div class="content">
+            <h2>Our Journey</h2>
+            <p>
+                From humble beginnings in Haryana, India, Alphabeta has grown into a global platform for innovation. Our journey spans three continents, reflecting a commitment to learning, growth, and impact.
+            </p>
+            <div class="svg-container journey-path">
+                <!-- Journey Visual -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300">
+                    <!-- Path -->
+                    <path d="M50 250 Q200 150, 450 250 T850 250" fill="none" stroke="#ff8c42" stroke-width="5" />
+                    <!-- Milestones -->
+                    <circle cx="50" cy="250" r="20" fill="#ff8c42" />
+                    <text x="50" y="280" font-family="Arial" font-size="16" text-anchor="middle" fill="#fff8e7">Haryana</text>
+
+                    <circle cx="450" cy="250" r="20" fill="#2a5298" />
+                    <text x="450" y="280" font-family="Arial" font-size="16" text-anchor="middle" fill="#fff8e7">Punjab</text>
+
+                    <circle cx="700" cy="150" r="20" fill="#1e3c72" />
+                    <text x="700" y="180" font-family="Arial" font-size="16" text-anchor="middle" fill="#fff8e7">United States</text>
+
+                    <circle cx="850" cy="250" r="20" fill="#ff8c42" />
+                    <text x="850" y="280" font-family="Arial" font-size="16" text-anchor="middle" fill="#fff8e7">Canada</text>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Services -->
+    <section style="background-color: #2a5298;">
+        <div class="content" style="color: #fff8e7;">
+            <h2>What We Do</h2>
+            <ul style="text-align: left; list-style-type: none; padding: 0;">
+                <li><span class="highlight">Custom Software Development:</span> Scalable, secure solutions tailored to your business.</li>
+                <li><span class="highlight">AI-Powered Agents:</span> Automation tools to enhance workflows and productivity.</li>
+                <li><span class="highlight">Gamified Campaigns:</span> Interactive campaigns that inspire engagement.</li>
+                <li><span class="highlight">Design & Branding:</span> Creative assets and user-centered designs for impactful branding.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Alphabeta. Innovating for a brighter future.</p>
+    </footer>
+</body>
+</html>

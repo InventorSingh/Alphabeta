@@ -1,0 +1,25 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1920" height="1080" fill="#1e3c72"/>
+
+    <text x="960" y="200" font-family="Arial" font-size="80" fill="#ff8c42" text-anchor="middle" font-weight="bold">
+        Design Services
+    </text>
+
+    <text x="960" y="400" font-family="Arial" font-size="40" fill="#fff8e7" text-anchor="middle">
+        • Crafting Visual Narratives: Compelling designs to engage audiences.
+    </text>
+    
+    <text x="960" y="500" font-family="Arial" font-size="40" fill="#fff8e7" text-anchor="middle">
+        • Digital Branding &amp; Marketing: Logos, social media assets, and campaigns.
+    </text>
+    
+    <text x="960" y="600" font-family="Arial" font-size="40" fill="#fff8e7" text-anchor="middle">
+        • User-Centric Design: Aesthetic and functional UX/UI.
+    </text>
+
+    <text x="960" y="950" font-family="Arial" font-size="32" fill="#ffd700" text-anchor="middle">
+        Empowering Businesses with Cutting-edge Design
+    </text>
+
+    <text x="910" y="1020" font-family="Arial" font-size="60" fill="#ff8c42">αβ</text>
+</svg>

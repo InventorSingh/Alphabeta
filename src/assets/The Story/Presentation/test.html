@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Synergi Solutions</title>
+
+  <!-- Embedded CSS -->
+  <style>
+    /* -----------------------------
+       1) GLOBAL STYLES & VARIABLES
+    ------------------------------ */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: "Open Sans", Arial, sans-serif;
+      color: #333;
+      background-color: #fff;
+      line-height: 1.5;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+    :root {
+      --primary-color: #f30859;   /* Pink accent akin to StandardFusion */
+      --dark-bg: #2b2b2b;
+      --gray-bg: #f7f7f7;
+      --transition-speed: 0.3s;
+      --text-color: #333;
+      --text-light: #bbb;
+    }
+
+    /* -----------------------------
+       2) HEADER & NAVIGATION
+    ------------------------------ */
+    header {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 70px;
+      background-color: var(--dark-bg);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1.5rem;
+      z-index: 999;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+    nav li a {
+      color: #fff;
+      padding: 0.5rem 0.75rem;
+      border-radius: 4px;
+      transition: background-color var(--transition-speed);
+    }
+    nav li a:hover {
+      background-color: rgba(255,255,255,0.1);
+    }
+    /* CTA button in header */
+    .header-btn {
+      background-color: var(--primary-color);
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: opacity var(--transition-speed);
+    }
+    .header-btn:hover {
+      opacity: 0.9;
+    }
+    /* Mobile menu toggle (hamburger) */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+      cursor: pointer;
+    }
+    .menu-toggle span {
+      width: 25px; height: 3px; background: #fff;
+    }
+
+    /* -----------------------------
+       3) RESPONSIVE NAV
+    ------------------------------ */
+    @media (max-width: 900px) {
+      nav ul {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        flex-direction: column;
+        background-color: var(--dark-bg);
+        width: 200px;
+        transform: translateX(100%);
+        transition: transform var(--transition-speed);
+        border-bottom-left-radius: 8px;
+        padding: 1rem;
+      }
+      nav ul.show-nav {
+        transform: translateX(0);
+      }
+      .menu-toggle {
+        display: flex;
+      }
+      nav ul li {
+        margin-bottom: 1rem;
+      }
+    }
+
+    /* A spacer to ensure content is visible below fixed header */
+    .spacer { margin-top: 70px; }
+
+    /* -----------------------------
+       4) LOGO BAR (Under Header)
+    ------------------------------ */
+    .logo-bar {
+      background-color: #1f1f1f;
+      color: #ccc;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .logo-bar img {
+      height: 24px; /* Example size for client logos */
+      filter: grayscale(1) brightness(2); /* Make them consistent & white-ish */
+      opacity: 0.8;
+      transition: filter var(--transition-speed), opacity var(--transition-speed);
+    }
+    .logo-bar img:hover {
+      filter: grayscale(0);
+      opacity: 1;
+    }
+
+    /* -----------------------------
+       5) HERO SECTION
+    ------------------------------ */
+    .hero {
+      background: linear-gradient(
+        to right,
+        rgba(243, 8, 89, 0.6),
+        rgba(0,0,0,0.4)
+      ), url('https://via.placeholder.com/1920x600?text=Hero+Background') center/cover no-repeat;
+      color: #fff;
+      padding: 5rem 2rem 6rem;
+      text-align: center;
+      position: relative;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0.75rem auto 2rem;
+      line-height: 1.4;
+    }
+    .hero-btn {
+      background-color: var(--primary-color);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: opacity var(--transition-speed);
+    }
+    .hero-btn:hover {
+      opacity: 0.9;
+    }
+
+    /* -----------------------------
+       6) COLOR-CODED BADGES
+    ------------------------------ */
+    .badges-container {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #fff;
+    }
+    .badges-container h2 {
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+    }
+    .badge-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    /* Example color-coded classes */
+    .badge {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .badge-r { background-color: #ad1457; }  /* Deep pink */
+    .badge-o { background-color: #f06292; }  /* Lighter pink */
+    .badge-y { background-color: #fbc02d; }  /* Yellow */
+    .badge-g { background-color: #43a047; }  /* Green */
+    .badge-c { background-color: #26a69a; }  /* Teal */
+    .badge-b { background-color: #1e88e5; }  /* Blue */
+    .badge-v { background-color: #8e24aa; }  /* Purple */
+
+    /* -----------------------------
+       7) MAIN CONTENT SECTIONS
+    ------------------------------ */
+    .section {
+      padding: 3rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+    }
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .content-block {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform var(--transition-speed);
+    }
+    .content-block:hover {
+      transform: translateY(-3px);
+    }
+    .content-block h3 {
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+      font-weight: 600;
+      font-size: 1.25rem;
+    }
+    .content-block p {
+      color: #555;
+      line-height: 1.4;
+      font-size: 0.95rem;
+    }
+
+    /* -----------------------------
+       8) QUOTE / CALLOUT SECTION
+    ------------------------------ */
+    .callout {
+      background: var(--primary-color);
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    .callout h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .callout blockquote {
+      font-style: italic;
+      max-width: 700px;
+      margin: 1rem auto;
+    }
+    .callout cite {
+      display: block;
+      margin-top: 0.5rem;
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    /* -----------------------------
+       9) TEAM SECTION
+    ------------------------------ */
+    .team-section {
+      background-color: var(--gray-bg);
+    }
+    .team-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .team-member {
+      background-color: #fff;
+      border-radius: 8px;
+      text-align: center;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .team-member img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    .team-member h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+    }
+    .team-member p {
+      font-size: 0.9rem;
+      color: #666;
+    }
+    .team-member blockquote {
+      font-size: 0.85rem;
+      font-style: italic;
+      margin-top: 0.75rem;
+      color: #999;
+      border-left: 3px solid var(--primary-color);
+      padding-left: 0.5rem;
+    }
+
+    /* -----------------------------
+       10) FINAL CTA / FOOTER
+    ------------------------------ */
+    .final-cta {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    .final-cta h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .final-cta .btn {
+      background: var(--primary-color);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: background-color var(--transition-speed);
+    }
+    .final-cta .btn:hover {
+      background-color: #d0074b;
+    }
+
+    footer {
+      background-color: var(--dark-bg);
+      color: #999;
+      padding: 1rem 1.5rem;
+      text-align: center;
+    }
+    footer p {
+      margin: 0.5rem 0;
+      font-size: 0.9rem;
+    }
+    footer nav a {
+      margin: 0 0.5rem;
+      font-size: 0.9rem;
+      color: #999;
+    }
+    footer nav a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-left">
+      <div class="logo">Synergi Solutions</div>
+    </div>
+    <!-- Mobile toggle -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav>
+      <ul id="nav-list">
+        <li><a href="#solutions">Solutions</a></li>
+        <li><a href="#team">Our Team</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#request-consultation" class="header-btn">Request Consultation</a>
+    </nav>
+  </header>
+
+  <!-- SPACER -->
+  <div class="spacer"></div>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>Governance, Risk, and Compliance Solutions</h1>
+    <p>Smart Solutions for a Better, More Profitable Healthcare Business. We help you boost efficiencies, reputation, savings, and quality in the healthcare and mental health arenas.</p>
+    <a href="#request-consultation" class="hero-btn">Request Consultation</a>
+  </section>
+
+  <!-- LOGO BAR (CLIENT LOGOS OR PARTNERS) -->
+  <div class="logo-bar">
+    <!-- Replace placeholders with real client/partner logos -->
+    <img src="https://via.placeholder.com/100x24?text=Client1" alt="Client1" />
+    <img src="https://via.placeholder.com/100x24?text=Client2" alt="Client2" />
+    <img src="https://via.placeholder.com/100x24?text=Client3" alt="Client3" />
+    <img src="https://via.placeholder.com/100x24?text=Client4" alt="Client4" />
+  </div>
+
+  <!-- COLOR-CODED BADGES (Healthcare Solutions) -->
+  <section class="badges-container" id="solutions">
+    <h2>Healthcare Solutions</h2>
+    <div class="badge-list">
+      <div class="badge badge-r">AI/MR Systems</div>
+      <div class="badge badge-o">Virtual Executive</div>
+      <div class="badge badge-y">Ancillary Services</div>
+      <div class="badge badge-g">Practice Management</div>
+      <div class="badge badge-c">Start-up</div>
+      <div class="badge badge-b">Compliance</div>
+      <div class="badge badge-v">Billing / Coding</div>
+      <div class="badge badge-r">Supply Chain</div>
+      <div class="badge badge-o">More…</div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT SECTIONS (Intelligent / Impactful / Innovative / Image-Based) -->
+  <section class="section" id="about">
+    <h2>Our Key Solutions</h2>
+    <div class="content-grid">
+      <div class="content-block">
+        <h3>Intelligent Solutions</h3>
+        <p>Optimize AI-powered solutions to reduce costs, increase capabilities, improve decision-making, and maximize intelligence for your business.</p>
+      </div>
+      <div class="content-block">
+        <h3>Impactful Solutions</h3>
+        <p>Strategize with our experienced leadership team to expand your profits, eliminate waste, and leverage growth opportunities.</p>
+      </div>
+      <div class="content-block">
+        <h3>Innovative Solutions</h3>
+        <p>Modernize your business through forward-looking technologies, proposals, and ancillary services that drive lasting success.</p>
+      </div>
+      <div class="content-block">
+        <h3>Image-Based Solutions</h3>
+        <p>Enhance the look of your enterprise with solutions that protect and highlight your reputation to patients, providers, and the community.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE / CALLOUT SECTION -->
+  <section class="callout">
+    <h2>Embrace a Proactive Approach</h2>
+    <blockquote>
+      “We are able to offer an array of services and opportunities that will leverage your business to greater profitability.”
+      <cite>– Ron N., CEO – Strategic Development & Growth</cite>
+    </blockquote>
+  </section>
+
+  <!-- TEAM SECTION -->
+  <section class="section team-section" id="team">
+    <h2>Meet Our Leadership</h2>
+    <div class="team-cards">
+      <div class="team-member">
+        <img src="https://via.placeholder.com/120?text=Ron+N" alt="Ron N">
+        <h3>Ron N.</h3>
+        <p>CEO – Strategic Development & Growth</p>
+        <blockquote>“Leading the charge for profitability and strategic growth.”</blockquote>
+      </div>
+      <div class="team-member">
+        <img src="https://via.placeholder.com/120?text=Jonathon+W" alt="Jonathon W">
+        <h3>Jonathon W.</h3>
+        <p>CMO – Strategic Management</p>
+        <blockquote>“Cultivating opportunities through precise management.”</blockquote>
+      </div>
+      <div class="team-member">
+        <img src="https://via.placeholder.com/120?text=Vicki+B" alt="Vicki B">
+        <h3>Vicki B.</h3>
+        <p>CDO – Strategic Development Officer</p>
+        <blockquote>“Innovating new pathways for lasting success.”</blockquote>
+      </div>
+      <div class="team-member">
+        <img src="https://via.placeholder.com/120?text=Tyler+N" alt="Tyler N">
+        <h3>Tyler N.</h3>
+        <p>PMA – Physician Medical Advisor</p>
+        <blockquote>“Marrying clinical excellence with operational efficiency.”</blockquote>
+      </div>
+      <div class="team-member">
+        <img src="https://via.placeholder.com/120?text=Jeffery+W" alt="Jeffery W">
+        <h3>Jeffery W.</h3>
+        <p>CTO – AI & Technology Development</p>
+        <blockquote>“Revolutionizing healthcare with cutting-edge AI.”</blockquote>
+      </div>
+      <div class="team-member">
+        <img src="https://via.placeholder.com/120?text=Rachel+O" alt="Rachel O">
+        <h3>Rachel O.</h3>
+        <p>CPO – Strategic Project Management</p>
+        <blockquote>“Driving seamless execution across initiatives.”</blockquote>
+      </div>
+      <div class="team-member">
+        <img src="https://via.placeholder.com/120?text=Walt+W" alt="Walt W">
+        <h3>Walt W.</h3>
+        <p>CFO – Strategic Finance</p>
+        <blockquote>“Building robust financial frameworks for ROI.”</blockquote>
+      </div>
+      <div class="team-member">
+        <img src="https://via.placeholder.com/120?text=Connor+G" alt="Connor G">
+        <h3>Connor G.</h3>
+        <p>Dir. of Practice Management</p>
+        <blockquote>“Enhancing workflows for top-tier performance.”</blockquote>
+      </div>
+      <div class="team-member">
+        <img src="https://via.placeholder.com/120?text=Noah+S" alt="Noah S">
+        <h3>Noah S.</h3>
+        <p>Dir. of Technology & Development</p>
+        <blockquote>“Driving innovation with tech-forward strategies.”</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta" id="request-consultation">
+    <h2>Ready to Transform Your Healthcare Business?</h2>
+    <a href="#contact" class="btn">Request a Consultation</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <p>&copy; 2025 Synergi Solutions, LLC. All Rights Reserved.</p>
+    <nav>
+      <a href="#about">About Us</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#team">Our Team</a>
+      <a href="#request-consultation">Contact</a>
+    </nav>
+  </footer>
+
+  <!-- EMBEDDED JAVASCRIPT -->
+  <script>
+    const navList = document.getElementById('nav-list');
+    function toggleMenu() {
+      navList.classList.toggle('show-nav');
+    }
+  </script>
+
+</body>
+</html>
