@@ -1,199 +1,128 @@
 ---
-import ProductsList from "./ProductsList.astro";
-
-const toggleChatbot = () => {
-    const chatbot = document.getElementById('chatbot');
-    if (chatbot) {
-        chatbot.style.display = chatbot.style.display === 'none' ? 'flex' : 'none';
-    }
-};
-
-const sendMessage = () => {
-    const userInput = document.getElementById('user-input');
-    const messages = document.getElementById('chatbot-messages');
-
-    if (!userInput || !messages) {
-        console.error('Required DOM elements are missing.');
-        return;
-    }
-
-    if (userInput.value.trim() === '') return;
-
-    const userMessage = document.createElement('div');
-    userMessage.textContent = userInput.value;
-    userMessage.style.textAlign = 'right';
-    userMessage.style.margin = '10px';
-    userMessage.style.backgroundColor = '#e0f7fa';
-    userMessage.style.padding = '10px';
-    userMessage.style.borderRadius = '8px';
-
-    messages.appendChild(userMessage);
-
-    const botMessage = document.createElement('div');
-    botMessage.textContent = `You said: "${userInput.value}". I'm here to assist you further.`;
-    botMessage.style.margin = '10px';
-    botMessage.style.backgroundColor = '#f1f1f1';
-    botMessage.style.padding = '10px';
-    botMessage.style.borderRadius = '8px';
-
-    messages.appendChild(botMessage);
-
-    userInput.value = '';
-};
+import ChatbotWidget from "../components/ChatbotWidget.astro";
 ---
 
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alphabeta - Building a Greener Future</title>
+    <title>Alphabeta - A Legacy of Excellence</title>
     <style>
+      /* 🌟 High-Value Gold & Blue Theme */
       body {
-        font-family: Arial, sans-serif;
+        font-family: 'Poppins', sans-serif;
         margin: 0;
         padding: 0;
-        color: #333;
+        color: #ffffff;
         line-height: 1.6;
-        background: linear-gradient(to bottom, #e8f5e9, #ffffff);
+        background: linear-gradient(to bottom, #003366, #000022);
       }
 
+      /* 🏆 HEADER */
       header {
-        background: #2e7d32;
-        color: white;
-        padding: 1rem 0;
+        background: linear-gradient(135deg, #FFD700, #FFAA00);
+        color: #003366;
         text-align: center;
+        padding: 2rem 0;
+        box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.3);
       }
 
       header h1 {
         font-size: 3rem;
-        font-family: 'Georgia', serif;
+        font-family: 'Playfair Display', serif;
       }
 
       nav {
-        background: #1b5e20;
-        color: white;
+        background: rgba(255, 215, 0, 0.1);
         display: flex;
         justify-content: center;
-        padding: 0.8rem 0;
+        padding: 1rem;
+        box-shadow: 0px 4px 6px rgba(255, 215, 0, 0.2);
       }
 
       nav a {
-        color: white;
+        color: #FFD700;
         text-decoration: none;
         margin: 0 1.5rem;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         font-weight: bold;
-        transition: color 0.3s;
+        transition: all 0.3s ease-in-out;
       }
 
       nav a:hover {
-        color: #a5d6a7;
+        color: #ffdd44;
+        text-shadow: 0 0 10px #ffdd44;
       }
 
+      /* 💎 SECTIONS */
       section {
-        padding: 3rem;
+        padding: 4rem 2rem;
         text-align: center;
-        position: relative;
+        max-width: 900px;
+        margin: auto;
       }
 
       section h2 {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
+        color: #FFD700;
+        font-family: 'Playfair Display', serif;
         margin-bottom: 1.5rem;
-        color: #388e3c;
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
       }
 
       section p {
-        max-width: 800px;
-        margin: 0 auto;
-        font-size: 1.1rem;
-        position: relative;
-        z-index: 1;
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: #ffffffcc;
       }
 
-      .svg-background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-        opacity: 0.3;
+      /* 🔥 CALL TO ACTION */
+      .cta-button {
+        display: inline-block;
+        background: linear-gradient(135deg, #FFD700, #FFAA00);
+        color: #003366;
+        font-weight: bold;
+        padding: 12px 24px;
+        margin-top: 20px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 1.3rem;
+        box-shadow: 0 4px 10px rgba(255, 215, 0, 0.4);
+        transition: all 0.3s ease-in-out;
       }
 
-      .chatbot-container {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        width: 300px;
-        max-height: 400px;
-        display: flex;
-        flex-direction: column;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        background-color: #fff;
-        border-radius: 8px;
-        overflow: hidden;
+      .cta-button:hover {
+        background: linear-gradient(135deg, #ffcc33, #ff9900);
+        transform: scale(1.05);
+        box-shadow: 0 6px 14px rgba(255, 215, 0, 0.5);
       }
 
-      .chatbot-header {
-        background: #2e7d32;
-        color: white;
-        padding: 10px;
-        text-align: center;
-        font-size: 1rem;
-      }
-
-      .chatbot-messages {
-        flex: 1;
-        overflow-y: auto;
-        padding: 10px;
-      }
-
-      .chatbot-input {
-        display: flex;
-        gap: 5px;
-        padding: 10px;
-        border-top: 1px solid #ccc;
-      }
-
-      .chatbot-input input {
-        flex: 1;
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-      }
-
-      .chatbot-input button {
-        padding: 8px;
-        background-color: #4caf50;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-
+      /* 🌙 FOOTER */
       footer {
-        background: #2e7d32;
-        color: white;
+        background: linear-gradient(135deg, #FFD700, #FFAA00);
+        color: #003366;
         text-align: center;
-        padding: 1.5rem 0;
-        margin-top: 2rem;
-      }
-
-      footer p {
-        margin: 0.5rem 0;
-        font-size: 1rem;
+        padding: 2rem;
+        margin-top: 4rem;
+        font-weight: bold;
+        box-shadow: 0px -4px 10px rgba(255, 215, 0, 0.3);
       }
 
       footer a {
-        color: #a5d6a7;
+        color: #003366;
         text-decoration: none;
+        font-weight: bold;
+      }
+
+      footer a:hover {
+        color: #000022;
       }
     </style>
   </head>
   <body>
     <header>
       <h1>Alphabeta</h1>
-      <p>Rebuilding Our Villages and Ecosystems</p>
+      <p>Building a Legacy of Innovation & Sustainability</p>
     </header>
 
     <nav>
@@ -204,37 +133,31 @@ const sendMessage = () => {
     </nav>
 
     <section id="about">
-      <h2>About Alphabeta</h2>
+      <h2>Who We Are</h2>
       <p>
-        Alphabeta is on a mission to create a greener future by empowering communities and enhancing biodiversity. Our initiatives focus on planting Tree Guilds that provide food for both wildlife and locals while improving the environment.
+        At Alphabeta, we create a legacy of sustainability, combining nature and technology to shape a better future. Our goal is to empower communities while preserving our planet.
       </p>
+      <a href="#join" class="cta-button">Join Us Today</a>
     </section>
 
     <section id="projects">
-      <h2>Our Projects</h2>
+      <h2>Our Visionary Projects</h2>
       <p>
-        - <strong>Tree Guild Planting:</strong> Strategically planting native trees to support wildlife and provide local food.<br />
-        - <strong>AI for Climate:</strong> Developing AI tools to research climate change and assist in sustainable planning.<br />
-        - <strong>Community Engagement:</strong> Workshops and events to raise awareness and involve locals in sustainability.
+        🌳 **Tree Guilds:** Restoring biodiversity through regenerative planting.<br />
+        🤖 **AI for Climate:** Cutting-edge AI tools for environmental research.<br />
+        🏡 **Sustainable Villages:** Empowering communities to thrive naturally.
       </p>
     </section>
 
     <section id="join">
-      <h2>Join Our Volunteer Network</h2>
+      <h2>Become a Part of the Change</h2>
       <p>
-        Be part of the change! Join our network of passionate volunteers and help us make a lasting impact on our environment and community.
+        Ready to make a difference? Our volunteers and partners are revolutionizing sustainability through action, education, and technology.
       </p>
-      <a href="#contact">Sign Up to Volunteer</a>
+      <a href="#contact" class="cta-button">Get Involved</a>
     </section>
 
-    <div id="chatbot" class="chatbot-container">
-      <div class="chatbot-header">Alphabeta Assistant</div>
-      <div id="chatbot-messages" class="chatbot-messages"></div>
-      <div class="chatbot-input">
-        <input type="text" id="user-input" placeholder="Ask me anything..." />
-        <button onclick="sendMessage()">Send</button>
-      </div>
-    </div>
+    <ChatbotWidget />
 
     <footer>
       <p>&copy; 2025 Alphabeta | All Rights Reserved</p>

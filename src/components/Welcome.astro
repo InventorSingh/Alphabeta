@@ -5,133 +5,89 @@ import Library from './Library.astro';
 
 <div id="container">
     <!-- Inline SVG Background -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 270" preserveAspectRatio="xMidYMid meet">
-        <!-- Background Gradient (Sunrise to Sunset) -->
-        <defs>
-            <linearGradient id="sunriseToSunset" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#FFDD70" /> <!-- Sunrise yellow -->
-                <stop offset="50%" stop-color="#FFA07A" /> <!-- Midday orange -->
-                <stop offset="100%" stop-color="#1E90FF" /> <!-- Sunset blue -->
-            </linearGradient>
-            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-                <feGaussianBlur stdDeviation="6" result="blur" />
-                <feMerge>
-                    <feMergeNode in="blur" />
-                    <feMergeNode in="SourceGraphic" />
-                </feMerge>
-            </filter>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#sunriseToSunset)" />
-      
-        <!-- Circular Sun at Sunrise -->
-        <circle cx="150" cy="100" r="50" fill="#FFD700" />
-        
-        <!-- Enhanced Twinkling Stars -->
-        <g id="stars">
-            <!-- Each star is now a composite of shapes -->
-            <g class="star" transform="translate(100,50)" filter="url(#starGlow)">
-                <path d="M0,0 L2,-2 L0,-6 L-2,-2 L-6,0 L-2,2 L0,6 L2,2 L6,0 L2,-2 Z" 
-                      fill="white" class="twinkle-1"/>
-                <circle r="1" fill="white" class="twinkle-core-1"/>
-            </g>
-            
-            <g class="star" transform="translate(200,30)" filter="url(#starGlow)">
-                <path d="M0,0 L1.5,-1.5 L0,-4.5 L-1.5,-1.5 L-4.5,0 L-1.5,1.5 L0,4.5 L1.5,1.5 L4.5,0 L1.5,-1.5 Z" 
-                      fill="white" class="twinkle-2"/>
-                <circle r="0.75" fill="white" class="twinkle-core-2"/>
-            </g>
-            
-            <g class="star" transform="translate(300,80)" filter="url(#starGlow)">
-                <path d="M0,0 L2.5,-2.5 L0,-7.5 L-2.5,-2.5 L-7.5,0 L-2.5,2.5 L0,7.5 L2.5,2.5 L7.5,0 L2.5,-2.5 Z" 
-                      fill="white" class="twinkle-3"/>
-                <circle r="1.25" fill="white" class="twinkle-core-3"/>
-            </g>
-            
-            <g class="star" transform="translate(400,20)" filter="url(#starGlow)">
-                <path d="M0,0 L2,-2 L0,-6 L-2,-2 L-6,0 L-2,2 L0,6 L2,2 L6,0 L2,-2 Z" 
-                      fill="white" class="twinkle-1"/>
-                <circle r="1" fill="white" class="twinkle-core-1"/>
-            </g>
-            
-            <g class="star" transform="translate(500,60)" filter="url(#starGlow)">
-                <path d="M0,0 L1.8,-1.8 L0,-5.4 L-1.8,-1.8 L-5.4,0 L-1.8,1.8 L0,5.4 L1.8,1.8 L5.4,0 L1.8,-1.8 Z" 
-                      fill="white" class="twinkle-2"/>
-                <circle r="0.9" fill="white" class="twinkle-core-2"/>
-            </g>
-            
-            <g class="star" transform="translate(600,40)" filter="url(#starGlow)">
-                <path d="M0,0 L2.3,-2.3 L0,-6.9 L-2.3,-2.3 L-6.9,0 L-2.3,2.3 L0,6.9 L2.3,2.3 L6.9,0 L2.3,-2.3 Z" 
-                      fill="white" class="twinkle-3"/>
-                <circle r="1.15" fill="white" class="twinkle-core-3"/>
-            </g>
-            
-            <g class="star" transform="translate(700,90)" filter="url(#starGlow)">
-                <path d="M0,0 L1.7,-1.7 L0,-5.1 L-1.7,-1.7 L-5.1,0 L-1.7,1.7 L0,5.1 L1.7,1.7 L5.1,0 L1.7,-1.7 Z" 
-                      fill="white" class="twinkle-1"/>
-                <circle r="0.85" fill="white" class="twinkle-core-1"/>
-            </g>
-        </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 270" preserveAspectRatio="xMidYMid meet">
+    <!-- Background Gradient (Gold & Royal Blue) -->
+    <defs>
+        <linearGradient id="goldBlueGradient" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#003366"/> <!-- Deep Royal Blue -->
+            <stop offset="50%" stop-color="#004080"/> <!-- Slightly Lighter Blue -->
+            <stop offset="100%" stop-color="#FFD700"/> <!-- Luxurious Gold -->
+        </linearGradient>
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="6" result="blur" />
+            <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#goldBlueGradient)" />
 
-        <!-- Small Lines for Depth -->
-        <g stroke="#FFA500" stroke-width="1">
-            <line x1="80" y1="100" x2="120" y2="100" />
-            <line x1="180" y1="100" x2="220" y2="100" />
-            <line x1="150" y1="50" x2="150" y2="90" />
-            <line x1="150" y1="110" x2="150" y2="140" />
+    <!-- Circular Sun (Gold) -->
+    <circle cx="150" cy="100" r="50" fill="#FFD700" filter="url(#glow)" />
+
+    <!-- Enhanced Twinkling Stars -->
+    <g id="stars">
+        <g class="star" transform="translate(100,50)" filter="url(#starGlow)">
+            <path d="M0,0 L2,-2 L0,-6 L-2,-2 L-6,0 L-2,2 L0,6 L2,2 L6,0 L2,-2 Z" 
+                  fill="white"/>
+            <circle r="1" fill="white"/>
         </g>
-      
-        <!-- People in STEM (Inclusive Figures) -->
-        <g transform="translate(0, -200)">
-            <!-- Person 1 -->
-            <circle cx="400" cy="400" r="15" fill="#6A5ACD" />
-            <line x1="400" y1="415" x2="400" y2="470" stroke="#6A5ACD" stroke-width="3" />
-            <line x1="385" y1="450" x2="400" y2="430" stroke="#6A5ACD" stroke-width="3" />
-            <line x1="415" y1="450" x2="400" y2="430" stroke="#6A5ACD" stroke-width="3" />
-      
-            <!-- Person 2 -->
-            <circle cx="500" cy="400" r="15" fill="#FF6347" />
-            <line x1="500" y1="415" x2="500" y2="470" stroke="#FF6347" stroke-width="3" />
-            <line x1="485" y1="450" x2="500" y2="430" stroke="#FF6347" stroke-width="3" />
-            <line x1="515" y1="450" x2="500" y2="430" stroke="#FF6347" stroke-width="3" />
+        <g class="star" transform="translate(200,30)" filter="url(#starGlow)">
+            <path d="M0,0 L1.5,-1.5 L0,-4.5 L-1.5,-1.5 L-4.5,0 L-1.5,1.5 L0,4.5 L1.5,1.5 L4.5,0 L1.5,-1.5 Z" 
+                  fill="white"/>
+            <circle r="0.75" fill="white"/>
         </g>
-      
-        <!-- Symbolic Tech (Gear) -->
-        <circle cx="650" cy="100" r="30" fill="none" stroke="#FFFFFF" stroke-width="3" />
-        <line x1="650" y1="80" x2="650" y2="60" stroke="#FFFFFF" stroke-width="3" />
-        <line x1="650" y1="120" x2="650" y2="140" stroke="#FFFFFF" stroke-width="3" />
-        <line x1="620" y1="100" x2="600" y2="100" stroke="#FFFFFF" stroke-width="3" />
-        <line x1="680" y1="100" x2="700" y2="100" stroke="#FFFFFF" stroke-width="3" />
-      
-        <!-- Ground Lines for Depth -->
-        <g stroke="#FFFFFF" stroke-width="0.5">
-            <g transform="translate(0, -90)">
-                <line x1="0" y1="450" x2="100%" y2="450" />
-                <line x1="0" y1="470" x2="100%" y2="470" />
-                <line x1="0" y1="490" x2="100%" y2="490" />
-            </g>
+        <g class="star" transform="translate(300,80)" filter="url(#starGlow)">
+            <path d="M0,0 L2.5,-2.5 L0,-7.5 L-2.5,-2.5 L-7.5,0 L-2.5,2.5 L0,7.5 L2.5,2.5 L7.5,0 L2.5,-2.5 Z" 
+                  fill="white"/>
+            <circle r="1.25" fill="white"/>
         </g>
-      
-        <!-- Alphabeta Logo -->
-        <g transform="translate(400, 50)" text-anchor="middle" filter="url(#glow)">
-            <text x="0" y="15" font-family="Arial" font-size="30" fill="#FF6347" font-weight="bold" letter-spacing="-0.1em">αβ</text>
+    </g>
+
+    <!-- Small Lines for Depth -->
+    <g stroke="#FFD700" stroke-width="1">
+        <line x1="80" y1="100" x2="120" y2="100" />
+        <line x1="180" y1="100" x2="220" y2="100" />
+        <line x1="150" y1="50" x2="150" y2="90" />
+        <line x1="150" y1="110" x2="150" y2="140" />
+    </g>
+
+    <!-- People in STEM (Inclusive Figures) -->
+    <g transform="translate(0, -200)">
+        <circle cx="400" cy="400" r="15" fill="#003366" />
+        <line x1="400" y1="415" x2="400" y2="470" stroke="#003366" stroke-width="3" />
+        <line x1="385" y1="450" x2="400" y2="430" stroke="#003366" stroke-width="3" />
+        <line x1="415" y1="450" x2="400" y2="430" stroke="#003366" stroke-width="3" />
+
+        <circle cx="500" cy="400" r="15" fill="#FFD700" />
+        <line x1="500" y1="415" x2="500" y2="470" stroke="#FFD700" stroke-width="3" />
+        <line x1="485" y1="450" x2="500" y2="430" stroke="#FFD700" stroke-width="3" />
+        <line x1="515" y1="450" x2="500" y2="430" stroke="#FFD700" stroke-width="3" />
+    </g>
+
+    <!-- Symbolic Tech (Gear) -->
+    <circle cx="650" cy="100" r="30" fill="none" stroke="#FFFFFF" stroke-width="3" />
+    <line x1="650" y1="80" x2="650" y2="60" stroke="#FFFFFF" stroke-width="3" />
+    <line x1="650" y1="120" x2="650" y2="140" stroke="#FFFFFF" stroke-width="3" />
+    <line x1="620" y1="100" x2="600" y2="100" stroke="#FFFFFF" stroke-width="3" />
+    <line x1="680" y1="100" x2="700" y2="100" stroke="#FFFFFF" stroke-width="3" />
+
+    <!-- Ground Lines for Depth -->
+    <g stroke="#FFFFFF" stroke-width="0.5">
+        <g transform="translate(0, -90)">
+            <line x1="0" y1="450" x2="100%" y2="450" />
+            <line x1="0" y1="470" x2="100%" y2="470" />
+            <line x1="0" y1="490" x2="100%" y2="490" />
         </g>
-      
-        <!-- Story Introduction -->
-        <!-- <g transform="translate(100, 450)">
-            <text x="0" y="0" font-family="Arial, sans-serif" font-size="22" fill="#FFFFFF">
-                Once upon a sunrise, two curious letters, Alpha (α) and Beta (β),
-            </text>
-            <text x="0" y="30" font-family="Arial, sans-serif" font-size="22" fill="#FFFFFF">
-                embarked on a journey to learn the world through stories.
-            </text>
-            <text x="0" y="80" font-family="Arial, sans-serif" font-size="18" fill="#FFA07A">
-                With Alpha's wisdom and Beta's curiosity, they invite you to explore
-            </text>
-            <text x="0" y="110" font-family="Arial, sans-serif" font-size="18" fill="#FFA07A">
-                technology, learning, and creativity in a vibrant world of discovery.
-            </text>
-        </g> -->
-    </svg>
+    </g>
+
+    <!-- Alphabeta Logo -->
+    <g transform="translate(400, 50)" text-anchor="middle" filter="url(#glow)">
+        <text x="0" y="15" font-family="Arial" font-size="30" fill="#FFD700" font-weight="bold" letter-spacing="-0.1em">αβ</text>
+    </g>
+</svg>
+
 
 	<Library />
 </div>

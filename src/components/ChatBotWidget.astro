@@ -1,0 +1,84 @@
+---
+---
+<div id="chatbot" class="chatbot-container">
+    <div class="chatbot-header">Alphabeta Assistant</div>
+    <div id="chatbot-messages" class="chatbot-messages"></div>
+    <div class="chatbot-input">
+      <input type="text" id="user-input" placeholder="Ask me anything..." />
+      <button id="send-button">Send</button>
+    </div>
+</div>
+
+<script src="/chatbot.js" defer></script>
+
+<style>
+  .chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    max-height: 450px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 6px 12px rgba(255, 215, 0, 0.3); /* Gold glow */
+    background: linear-gradient(135deg, #003366, #001a33); /* Deep Blue */
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid #FFD700; /* Gold Border */
+  }
+
+  .chatbot-header {
+    background: linear-gradient(135deg, #FFD700, #FFAA00);
+    color: #003366;
+    padding: 12px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-bottom: 2px solid #FFD700;
+  }
+
+  .chatbot-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+    color: white;
+  }
+
+  .chatbot-input {
+    display: flex;
+    gap: 6px;
+    padding: 12px;
+    border-top: 2px solid #FFD700;
+    background: rgba(255, 215, 0, 0.1); /* Subtle gold tint */
+  }
+
+  .chatbot-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #FFD700;
+    border-radius: 6px;
+    background: #001a33;
+    color: white;
+    font-size: 1rem;
+  }
+
+  .chatbot-input input::placeholder {
+    color: rgba(255, 215, 0, 0.7);
+  }
+
+  .chatbot-input button {
+    padding: 10px;
+    background: linear-gradient(135deg, #FFD700, #FFAA00);
+    color: #003366;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .chatbot-input button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.4);
+  }
+</style>
