@@ -1,147 +1,391 @@
 ---
-import Footer from './Footer.astro';
-import Library from './Library.astro';
 ---
 
-<div id="container">
-    <!-- Inline SVG Background -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 270" preserveAspectRatio="xMidYMid meet">
-    <!-- Background Gradient (Gold & Royal Blue) -->
-    <defs>
-        <linearGradient id="goldBlueGradient" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#003366"/> <!-- Deep Royal Blue -->
-            <stop offset="50%" stop-color="#004080"/> <!-- Slightly Lighter Blue -->
-            <stop offset="100%" stop-color="#FFD700"/> <!-- Luxurious Gold -->
-        </linearGradient>
-        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="6" result="blur" />
-            <feMerge>
-                <feMergeNode in="blur" />
-                <feMergeNode in="SourceGraphic" />
-            </feMerge>
-        </filter>
-    </defs>
-    <rect width="100%" height="100%" fill="url(#goldBlueGradient)" />
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sia Glow - Natural Skincare</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+    </style>
+    <style>
+      :root {
+        --primary: #d49422;
+        --primary-dark: #bf7e04;
+        --secondary: #f4c542;
+        --background: #fff8e1;
+        --text: #333;
+        --white: #ffffff;
+      }
 
-    <!-- Circular Sun (Gold) -->
-    <circle cx="150" cy="100" r="50" fill="#FFD700" filter="url(#glow)" />
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    <!-- Enhanced Twinkling Stars -->
-    <g id="stars">
-        <g class="star" transform="translate(100,50)" filter="url(#starGlow)">
-            <path d="M0,0 L2,-2 L0,-6 L-2,-2 L-6,0 L-2,2 L0,6 L2,2 L6,0 L2,-2 Z" 
-                  fill="white"/>
-            <circle r="1" fill="white"/>
-        </g>
-        <g class="star" transform="translate(200,30)" filter="url(#starGlow)">
-            <path d="M0,0 L1.5,-1.5 L0,-4.5 L-1.5,-1.5 L-4.5,0 L-1.5,1.5 L0,4.5 L1.5,1.5 L4.5,0 L1.5,-1.5 Z" 
-                  fill="white"/>
-            <circle r="0.75" fill="white"/>
-        </g>
-        <g class="star" transform="translate(300,80)" filter="url(#starGlow)">
-            <path d="M0,0 L2.5,-2.5 L0,-7.5 L-2.5,-2.5 L-7.5,0 L-2.5,2.5 L0,7.5 L2.5,2.5 L7.5,0 L2.5,-2.5 Z" 
-                  fill="white"/>
-            <circle r="1.25" fill="white"/>
-        </g>
-    </g>
+      body {
+        font-family: 'Poppins', Arial, sans-serif;
+        background: var(--background);
+        color: var(--text);
+        line-height: 1.6;
+      }
 
-    <!-- Small Lines for Depth -->
-    <g stroke="#FFD700" stroke-width="1">
-        <line x1="80" y1="100" x2="120" y2="100" />
-        <line x1="180" y1="100" x2="220" y2="100" />
-        <line x1="150" y1="50" x2="150" y2="90" />
-        <line x1="150" y1="110" x2="150" y2="140" />
-    </g>
+      header {
+        background: var(--white);
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
 
-    <!-- People in STEM (Inclusive Figures) -->
-    <g transform="translate(0, -200)">
-        <circle cx="400" cy="400" r="15" fill="#003366" />
-        <line x1="400" y1="415" x2="400" y2="470" stroke="#003366" stroke-width="3" />
-        <line x1="385" y1="450" x2="400" y2="430" stroke="#003366" stroke-width="3" />
-        <line x1="415" y1="450" x2="400" y2="430" stroke="#003366" stroke-width="3" />
+      .logo {
+        font-family: 'Playfair Display', serif;
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--primary);
+      }
 
-        <circle cx="500" cy="400" r="15" fill="#FFD700" />
-        <line x1="500" y1="415" x2="500" y2="470" stroke="#FFD700" stroke-width="3" />
-        <line x1="485" y1="450" x2="500" y2="430" stroke="#FFD700" stroke-width="3" />
-        <line x1="515" y1="450" x2="500" y2="430" stroke="#FFD700" stroke-width="3" />
-    </g>
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
 
-    <!-- Symbolic Tech (Gear) -->
-    <circle cx="650" cy="100" r="30" fill="none" stroke="#FFFFFF" stroke-width="3" />
-    <line x1="650" y1="80" x2="650" y2="60" stroke="#FFFFFF" stroke-width="3" />
-    <line x1="650" y1="120" x2="650" y2="140" stroke="#FFFFFF" stroke-width="3" />
-    <line x1="620" y1="100" x2="600" y2="100" stroke="#FFFFFF" stroke-width="3" />
-    <line x1="680" y1="100" x2="700" y2="100" stroke="#FFFFFF" stroke-width="3" />
+      nav ul li {
+        margin: 0 15px;
+      }
 
-    <!-- Ground Lines for Depth -->
-    <g stroke="#FFFFFF" stroke-width="0.5">
-        <g transform="translate(0, -90)">
-            <line x1="0" y1="450" x2="100%" y2="450" />
-            <line x1="0" y1="470" x2="100%" y2="470" />
-            <line x1="0" y1="490" x2="100%" y2="490" />
-        </g>
-    </g>
+      nav ul li a {
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
 
-    <!-- Alphabeta Logo -->
-    <g transform="translate(400, 50)" text-anchor="middle" filter="url(#glow)">
-        <text x="0" y="15" font-family="Arial" font-size="30" fill="#FFD700" font-weight="bold" letter-spacing="-0.1em">αβ</text>
-    </g>
-</svg>
+      nav ul li a:hover {
+        color: var(--primary);
+      }
 
+      .hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/api/placeholder/1200/600') center/cover;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: var(--white);
+        padding: 0 20px;
+      }
 
-	<Library />
-</div>
+      .hero h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        animation: fadeIn 1.5s;
+      }
 
+      .hero p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin-bottom: 30px;
+        animation: fadeIn 2s;
+      }
 
-<style>
-    /* Enhanced twinkling animations with faster timings */
-    @keyframes twinkle-1 {
-        0%, 100% { opacity: 1; transform: scale(1); }
-        50% { opacity: 0.2; transform: scale(0.85); }
-    }
+      .hero-btn {
+        background: var(--primary);
+        color: var(--white);
+        padding: 12px 30px;
+        border: none;
+        border-radius: 30px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        animation: fadeIn 2.5s;
+      }
 
-    @keyframes twinkle-2 {
-        0%, 100% { opacity: 0.9; transform: scale(0.95); }
-        50% { opacity: 0.3; transform: scale(1.1); }
-    }
+      .hero-btn:hover {
+        background: var(--primary-dark);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
 
-    @keyframes twinkle-3 {
-        0%, 100% { opacity: 1; transform: scale(1.05); }
-        50% { opacity: 0.4; transform: scale(0.9); }
-    }
+      .container {
+        max-width: 1200px;
+        margin: 50px auto;
+        padding: 0 20px;
+      }
 
-    @keyframes core-pulse {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.6; }
-    }
+      .section-title {
+        text-align: center;
+        margin-bottom: 50px;
+      }
 
-    /* Apply faster animations to star elements */
-    .twinkle-1 {
-        animation: twinkle-1 1.5s infinite ease-in-out;
-    }
+      .section-title h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5rem;
+        color: var(--primary-dark);
+        margin-bottom: 15px;
+        position: relative;
+        display: inline-block;
+      }
 
-    .twinkle-2 {
-        animation: twinkle-2 2s infinite ease-in-out;
-    }
+      .section-title h2::after {
+        content: '';
+        position: absolute;
+        width: 70%;
+        height: 3px;
+        background: var(--secondary);
+        bottom: -10px;
+        left: 15%;
+      }
 
-    .twinkle-3 {
-        animation: twinkle-3 2.5s infinite ease-in-out;
-    }
+      .section-title p {
+        max-width: 700px;
+        margin: 0 auto;
+        font-size: 1.1rem;
+      }
 
-    .twinkle-core-1 {
-        animation: core-pulse 1.5s infinite ease-in-out;
-    }
+      .products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+      }
 
-    .twinkle-core-2 {
-        animation: core-pulse 2s infinite ease-in-out;
-    }
+      .product {
+        width: 300px;
+        background: var(--white);
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
 
-    .twinkle-core-3 {
-        animation: core-pulse 2.5s infinite ease-in-out;
-    }
+      .product:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      }
 
-    /* Make stars more visible against the background */
-    .star {
-        mix-blend-mode: screen;
-    }
-</style>
+      .product-img {
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .product-content {
+        padding: 25px;
+        text-align: center;
+      }
+
+      .product h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+        color: var(--primary-dark);
+      }
+
+      .product p {
+        margin-bottom: 20px;
+        color: var(--text);
+      }
+
+      .product .price {
+        font-weight: 600;
+        color: var(--primary);
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+        display: block;
+      }
+
+      .btn {
+        background: var(--primary);
+        color: var(--white);
+        padding: 10px 25px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s;
+        display: inline-block;
+      }
+
+      .btn:hover {
+        background: var(--primary-dark);
+      }
+
+      .benefits {
+        background: var(--white);
+        padding: 80px 0;
+        margin-top: 80px;
+      }
+
+      .benefits-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .benefit-item {
+        flex: 1 1 300px;
+        text-align: center;
+        padding: 30px;
+        border-radius: 10px;
+        background: var(--background);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s;
+      }
+
+      .benefit-item:hover {
+        transform: translateY(-5px);
+      }
+
+      .benefit-icon {
+        font-size: 2.5rem;
+        color: var(--primary);
+        margin-bottom: 20px;
+      }
+
+      .benefit-item h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        color: var(--primary-dark);
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+
+        .section-title h2 {
+          font-size: 2rem;
+        }
+
+        nav ul {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Sia Glow</div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Benefits</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Natural Turmeric Skincare</h1>
+      <p>Discover the ancient beauty secret for radiant, healthy skin. Handcrafted with love using only natural ingredients.</p>
+      <button class="hero-btn">Explore Collection</button>
+    </section>
+
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Bestsellers</h2>
+        <p>100% Natural | Chemical-Free | Handmade with Love</p>
+      </div>
+
+      <div class="products">
+        <div class="product">
+          <div class="product-img" style="background-image: url('/api/placeholder/300/200')"></div>
+          <div class="product-content">
+            <h3>Turmeric Glow Face Mask</h3>
+            <p>Brightens & evens skin tone with our signature turmeric blend.</p>
+            <span class="price">$24.99</span>
+            <button class="btn">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="product-img" style="background-image: url('/api/placeholder/300/200')"></div>
+          <div class="product-content">
+            <h3>Golden Turmeric Soap</h3>
+            <p>Hydrates & nourishes for glowing skin all day long.</p>
+            <span class="price">$12.99</span>
+            <button class="btn">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="product-img" style="background-image: url('/api/placeholder/300/200')"></div>
+          <div class="product-content">
+            <h3>Turmeric & Oatmeal Scrub</h3>
+            <p>Exfoliates & removes dead skin cells for a fresh complexion.</p>
+            <span class="price">$18.99</span>
+            <button class="btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="benefits">
+      <div class="section-title">
+        <h2>The Power of Turmeric</h2>
+        <p>For centuries, turmeric has been treasured for its skin-enhancing properties</p>
+      </div>
+
+      <div class="benefits-container">
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fas fa-sun"></i>
+          </div>
+          <h3>Natural Glow</h3>
+          <p>Turmeric's natural properties help enhance your skin's radiance and bring out your natural glow.</p>
+        </div>
+
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Anti-Inflammatory</h3>
+          <p>Soothes irritated skin and reduces redness, perfect for sensitive skin types.</p>
+        </div>
+
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fas fa-magic"></i>
+          </div>
+          <h3>Anti-Aging</h3>
+          <p>Rich in antioxidants that help fight free radicals and reduce signs of aging.</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
